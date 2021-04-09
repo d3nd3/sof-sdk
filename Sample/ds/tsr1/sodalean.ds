@@ -1,0 +1,29 @@
+
+
+#include "../common/header.ds"
+
+output "p:/base/ds/tsr1"
+
+
+//////////////////////////////////////////////////////////////////////////
+// Enemy leans around corner near soda machine after token booth gate
+//////////////////////////////////////////////////////////////////////////
+
+//enemy that leans
+local entity sodaleaner
+
+//to target player
+local entity sneak
+
+
+
+//enemy that leans
+sodaleaner = find entity with targetname "sodaleaner"
+sneak = find entity player
+
+
+//spawns leaner
+use entity sodaleaner 
+// this is him peeking around the corner firing
+animate entity sodaleaner performing action STD_FCORNERPEAK_RT_P_A targeting entity sneak 
+animate entity sodaleaner performing action SCRIPT_RELEASE

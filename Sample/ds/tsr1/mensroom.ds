@@ -1,0 +1,43 @@
+// template file for newyork directory
+
+#include "../common/header.ds"
+
+output "p:/base/ds/tsr1"
+
+
+local entity mstalldoor1  // the stall door that flys off
+local entity stallguym // the guy in the far stall 
+local entity sinkguy // the guy standing by the sink who yells
+local entity pissguy // the guy taking a leak
+local int sig1
+local int sig2
+
+
+mstalldoor1 = find entity with targetname "mstalldoor1"
+stallguym = find entity with targetname "stallguym"
+sinkguy = find entity with targetname "sinkguy"
+pissguy = find entity with targetname "pissguy"
+
+// mstalldoor1.movetype = MOVETYPE_NOCLIP
+
+
+animate entity stallguym performing action STD_XKICKDOOR_N_A_A // signaling sig1 // the kicking door animation
+play sound "speech/tsr1/skn/bt9-6.adp" for entity sinkguy at volume 0.9
+
+wait .25 seconds
+moverotate entity mstalldoor1 from file "stall_door_1.rof" // signaling sig2 // the door getting kicked
+play sound "impact/door/kickdoor.wav" for entity mstalldoor1 at volume 0.9
+// wait for all clearing sig1, sig2
+
+animate entity stallguym performing action RUN by moving [-64, 0, 0] 
+animate entity stallguym performing action RUN by moving [0, -64, 0] // moves him forwards to try and get him out of the way of the stall
+
+use entity pissguy // gets this guy moving
+
+
+animate entity stallguym performing action SCRIPT_RELEASE
+animate entity sinkguy performing action SCRIPT_RELEASE
+animate entity pissguy performing action SCRIPT_RELEASE
+
+
+exit

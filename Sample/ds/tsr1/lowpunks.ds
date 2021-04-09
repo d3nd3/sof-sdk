@@ -1,0 +1,28 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+
+// this script makes punk guys on the lower level run around the corner and attack the player
+
+
+
+
+local entity lower_punk1
+local entity lower_punk2
+
+
+lower_punk1 = find entity with targetname "lower_punk1"
+lower_punk2 = find entity with targetname "lower_punk2"
+
+
+use entity lower_punk1 // spawns this guy in
+use entity lower_punk2 // spawns him in
+
+use entity lower_punk1 // sends this guy to his point combat
+use entity lower_punk2 // sends this guy to his point combat
+
+
+exit

@@ -1,0 +1,22 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+local entity endstepsguy1 // first dude who will jump down the stairs
+local entity endstepsguy2 // the second guy
+
+
+endstepsguy1 = find entity with targetname "endstepsguy1"
+endstepsguy2 = find entity with targetname "endstepsguy2"
+
+
+
+animate entity endstepsguy2 performing action STD_JRUN_FWD_A_A by moving [0, -188, 0] // first guy jumps off the steps
+// animate entity endstepsguy1 performing action RUN by moving [-40, 0, 0] // second guy runs towards the steps
+// animate entity endstepsguy1 performing action STD_JRUN_FWD_A_A by moving [0, -128, 0] // jumps off the steps
+
+animate entity endstepsguy2 performing action SCRIPT_RELEASE
+exit
+
+

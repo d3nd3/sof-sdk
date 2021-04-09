@@ -1,0 +1,807 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+#include "tsr1.ds"
+
+
+// redo of the nyc intro script, this is the first crane camera shot
+
+// first shot entities
+
+local entity introcam1 // the first camera looking down on the street
+local entity introcam1n // the first cameras null
+local entity walkingswatguy // the guy who will walk in the first shot
+local entity intro4 // the second script runner that will trigger shot2 of the intro
+local entity introhawk //  the merc character in this shot
+local entity introhawkb //  the merc character in this shot
+local entity introjohn // the merc character in this shot
+local entity introjohnb // the merc character in this shot
+local entity introswat3 // the guy back under the train bridge
+local entity copcar1 // the slanted copcar in the middle of the street
+local entity newcam1 // the new close up cam of john for the last couple of shots
+local entity newcam2 // the cam for hawk close up
+local entity newcam1n
+local entity newcam2n
+local entity t121 // the sound trigger for the first ambient set
+
+// stuff for second shot
+
+local entity introdeadswat // the swat guy who will get murdered
+local entity introswatkiller // the guy who will kill him
+local entity introswatcam // the camera showing the swat guy murdered
+local entity introswatcamn  // the cameras null
+local entity intro3 // the cut to the shot back on the street
+
+local entity introcam6 // other cut around the conversation
+local entity introcam6n // the cams null
+local entity swatleader // the swat guy leader
+local entity introltrain // the l train that will fly by
+
+// stuff for third shot
+
+local entity introcam4 // the camera
+local entity introcam4n // the third cameras null
+
+// stuff for 4th shot
+
+local entity sabre1 // skinhead boss who will shoot the hostages
+local entity walkinguy // skinhead who will walk in the shot
+local entity introcam2 // the camera which will shoot this shot
+local entity introcam2n // the cameras null in case we want to move it
+local entity introhostage1 // the hostage to the left of sabre in the intro
+local entity introhostage2 // the second hostage
+local entity introcam3 // the close up camera shot of Sabre
+local entity introcam3n // the close up cameras null
+local entity introcam7 // the other new shot of the hostage murder
+local entity introcam7a // the other new shot of the hostage murder SM
+local entity introcam7n // the above cameras null
+local entity lastcam1 // the last close up shot of them in this cinematic
+local entity lastcam1n // the last cameras null
+local entity lastcam2 // the camera at the bottom of the stairs
+local entity lastcam2n // the stair cams null
+local entity lastjohn // the john by the stairs
+local entity lasthawk // the hawk at the top of the stairs
+local entity lastswatleader // the last swatleader that appears in the shot with hawk
+local entity runguy // the script runner that starts the ecto running at the bottom of the stairs
+local entity show_objectives // the objective thing that needs to be turned on after the intro runs
+
+//sm addition
+
+local entity finaltrain	//train in final camera
+local entity gunshots	//gunshots the swat members hear
+
+local entity tsr1fadeout // the fade out for the cinematic transition  MADE BY JERSEY
+local entity tsr1fadein // the fade in when the player starts in 1st person MADE BY JERSEY
+
+local int sig1
+local int sig2
+
+// cache stuff
+
+cache roff "tsr1_introcam1_ren.rof"  // changes made by jersey
+cache roff "tsr1_introcam1t_ren.rof"
+
+/*
+cache sound "cin/tsr1/c3d1.adp"
+cache sound "cin/tsr1/c3d2.adp"
+cache sound "cin/tsr1/c4d1.adp"
+cache sound "cin/tsr1/c5d1.adp"
+cache sound "cin/tsr1/c5d2.adp"
+cache sound "cin/tsr1/c6d1.adp"
+cache sound "cin/tsr1/c6d2.adp"
+cache sound "cin/tsr1/c6d3.adp"
+cache sound "cin/tsr1/c6d4.adp"
+*/
+
+introcam1 = find entity with targetname "introcam1"
+
+//turns on 1st camera
+enable cinematics
+use entity introcam1// turns on the camera
+
+
+introcam1n = find entity with targetname "introcam1n"
+walkingswatguy = find entity with targetname "walkingswatguy"
+intro4 = find entity with targetname "intro4"
+introhawk = find entity with targetname "introhawk"
+introhawkb = find entity with targetname "introhawkb"
+introjohn = find entity with targetname "introjohn"
+introjohnb = find entity with targetname "introjohnb"
+introltrain = find entity with targetname "introltrain"
+copcar1 = find entity with targetname "copcar1"
+newcam1 = find entity with targetname "newcam1"
+newcam1n = find entity with targetname "newcam1n"
+newcam2 = find entity with targetname "newcam2"
+newcam2n = find entity with targetname "newcam2n"
+introswat3 = find entity with targetname "introswat3"
+
+introdeadswat = find entity with targetname "introdeadswat"
+introswatkiller = find entity with targetname "introswatkiller"
+introswatcam = find entity with targetname "introswatcam"
+introswatcamn = find entity with targetname "introswatcamn"
+intro3 = find entity with targetname "intro3"
+
+introcam6 = find entity with targetname "introcam6"
+introcam6n = find entity with targetname "introcam6n"
+swatleader = find entity with targetname "swatleader"
+
+introcam4 = find entity with targetname "introcam4"
+introcam4n = find entity with targetname "introcam4n"
+
+sabre1 = find entity with targetname "sabre1"
+walkinguy = find entity with targetname "walkinguy"
+introcam2 = find entity with targetname "introcam2"
+introcam2n = find entity with targetname "introcam2n"
+introcam3 = find entity with targetname "introcam3"
+introcam3n = find entity with targetname "introcam3n"
+
+introhostage1 = find entity with targetname "introhostage1"
+introhostage2 = find entity with targetname "introhostage2"
+
+introcam7 = find entity with targetname "introcam7"
+introcam7a = find entity with targetname "introcam7a"
+introcam7n = find entity with targetname "introcam7n"
+
+lastcam1 = find entity with targetname "lastcam1"
+lastcam1n = find entity with targetname "lastcam1n"
+lastcam2 = find entity with targetname "lastcam2"
+lastcam2n = find entity with targetname "lastcam2n"
+lastjohn = find entity with targetname "lastjohn"
+lasthawk = find entity with targetname "lasthawk"
+lastswatleader = find entity with targetname "lastswatleader"
+runguy = find entity with targetname "runguy"
+
+tsr1fadeout = find entity with targetname "tsr1fadeout"  // MADE BY JERSEY
+tsr1fadein = find entity with targetname "tsr1fadein"// MADE BY JERSEY
+
+//sm addition
+finaltrain = find entity with targetname "finaltrain"		//train
+gunshots = find entity with targetname "gunshots"		//gunshots the swat members hear
+show_objectives = find entity with targetname "show_objectives"
+
+
+t121 = find entity with targetname "t121"
+
+//introcam1.movetype = MOVETYPE_NOCLIP
+//introcam1n.movetype = MOVETYPE_NOCLIP
+introswatcam.movetype = MOVETYPE_NOCLIP
+introswatcamn.movetype = MOVETYPE_NOCLIP
+introcam4.movetype = MOVETYPE_NOCLIP
+introcam4n.movetype = MOVETYPE_NOCLIP
+introcam2.movetype = MOVETYPE_NOCLIP
+introcam2n.movetype = MOVETYPE_NOCLIP
+introcam3.movetype = MOVETYPE_NOCLIP
+introcam3n.movetype = MOVETYPE_NOCLIP
+introcam7.movetype = MOVETYPE_NOCLIP
+introcam7n.movetype = MOVETYPE_NOCLIP
+lastcam1.movetype = MOVETYPE_NOCLIP
+lastcam1n.movetype = MOVETYPE_NOCLIP
+lastcam2.movetype = MOVETYPE_NOCLIP
+lastcam2n.movetype = MOVETYPE_NOCLIP
+newcam1.movetype = MOVETYPE_NOCLIP
+newcam1n.movetype = MOVETYPE_NOCLIP
+newcam2.movetype = MOVETYPE_NOCLIP
+newcam2n.movetype = MOVETYPE_NOCLIP
+
+//
+// FIRST SWEEPING SHOT OUTSIDE LEADS TO FIRST CONVERSATION
+//
+
+
+//TSR1_ACTIVISION
+//TSR1_RAVEN
+//TSR1_SOF
+
+
+
+
+// Use the first camera- this will be the fly-by and the intro credits.
+
+//use entity introcam1// turns on the camera
+playsong 1
+// use entity t121 // should start the intro sound set 
+print TSR1_INTRO // added by jersey
+moverotate entity introcam1 from file "tsr1_introcam1_ren.rof" // starts the fly-by for the camera // CHANGES MADE BY JERSEY :)
+moverotate entity introcam1n from file "tsr1_introcam1t_ren.rof"   // starts the fly-by for the target
+
+wait 2 seconds
+
+
+
+//print ACTIVISION for 1st camera
+print TSR1_ACTIVISION 
+
+wait 1 seconds
+
+animate entity walkingswatguy performing action STD_WNORMAL_N_PK_A by moving [0, -148, 0] // Starts the moving SWAT guy walking forward
+
+wait 1.25 seconds
+
+use entity introltrain // makes the train run across the bridge
+wait 2 seconds
+
+//eric biessman is a god
+
+//
+// This is the faked conversation at the beginning of the intro
+//
+animate entity swatleader performing action STD_IETALKPOSE_N_A_N holding for 2.2 // wait while the walking SWAT guy talks
+
+animate entity walkingswatguy performing action STD_ETALKBOTH_N_A_N // talks for 1.5 seconds
+animate entity walkingswatguy performing action STD_ETALKLEFT_N_A_N 
+animate entity walkingswatguy performing action STD_ETALKBOTH_N_A_N
+
+animate entity walkingswatguy performing action STD_IETALKPOSE_N_A_N holding for 3.1 // wait while the SWAT Leader talks
+
+animate entity swatleader performing action STD_ETALKLEFT_N_A_N // talks for 3.1 seconds
+animate entity swatleader performing action STD_ETALKLEFT_N_A_N 
+animate entity swatleader performing action STD_ETALKBOTH_N_A_N 
+animate entity swatleader performing action STD_ETALKLEFT_N_A_N 
+
+animate entity swatleader performing action STD_IETALKPOSE_N_A_N holding for 4.1 // wait while the walking SWAT guy talks
+
+animate entity walkingswatguy performing action STD_ETALKBOTH_N_A_N // talks for 4.1 seconds
+animate entity walkingswatguy performing action STD_ETALK_N_A_N 
+animate entity walkingswatguy performing action STD_ETALKLEFT_N_A_N
+
+animate entity walkingswatguy performing action STD_IETALKPOSE_N_A_N holding for 4.8 // wait while the SWAT Leader talks
+
+
+animate entity swatleader performing action STD_ETALKBOTH_N_A_N // talks for 4.8 seconds
+animate entity swatleader performing action STD_ETALKLEFT_N_A_N
+animate entity swatleader performing action STD_ETALK_N_A_N 
+animate entity swatleader performing action STD_ETALKBOTH_N_A_N
+
+//wait 1 seconds	//was 5 before I added text
+
+//print RAVEN SOFTWARE for 1st camera
+print TSR1_RAVEN 
+
+wait 3 seconds
+
+//print SOLDIER OF FORTUNE for 1st camera
+print TSR1_SOF
+
+wait 3 seconds
+
+//print
+print TSR1_ONE
+
+//wait 10.8 seconds
+
+wait 3 seconds
+
+print TSR1_TWO
+
+wait 3 seconds
+
+print TSR1_THREE
+
+wait 3 seconds
+
+print TSR1_FOUR
+
+wait 3 seconds
+
+
+
+
+//
+// The conversation ends
+//
+animate entity walkingswatguy performing action STD_WNORMAL_N_PK_A by moving [0, 212, 0] // Move the first walking SWAT guy away
+
+wait .45 seconds
+
+remove entity introltrain // once the train is out of the camera's view, it is removed
+
+animate entity introjohn performing action STD_IETALKPOSE_N_A_N holding for 3.4 // 5.9standard talking pose, needs to hold it until he speaks
+animate entity introhawk performing action STD_IETALKPOSE_N_A_N holding for 3.4 // standard talking pose, never needs to come out of it
+
+animate entity walkingswatguy performing action STD_WNORMAL_N_PK_A by moving [-20, 24, 0] // Move the first walking SWAT guy away
+
+animate entity swatleader performing action STD_WNORMAL_N_PK_A by moving [-88, 0, 0] signaling sig1// SWAT Leader walks into view (was -96)
+wait for all clearing sig1
+
+swatleader.angles = [0, 200, 0]
+
+
+//////////////////////////////////////////////////////////
+// SECOND CAMERA SHOT: TRANSITION BEHIND SWAT LEADER
+//////////////////////////////////////////////////////////
+
+//SM ADDITION
+use entity introcam1 // turns the first camera off to switch to the second camera
+use entity introcam6 // turns the camera on
+//
+
+
+
+animate entity swatleader showing emotion EMOTION_TALK holding for 3.4 // start the SWAT leader's face animating
+animate entity swatleader performing action STD_ETALK_N_A_N holding for 3.0 // Does the normal talk anim for the first three seconds of the speech
+animate entity swatleader performing action STD_ETALKLEFT_N_A_N holding for .4 // finishes with a different animation
+
+wait .1 seconds
+
+	//
+	// SWAT talks to John and Hawk: 3.4 seconds long.  Start the sound here and print the subtitle
+	//
+	play sound "cin/tsr1/c3d1.adp" for entity swatleader at volume 0.9 on channel CHAN_AUTO  
+	print TSR1_C3D1 // "SWAT: This isn't a military operation, I can't let you boys go down there."
+
+wait 3.3 seconds // holds the script while the SWAT leader talks
+
+//gunshots go off
+play sound "weapons/dpistol/fire.wav" for entity gunshots at volume 0.9 on channel CHAN_NO_PHS_ADD
+wait .4 seconds
+
+//reaction to the gunshots heard
+animate entity introjohn performing action STD_XSTARTLED_N_A_A 
+wait .1 seconds
+animate entity swatleader performing action STD_IALERTTRN_LT_P_N 
+wait .2 seconds 
+animate entity introhawk performing action STD_XSTARTLED_N_A_A 
+
+//////////////////////
+//stuff for next shot
+//////////////////////
+
+
+//more gunshots go off
+play sound "weapons/dpistol/fire.wav" for entity gunshots at volume 0.9 on channel CHAN_NO_PHS_ADD
+wait .4 seconds
+play sound "weapons/dpistol/fire.wav" for entity gunshots at volume 0.9 on channel CHAN_NO_PHS_ADD
+wait .3 seconds
+
+
+
+remove entity walkingswatguy // removes the walking SWAT guy when he is out of frame
+remove entity introswat3 // removes the standing SWAT guy when he is out of frame
+
+
+//spawns baddie that guns down swat member in next sequence
+use entity introswatkiller
+
+
+///////////////////
+//turns off camera
+///////////////////
+use entity introcam6
+
+
+
+////////////////////////////////////////////////////////////////
+// THIRD CAMERA SHOT: Hate gang member guns down the SWAT guy
+////////////////////////////////////////////////////////////////
+
+
+//turns on camera
+use entity introswatcam // turn the correct camera on
+move entity introswatcam by [-55, 20, 0] at 12 speed // Dollies the camera to the left, revealing the gang member running in
+
+//baddie runs around corner
+animate entity introswatkiller performing action STD_R_N_PK_N by moving to [260,1432,-152] // the hate gang member runs around the corner[240,1432,-152]
+animate entity introswatkiller performing action STD_R_N_PK_N by moving to [284,1376,-152] // Continues to run up to the SWAT guy[264,1376,-152]
+
+
+//baddie runs up behind swat member
+animate entity introswatkiller performing action STD_R_N_PK_N by moving  [0,-205,0] // Runs behind the SWAT guy (was 174)
+
+//swat member walks forward towards camera
+animate entity introdeadswat performing action STD_WAIM_FWD_P_2 by moving [0,-152,0] 
+animate entity introdeadswat performing action STD_XSTARTLED_N_A_A 
+
+//swat member gets shot in the head
+animate entity introswatkiller performing action STD_FATTITUDE_N_P_A targeting entity introdeadswat kill nulltarget HEAD // Shoots the SWAT guy 
+
+wait .7 seconds
+
+print TSR1_FIVE
+
+wait 1.3 seconds
+
+//baddie walks over and fires more shots in dead swat member
+animate entity introswatkiller performing action STD_WATTITUDE_N_PK_A by moving [8,-64,0] signaling sig1 // Moves up to the body was 20,-48,0
+wait for all clearing sig1
+animate entity introswatkiller performing action STD_FVIOLENT_DWN_P_N targeting entity introdeadswat kill nulltarget HEAD holding for 6.0// fires a couple of extra rounds for good measure
+
+wait 1.0 seconds
+
+print TSR1_SIX
+
+wait 3 seconds
+
+//turns off camera
+use entity introswatcam // shuts this scene's camera off
+
+//clean up
+remove entity introdeadswat // removes the body when it is out of camera shot
+remove entity introswatkiller // removes the gang member when it is out of camera shot
+
+
+
+
+//////////////////////////////////////////////////////////////////////////
+//CAMERA SHOT: JOHN YELLS Doesn't sound like you have a choice, Captain
+//////////////////////////////////////////////////////////////////////////
+///////////////////
+//turns on camera
+///////////////////
+use entity introcam6
+
+//////////////
+//
+//////////////
+
+wait .1 seconds // waits for the SWAT leader to finish talking
+
+animate entity swatleader performing action STD_IETALKPOSE_N_A_N //holding for 4.0 // Put the swatleader into a talk stance
+
+
+animate entity introjohn showing emotion EMOTION_TALK holding for 1.8 // begin to make John's face animate
+
+
+
+animate entity introjohn performing action STD_ETALKLEFT_N_A_N holding for .8 // run the animation for the talking
+animate entity introjohn performing action STD_ETALK_N_A_N holding for 1.0  // add some spice to the animation
+wait .5 seconds	// Match the voice with the talking (was .25)
+
+use entity introdeadswat // spawns this enemy for the next shot
+use entity introswatkiller // spawns this SWAT guy for the next shot
+
+//animate entity introswatkiller performing action STD_R_N_PK_N by moving to [240, 1432, -152] // the hate gang member runs around the corner
+//animate entity introswatkiller performing action STD_R_N_PK_N by moving to [264, 1376, -152] // Continues to run up to the SWAT guy // 
+
+	//
+	// John talks to the SWAT leader: 1.8 seconds long.  
+	//
+	play sound "cin/tsr1/c3d2.adp" for entity introjohn at volume 0.9 on channel CHAN_AUTO  
+	print TSR1_C3D2	// "JOHN: Doesn't sound like you have a choice, Captain."
+
+animate entity introjohn performing action STD_IETALKPOSE_N_A_N holding for 5.0// goes back to his ready-to-talk pose
+
+
+//swat leader talks
+//animate entity swatleader showing emotion EMOTION_TALK //holding for 7.1
+
+
+
+wait 2.0 seconds // cuts to next camera before John finishes talking 2.0
+
+
+
+//set up stuff for the next shot
+use entity introjohnb // Spawns the john model for the next camera shot
+use entity introhawkb // Spawns the hawk model for the next camera shot
+
+
+//
+
+introjohnb.movetype = MOVETYPE_NOCLIP
+
+animate entity introjohnb performing action STD_IETALKPOSE_RT_A_N holding for 6.0 // Sets the John model into his talk stance
+animate entity introhawkb performing action STD_IETALKPOSE_N_A_N holding for 6.0 // Sets the Hawk model into his talk stance
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// FOURTH CAMERA SHOT: Back to the outside where the SWAT leader tells John and Hawk to go on in
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+wait .1 seconds 
+
+///////////////////
+//turns off camera
+///////////////////
+use entity introcam6 // turns the outside camera off
+
+remove entity introjohn // removes this John model from the game when it is out of camera shot
+remove entity introhawk // removes this Hawk model from the game when it is out of camera shot
+
+//swat leader talks
+animate entity swatleader showing emotion EMOTION_TALK
+
+use entity introcam4 // turns on the camera
+
+
+
+wait .1 seconds //wait (so sound will work)
+
+//animate entity swatleader showing emotion EMOTION_TALK
+
+	//
+	// SWAT talks to John and tells him that he knows the leader's name: 5 seconds long
+	//
+	play sound "cin/tsr1/c4d1.adp" for entity swatleader at volume 0.9 on channel CHAN_AUTO  
+	print TSR1_C4D1 // "SWAT: All right, you win.  We know the leader's name."
+
+animate entity swatleader performing action STD_EHEADSHAKE_N_A_N holding for 2.0
+animate entity swatleader performing action STD_ETALK_N_A_N holding for 2.6
+animate entity swatleader performing action STD_ETALKLEFT_N_A_N holding for .4
+animate entity swatleader performing action STD_IETALKPOSE_N_A_N holding for 1.0
+
+wait 0.9 seconds // Weird delay for no reason
+
+use entity sabre1 // Spawn the enemy for the next camera shot
+use entity introhostage1 // Spawn the hostage for the next camera shot
+use entity introhostage2 // Spawn the hostage for the next camera shot
+use entity walkinguy // Spawn the enemy for the next camera shot
+
+
+wait 3.8 seconds
+
+
+
+
+////////////////////////////////////////////////////////////////////////////
+// FIFTH CAMERA SHOT: Sabre and gang member are angry and kill a hostage
+////////////////////////////////////////////////////////////////////////////
+
+animate entity walkinguy performing action STD_IETALKPOSE_N_A_N holding for 0.1 // get the scared gang member in his talk pose
+
+animate entity sabre1 performing action STD_IETALKPOSE_N_A_N holding for 3.1 // Make Sabre look menacing
+
+wait .1 seconds 
+
+use entity introcam4 // turns off the previous camera
+remove entity swatleader // Removes the SWAT leader from the game
+remove entity introjohnb // Removes the John model from the shot
+remove entity introhawkb // Removes the Hawk model from the shot
+remove entity copcar1 // removes this out of the way so another hawk model doesnt get caught on it
+
+use entity introcam7 // turns on the camera 
+
+wait .1 seconds //wait (so sound will work)
+
+//print TSR1_SEVEN
+
+
+animate entity walkinguy performing action STD_EHEADSHAKE_N_A_N repeating for 2 times // Skinhead talking to Sabre
+animate entity walkinguy performing action STD_ETALKBOTH_N_A_N repeating for 1 times  
+animate entity walkinguy performing action STD_ETALK_N_A_N holding for 1.0
+
+	//
+	// The Gang Member yells at Sabre: 2.7 seconds long
+	//
+	play sound "cin/tsr1/c5d1.adp" for entity walkinguy at volume 0.9 on channel CHAN_AUTO // the skinhead guy panics
+	print TSR1_C5D1 // "GANG MEMBER: Sabre!  We gotta,,,"
+wait .3 seconds
+print TSR1_SEVEN
+//wait 1.6 seconds 
+wait 1.3 seconds
+
+animate entity walkinguy performing action STD_IETALKPOSE_N_A_N holding for 2.0
+
+animate entity sabre1 showing emotion EMOTION_TALKANGRY holding for 3.2	//3.5
+
+
+wait .7 seconds // The delay for angry Sabre's face to start animating with the speaking
+
+
+
+animate entity sabre1 performing action STD_ETALK_N_A_N holding for 3.5 // Sabre talking, angry
+
+use entity introcam7 // turns off the camera 
+
+
+////////////////////////////////////////////////
+// SIXTH CAMERA SHOT: Sabre shown in close up
+////////////////////////////////////////////////
+
+use entity introcam3 // turns on the close-up shot of sabre
+
+//move entity introcam3 by [16, 0, 0] at 1 speed // pan across Sabre's face
+
+wait .1 seconds 
+
+	//
+	// Sabre says to grab hostages and detonate the bombs: 3.5 seconds long
+	//
+	play sound "cin/tsr1/c5d2.adp" for entity sabre1 at volume 0.9 on channel CHAN_AUTO // Sabre starts to talk
+	print TSR1_C5D2 // "SABRE: Take hostages, I want those bombs detonated!"
+
+wait .5 seconds
+print TSR1_EIGHT
+//wait 3.5 seconds // The time for the speech delay
+wait 3.0 seconds
+
+use entity introcam3 // turns off the close-up
+
+/////////////////////////////////////////////////////////
+//SEVENTH CAMERA SHOT: Sabre shoots the hostage in rage
+/////////////////////////////////////////////////////////
+
+//turns on camera
+use entity introcam7a 
+
+animate entity sabre1 showing emotion EMOTION_ANGRY holding for 4.0		//STD_ERAGESHOOT_N_P_N	
+animate entity sabre1 performing action STD_ERAGESHOOT_N_P_N targeting entity introhostage1 kill nulltarget HEAD //signaling sig1
+//wait for all clearing sig1
+
+wait .5 seconds
+print TSR1_NINE
+//wait 2.4 seconds	//time STD_ERAGESHOOT_N_P_N takes
+wait 1.9 seconds
+
+
+
+animate entity sabre1 performing action STD_IETALKPOSE_N_A_N holding for 10.0 // Sabre looks pissed off
+wait .2 seconds
+animate entity walkinguy performing action STD_R_N_PK_N by moving [0, -200, 0]
+
+use entity lastjohn // Spawns in the last John model- Thank God!
+use entity lasthawk // Spawns in the last Hawk model
+use entity lastswatleader // Spawns in the last SWAT leader
+
+//for next shot
+animate entity lastswatleader showing emotion EMOTION_TALK holding for 2.0
+
+wait .1 seconds // time to show the hostage killed
+
+//turns off camera
+use entity introcam7a 
+
+remove entity sabre1 // Removes Sabre from the shot
+remove entity walkinguy  // Removes the hate gang member from the shot
+remove entity introhostage1 // Removes the dead hostage from the shot
+remove entity introhostage2 // Removes the other hostage from the shot
+
+animate entity lastswatleader performing action STD_IETALKPOSE_N_A_N holding for 1.0 // set the SWAT Leader to speak
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// EIGHTH CAMERA SHOT: John, Hawk, and the SWAT leader say one last round of conversation
+/////////////////////////////////////////////////////////////////////////////////////////
+
+use entity lastcam1 // turns on the last camera, finally!
+
+move entity lastcam1 by [0, 0, 16] at 2 speed // pan up on the SWAT leader
+
+wait .1 seconds
+
+animate entity lasthawk performing action STD_IETALKPOSE_N_A_N holding for 2.6 // sets hawk standing there with a good transition animation
+animate entity lastjohn performing action STD_IETALKPOSE_N_A_N  holding for 2.0 // sets john up the same
+
+
+//swat leader talks
+//animate entity lastswatleader showing emotion EMOTION_TALK holding for 1.9
+animate entity lastswatleader performing action STD_ETALK_N_A_N holding for 2.0 
+
+	//
+	// SWAT Leader says to take down Sabre to take down the game: 1.9 seconds long
+	// 
+	play sound "cin/tsr1/c6d1.adp" for entity lastswatleader at volume 0.9 on channel CHAN_AUTO  // swat leader saying the leader line
+	print TSR1_C6D1 // "SWAT LEADER: Kill Sabre, you've killed the gang."
+
+wait .1 seconds
+print TSR1_TEN
+//wait 2 seconds 
+wait 2.1 seconds
+
+animate entity lastswatleader performing action STD_IETALKPOSE_N_A_N holding for 10.0 // set the SWAT Leader to never speak again
+
+//off and on for last cam
+use entity lastcam1 // turns off that bastard lastcam!
+use entity newcam1 // close-up on John
+
+wait .1 seconds
+
+animate entity lastjohn showing emotion EMOTION_TALK holding for 0.7 
+animate entity lastjohn performing action STD_EHEADNOD_N_A_N holding for 1.0 
+	
+	//
+	// John answers the SWAT Leader: .7 seconds long
+	//
+	play sound "cin/tsr1/c6d2.adp" for entity lastjohn at volume 0.9 on channel CHAN_AUTO  // johns response of understood
+ 	print TSR1_C6D2 // Understood.  .7 seconds
+	wait 1 second 
+
+
+//turns off camera
+use entity newcam1
+
+/////////////////////////////////////////////////////////////
+//Cuts to a view from down the stairs point up at the actors
+/////////////////////////////////////////////////////////////
+
+//turns on camera
+use entity newcam2 // Cuts to a view from down the stairs point up at the actors
+
+//moves train
+use entity finaltrain
+
+wait .1 seconds 
+
+animate entity lasthawk showing emotion EMOTION_TALK holding for 3.3 //  Set Hawk's face to animate
+animate entity lasthawk performing action STD_ETALK_N_A_N holding for 2.6 // Set Hawk's body to animate
+animate entity lasthawk performing action STD_ETALKBOTH_N_A_N holding for .7  // Continues to speak
+animate entity lasthawk performing action STD_ETALK_N_A_N holding for 1.2  // Finishes up his speech
+
+	//
+	// Hawk talks to John: 3.3 seconds
+	//
+	play sound "cin/tsr1/c6d3.adp" for entity lasthawk at volume 0.9 on channel CHAN_AUTO
+        print TSR1_C6D3 // "HAWK: John, take this entrance.  I'll meet you at 6C."
+wait .2 seconds
+print TSR1_THIRTEEN
+//wait 3.5 seconds 
+wait 3.3 seconds
+
+
+
+
+animate entity lasthawk performing action STD_IETALKPOSE_N_A_N holding for 1.0
+
+use entity newcam2 // turns off the Hawk Close-up
+
+//
+// NINTH AND FINAL CAMERA SHOT: John runs down the stairs
+//
+
+use entity lastcam2 // turns the lower camera on
+
+move entity lastcam2 by [64, 0 ,0] at 8 speed // pans to the right as John runs down the steps
+wait .1 seconds 
+
+animate entity lastjohn performing action STD_R_N_PK_N by moving [0, -336, 0] // john running down the stairs into the camera
+	
+	//
+	// John yells to Hawk: .8 seconds
+	//
+	play sound "cin/tsr1/c6d4.adp" for entity lastjohn at volume 0.9 on channel CHAN_AUTO
+	print TSR1_C6D4 // "JOHN:Good luck, Hawk."
+
+animate entity lasthawk performing action STD_R_N_PK_N by moving [96, 0, 0] // hawk running bacwards avoiding the copcar
+
+animate entity lasthawk performing action STD_R_N_PK_N by moving [152, 0, 0] //signaling sig1 // hawk running behind the cop car
+//wait for all clearing sig1
+
+wait .2 seconds
+print TSR1_FOURTEEN	//TSR1_FOURTEEN
+//wait 1.4 seconds
+
+wait 2.1 seconds
+
+
+use entity tsr1fadeout  // starts the fade out // MADE BY JERSEY
+wait 1 second
+use entity lastcam2 // Finally ends the cinematic... there is a God
+disable cinematics 
+
+remove entity lastjohn // Remove the fake John model from the world
+remove entity lasthawk // Remove the fake Hawk model from the world
+remove entity lastswatleader // Removes the SWAT Leader from the world
+
+use entity runguy // starts the script runner of the guy running past
+use entity show_objectives // triggers this
+
+//////////////
+// Clean Up
+//////////////
+
+//removes train
+remove entity finaltrain
+
+
+
+
+use entity tsr1fadein // fades in to players view // MADE BY JERSEY
+playsong -1 
+
+
+unload roff "trs1_introcam1_ren.rof"
+unload roff "trs1_introcam1t_ren.rof"
+
+unload sound "cin/tsr1/c3d1.adp"
+unload sound "cin/tsr1/c3d2.adp"
+unload sound "cin/tsr1/c4d1.adp"
+unload sound "cin/tsr1/c5d1.adp"
+unload sound "cin/tsr1/c5d2.adp"
+unload sound "cin/tsr1/c6d1.adp"
+unload sound "cin/tsr1/c6d2.adp"
+unload sound "cin/tsr1/c6d3.adp"
+unload sound "cin/tsr1/c6d4.adp"

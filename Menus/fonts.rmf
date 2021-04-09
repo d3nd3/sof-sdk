@@ -1,0 +1,61 @@
+<stm>
+<include tints>
+<backdrop tile "backdrop/web_bg">
+<vbar tint vbargray>
+
+<normal>
+<font type small tint purple>
+"Font type small"<hbr>
+<font type small tint white>
+<hbr>
+" ! #$%&'()*+,-./0123456789:; = ?"<hbr><hbr>
+"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]._"<hbr><hbr>
+"`abcdefghijklmnopqrstuvwxyz{|}~ "<hbr><hbr>
+"..............................."<hbr><hbr>
+"...£.....©....®................¿"<hbr><hbr>
+"ְֱֲֳִֵֶַָֹÊֻּֽ־ֿ׀ׁׂ׃װױײ׳״ÙÚÛÜÝÞß"<hbr><hbr>
+"אבגדהוזחטיךכלםמןנסעףפץצקרשתûü‎‏ÿ"<hbr><hbr>
+<hbr>
+
+<normal>
+<font type medium tint purple>
+"Font type medium"<hbr>
+<font type medium tint white>
+<hbr>
+" ! #$%&'()*+,-./0123456789:; = ?"<hbr><hbr>
+"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]._"<hbr><hbr>
+"`abcdefghijklmnopqrstuvwxyz{|}~ "<hbr><hbr>
+"..............................."<hbr><hbr>
+"...£.....©....®................¿"<hbr><hbr>
+"ְֱֲֳִֵֶַָֹÊֻּֽ־ֿ׀ׁׂ׃װױײ׳״ÙÚÛÜÝÞß"<hbr><hbr>
+"אבגדהוזחטיךכלםמןנסעףפץצקרשתûü‎‏ÿ"<hbr><hbr>
+<hbr>
+
+<font type title tint purple>
+"Font type title"<hbr>
+<font type title tint white>
+<hbr>
+" ! #$%&'()*+,-./0123456789:; = ?"<hbr><hbr>
+"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]._"<hbr><hbr>
+"`abcdefghijklmnopqrstuvwxyz{|}~ "<hbr><hbr>
+"..............................."<hbr><hbr>
+"...£.....©....®................¿"<hbr><hbr>
+"ְֱֲֳִֵֶַָֹÊֻּֽ־ֿ׀ׁׂ׃װױײ׳״ÙÚÛÜÝÞß"<hbr><hbr>
+"אבגדהוזחטיךכלםמןנסעףפץצקרשתûü‎‏ÿ"<hbr><hbr>
+<hbr>
+
+<normal>
+<font type title tint purple>
+"Font type interface"<hbr>
+<font type interface tint white>
+<hbr>
+"0123456789"<hbr>
+<hbr>
+<hbr>
+<hbr>
+<hbr>
+<hbr>
+<hbr>
+<hbr>
+<blank 16 16>
+</stm>

@@ -1,0 +1,30 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+/////////////////////////////////////////////////
+
+
+
+local entity trackcam1 // the cam on the tracks
+local entity trackcam1n // the trackcams null
+local entity fryguy // the guy who gets killed
+local entity tracksparks // the spark gen by the tracks
+local int sig1
+
+trackcam1 = find entity with targetname "trackcam1"
+trackcam1n = find entity with targetname "trackcam1n"
+fryguy = find entity with targetname "fryguy"
+tracksparks = find entity with targetname "tracksparks"
+
+trackcam1.movetype =  MOVETYPE_NOCLIP
+trackcam1n.movetype = MOVETYPE_NOCLIP
+
+use entity fryguy // spawns the guy who will get killed
+use entity trackcam1 // turns the camera on
+animate entity fryguy performing action WALK by moving [-32, 0, 0] signaling sig1 // has the guy walkforward towards the fusebox
+wait for all clearing sig1
+animate entity fryguy performing action STD_XALARMPUSH_N_A_N signaling sig1 // triggers the alarm push button animation
+wait for all clearing sig1
+animate entity fryguy performing action STD_SBLOWN_2BK_N_N signaling sig1 // the blown back animation
+use entity tracksparks // triggers the sparkgen
+wait for all clearing sig1

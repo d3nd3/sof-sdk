@@ -1,0 +1,59 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+// this is the script triggered when the player enters the token booth through the glass
+
+
+
+local entity tokentv // the tv thing in the token booth
+local entity tvthing // the other tvthing in the token booth
+local entity roundguy // the skinhead that will spawn round the corner shooting at the player entering
+local entity tokvictim // the guy who will run past the token booth
+local entity tokchaser // the guy following him
+local entity tollguy // the guy by the token machines
+local entity outtoken // the trigger for leaving the token booth
+local entity host_count // the hostage counter for how many hostage events the player has seen
+local int sig1
+
+
+
+tokentv = find entity with targetname "tokentv"
+tvthing = find entity with targetname "tvthing"
+roundguy = find entity with targetname "roundguy"
+tokvictim = find entity with targetname "tokvictim"
+tokchaser = find entity with targetname "tokchaser"
+tollguy = find entity with targetname "tollguy"
+outtoken = find entity with targetname "outtoken"
+host_count = find entity with targetname "host_count"
+
+
+use entity roundguy // spawns the guy in
+animate entity roundguy performing action SCRIPT_RELEASE
+
+
+
+use entity outtoken // sets this trigger active
+
+
+use entity tokvictim // spawns the first running guy in
+
+
+
+host_count.health += 1 // sets the hostage counter up by 1 
+use entity tokchaser // spawns the guy chasing him
+animate entity tokchaser performing action STD_R_N_PK_N by moving [156, 0, 0]
+animate entity tokchaser performing action STD_R_N_PK_N by moving [0, -64, 0] signaling sig1
+wait for all clearing sig1
+animate entity tokchaser performing action SCRIPT_RELEASE
+
+use entity tollguy // spawns the guy around the corner in
+animate entity tollguy performing action SCRIPT_RELEASE
+
+
+
+
+
+
+
+
+exit

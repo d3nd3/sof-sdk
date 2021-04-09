@@ -1,0 +1,106 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+local entity startintro // the script runner that starts the first cinematic
+
+startintro = find entity with targetname "startintro"
+
+setcvar cvar "ai_spawnfrequency" to 1.0
+
+cache strings "tsr1"
+
+cache sound "Impact/Vending/Kick.wav" 
+cache sound "Speech/TSR1/NPC/EB9-1.adp"      // "Speech/Hostage1/Please.wav" 
+cache sound "Speech/TSR1/SKN/BT9-2.adp"      //	"Speech/Skinhead1/Snicker.wav" 
+cache sound "Speech/TSR1/SKN/BT9-1.adp"	    //	"Speech/Skinhead1/InHere.wav" 
+cache sound "impact/door/kickdoor.wav" 
+cache sound "Speech/TSR1/NPC/EB9-6.adp"        //"Speech/Hostage1/Whimper.wav" 
+cache sound "Speech/TSR1/NPC/EB9-5.adp"           // "Speech/Hostage1/Cry.wav" 
+
+cache sound "Speech/TSR1/SKN/BT9-3.adp"		// "Speech/Skinhead1/Shutup.wav"
+cache sound "Speech/TSR1/SKN/BT9-6.adp"					// "Speech/Skinhead1/HesHere.wav" 
+cache sound "Speech/TSR1/NPC/EB9-2.adp"                                     //"Speech/Hostage1/DontShoot.wav" 
+cache sound "impact/vending/sodadrop.wav" 
+cache sound "Speech/TSR1/SKN/BT9-5.adp"				// "Speech/Skinhead1/LetsGo.wav" 
+cache sound "Speech/TSR1/NPC/EB9-3.adp"
+cache sound "Speech/TSR1/SKN/BT9-4.adp"
+cache sound "Speech/TSR1/SWT/MCD-1.adp"
+
+cache sound "Speech/TSR1/SKN/BT9-7.adp"
+cache sound "Speech/TSR1/NPC/EB9-11.adp"
+cache sound "Impact/Stone/BigRubble.adp"
+
+cache sound "cin/tsr1/c8d1.adp"
+cache sound "cin/tsr1/c8d2.adp"
+
+
+cache sound "cin/tsr1/c9d1.adp"
+cache sound "cin/tsr1/c9d2.adp"
+cache sound "cin/tsr1/c9d3.adp"
+
+// INTRO STUFF THAT GOT MOVED HERE
+
+cache sound "cin/tsr1/c3d1.adp"
+cache sound "cin/tsr1/c3d2.adp"
+cache sound "cin/tsr1/c4d1.adp"
+cache sound "cin/tsr1/c5d1.adp"
+cache sound "cin/tsr1/c5d2.adp"
+cache sound "cin/tsr1/c6d1.adp"
+cache sound "cin/tsr1/c6d2.adp"
+cache sound "cin/tsr1/c6d3.adp"
+cache sound "cin/tsr1/c6d4.adp"
+
+
+cache sound "cin/tsr1/s1d1.adp" // speech when john gets out of token booth
+cache sound "cin/tsr1/s1d2.adp"
+cache sound "cin/tsr1/s1d3.adp"
+cache sound "cin/tsr1/s1d4.adp"
+
+
+cache sound "cin/tsr1/s2d1.adp" // end tunnel speech
+cache sound "cin/tsr1/s2d2.adp"
+
+cache sound "cin/tsr1/s1d3.adp"
+cache sound "cin/tsr1/s1d4.adp"
+
+cache sound "speech/tsr1/swt/mcd-1.adp"
+
+cache sound "cin/tsr1/c7d1.adp"
+cache sound "cin/tsr1/c7d2.adp"
+cache sound "cin/tsr1/laugh.adp"
+cache sound "Ambient/Locs/Subway/Train/Horn2.wav"  // the train horn wav
+cache sound "Impact/Metal/SodaMach.adp" // the soda machine falling wave
+
+cache sound "Cin/TSR1/Script/Warning.wav" // the new train sound 
+
+cache sound "Cin/TSR1/Script/Piss.wav" // the peeing sound
+// cache sound "Cin/TSR1/Script/Health.wav" // the health station sound
+
+
+cache roff "stall_door_1.rof" // the special kicked door in the mensroom
+cache roff "generic_door_cw.rof"
+cache roff "generic_door_ccw.rof"
+cache roff "gbnyc_stall.rof"
+
+cache roff "tsr1_beam1.rof"
+cache roff "tsr1_beam1b.rof"
+cache roff "tsr1_beam2.rof"
+cache roff "tsr1_beam2b.rof"
+cache roff "tsr1_beam3.rof"
+cache roff "tsr1_beam3b.rof"
+cache roff "tsr1_rchunk1.rof"
+cache roff "tsr1_rchunk2.rof"
+
+cache roff "tsr1_soda_fall.rof" // intro soda machine falling 
+
+run console command "cl_touch" // makes sure Windows keeps an eye on these files
+// wait 5 seconds
+
+use entity startintro // starts the intro cin
+
+
+
+

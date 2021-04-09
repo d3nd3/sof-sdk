@@ -1,0 +1,7 @@
+// template file for common directory
+
+#include "../common/header.ds"
+
+output "p:/base/ds/common"
+
+

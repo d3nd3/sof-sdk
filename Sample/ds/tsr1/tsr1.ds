@@ -1,0 +1,57 @@
+// __tsr1_ds
+//
+
+
+/********************************************************************************
+
+TSR1 Level Specific Strings
+
+********************************************************************************/
+
+
+#define PACKAGE_TSR1		0x64
+
+#define TSR1_C3D2			0x6400
+#define TSR1_C3D1			0x6401
+#define TSR1_C4D1			0x6402
+#define TSR1_C5D1			0x6403
+#define TSR1_C5D2			0x6404
+#define TSR1_C6D1			0x6405
+#define TSR1_C6D2			0x6406
+#define TSR1_C6D3			0x6407
+#define TSR1_S1D1			0x6408
+#define TSR1_S1D2			0x6409
+#define TSR1_S1D3			0x640a
+#define TSR1_S1D4			0x640b
+#define TSR1_S2D1			0x640c
+#define TSR1_S2D2			0x640d
+#define TSR1_C7D1			0x640e
+#define TSR1_C7D2			0x640f
+#define TSR1_C8D1			0x6410
+#define TSR1_C8D2			0x6411
+#define TSR1_C9D1			0x6412
+#define TSR1_C9D2			0x6413
+#define TSR1_C9D3			0x6414
+#define TSR1_C6D4			0x6415
+#define TSR1_RUSSIA			0x6416
+#define TSR1_INTRO			0x6417
+#define TSR1_ACTIVISION			0x6418
+#define TSR1_RAVEN			0x6419
+#define TSR1_SOF			0x641a
+#define TSR1_LOCKED			0x641b
+#define TSR1_ONE			0x641c
+#define TSR1_TWO			0x641d
+#define TSR1_THREE			0x641e
+#define TSR1_FOUR			0x641f
+#define TSR1_FIVE			0x6420
+#define TSR1_SIX			0x6421
+#define TSR1_SEVEN			0x6422
+#define TSR1_EIGHT			0x6423
+#define TSR1_NINE			0x6424
+#define TSR1_TEN			0x6425
+#define TSR1_USELEVER			0x6426
+#define TSR1_THIRTEEN			0x6428
+#define TSR1_FOURTEEN			0x6429
+
+
+// __tsr1_ds

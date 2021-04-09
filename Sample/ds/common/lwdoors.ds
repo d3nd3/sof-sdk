@@ -1,0 +1,24 @@
+// Generic double doors 
+
+#include "../common/header.ds"
+
+output "p:/base/ds/common"
+
+/////////////////////////////////////////////////////////////
+// Define
+
+// Actors
+parameter entity door_cw	// Two doors, clockwise and counter-cw
+parameter entity door_ccw
+
+/////////////////////////////////////////////////////////////
+// Assign
+
+// door_cw.movetype = MOVETYPE_NOCLIP
+// door_ccw.movetype = MOVETYPE_NOCLIP
+
+/////////////////////////////////////////////////////////////
+// Action
+
+moverotate entity door_cw from file "generic_door_cw.rof"
+moverotate entity door_ccw from file "generic_door_ccw.rof"

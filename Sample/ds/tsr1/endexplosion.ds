@@ -1,0 +1,23 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+
+local entity tunnelsabre // the sabre model the player will see running into the alcove
+local int sig1
+
+// this script triggers the explosion that happens at the end of the tunnel
+
+
+tunnelsabre = find entity with targetname "tunnelsabre"
+
+// play sound "cin/tsr1/c5d2.adp" for entity tunnelsabre at volume 0.9 on channel CHAN_VOICE
+animate entity tunnelsabre performing action STD_R_N_PK_N by moving [-504, 0, 0] signaling sig1 // him running into the little alcove
+wait for all clearing sig1
+animate entity tunnelsabre performing action STD_R_N_PK_N by moving [0, 176, 0] signaling sig1 // him running out of view
+wait for all clearing sig1
+remove entity tunnelsabre // gets him out of the world
+
+

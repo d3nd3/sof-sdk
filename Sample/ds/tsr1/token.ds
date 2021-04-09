@@ -1,0 +1,58 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+local entity tokenguy1
+local entity tokenguy2
+local entity tokenguy3
+local entity player_shoot // the player
+local int sig1
+local int sig2
+
+
+tokenguy1 = find entity with targetname "tokenguy1"
+tokenguy2 = find entity with targetname "tokenguy2":
+tokenguy3 = find entity with targetname "tokenguy3"
+player_shoot = find entity player
+
+
+
+
+
+// animate entity tokenguy1 performing action CCH_XCROUCH_UP_PK_A
+// wait .2 seconds
+play sound "speech/tsr1/skn/bt9-7.adp" for entity tokenguy1 at volume 0.9
+
+
+animate entity tokenguy1 performing action CCH_XCROUCH_UP_MRS_2 // first guy gets up
+animate entity tokenguy1 performing action STD_F_FWD_S_2 targeting entity player_shoot // first guy takes a shot at the player
+
+// THIS IS THE GUY RUNNING AWAY OUT THE BACK EXIT
+
+// animate entity tokenguy1 performing action STD_R_N_MRS_2 by moving [-112, 0, 0] // guy running towards the back of the room
+// animate entity tokenguy1 performing action STD_R_N_MRS_2 by moving [0, 112, 0] // guy running up the little hall and to the left
+// animate entity tokenguy1 performing action STD_R_N_MRS_2 by moving [-216, 0, 0] // 
+// animate entity tokenguy1 performing action STD_R_N_MRS_2 by moving [0, 256, 0]  // running towards the door
+
+
+
+// SECOND GUY DOING HIS THING
+animate entity tokenguy2 performing action CCH_XCROUCH_UP_PK_A // JUMPS UP TO TAKE A SHOT AT THE PLAYER
+animate entity tokenguy2 performing action STD_F_FWD_P_2 targeting entity player_shoot
+animate entity tokenguy2 performing action STD_XCROUCH_DWN_PK_A // HIM DUCKING DOWN AGAIN
+animate entity tokenguy2 performing action STD_F_FWD_P_2 targeting entity player_shoot // signaling sig1
+
+// THIRD GUY DOING HIS THING
+animate entity tokenguy3 performing action CCH_XCROUCH_UP_PK_A
+animate entity tokenguy3 performing action STD_F_FWD_P_2 targeting entity player_shoot
+animate entity tokenguy3 performing action STD_XCROUCH_DWN_PK_A // HIM DUCKING DOWN AGAIN
+animate entity tokenguy3 performing action STD_F_FWD_P_2 targeting entity player_shoot // signaling sig2
+
+// wait for all clearing sig1, sig2
+animate entity tokenguy2 performing action SCRIPT_RELEASE
+animate entity tokenguy3 performing action SCRIPT_RELEASE
+animate entity tokenguy1 performing action SCRIPT_RELEASE
+
+

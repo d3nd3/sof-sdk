@@ -1,0 +1,58 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+#include "tsr1.ds"
+
+
+
+// script that controls end stuff falling and rotating in tunnel
+
+
+
+local entity endspawner1 // the first spawner at the end
+local entity endspawner2 // the second spawner at the end
+local entity endrightguy // the guy in the right alcove at the end of the tunnel
+local entity endleftguy // the guy in the left alcove at the end of the tunnel
+local entity findjohnend
+
+
+endspawner1 = find entity with targetname "endspawner1"
+endspawner2 = find entity with targetname "endspawner2"
+endrightguy = find entity with targetname "endrightguy"
+endleftguy = find entity with targetname "endleftguy"
+findjohnend =  find entity player
+
+
+wait 1 seconds // slight pause to make it sound more natural
+
+// JOHN TALKING TO HAWK OVER THE WALKIE TALKIE
+
+	play sound "cin/tsr1/s2d1.adp" for entity findjohnend at volume 0.9   // john talking to hawk
+	print TSR1_S2D1
+	//  "damn" 
+
+
+use entity endspawner1 // triggers the first endspawner to activate
+use entity endspawner2 // triggers the first endspawner to activate
+use entity endrightguy // should send these guys to their point combats
+use entity endleftguy // 
+
+wait 3 seconds 
+
+	play sound "cin/tsr1/s2d2.adp" for entity findjohnend at volume 0.9   // john talking to hawk
+	print TSR1_S2D2
+	// "copy.. look out" 
+
+wait 2 seconds 
+
+
+use entity endspawner1 // triggers the first endspawner to activate
+use entity endspawner2 // triggers the first endspawner to activate
+use entity endrightguy // should send these guys to their point combats
+use entity endleftguy // 
+
+
+
+
+
+
+

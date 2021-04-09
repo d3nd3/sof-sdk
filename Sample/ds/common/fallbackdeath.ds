@@ -1,0 +1,17 @@
+// Guy that gets shot gets blown backward!
+
+#include "../common/header.ds"
+
+output "p:/base/ds/common"
+
+parameter entity deadguy // This is the enemy that should fall back
+parameter vector falldist // This is the direction and distance that he should go
+parameter entity breakbrush // This is the entity (such as a window) that the enemy should bust through
+
+// If there is no window, make sure to set the breakbrush parameter to the same as the dying enemy parm
+// That way, it will ignore breaking it
+if breakbrush != deadguy
+	use entity breakbrush
+endif
+
+	animate entity deadguy performing action STD_SBLOWN_2BK_N_N by moving falldist 

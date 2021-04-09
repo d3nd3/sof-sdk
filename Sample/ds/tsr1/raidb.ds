@@ -1,0 +1,66 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+#include "tsr1.ds"
+
+
+
+
+local entity rcam1
+local entity rhawk
+local entity leader
+local entity leadertrain
+local entity sabrefade1
+local entity sabrefade2
+local entity traintriggerb
+
+rcam1 = find entity with targetname "rcam1"
+rhawk= find entity with targetname "rhawk"
+leader = find entity with targetname "leader"
+leadertrain = find entity with targetname "leadertrain"
+sabrefade1 = find entity with targetname "sabrefade1"
+sabrefade2 = find entity with targetname "sabrefade2"
+traintriggerb = find entity with targetname "traintriggerb"
+
+
+
+enable cinematics // 
+use entity rcam1 // turns the camera on
+
+
+
+// animate entity rhawk performing action STD_R_N_PK_N by moving [-320, 0, 0]  //new line
+// animate entity rhawk performing action STD_R_N_PK_N by moving [-32, -64, 0]  //new line
+
+//Going to external camera
+
+
+
+wait .1 seconds
+  
+	animate entity leader performing action STD_ESABREMOCK_N_A_N holding for 4.0 // skinhead leader laughing as the train takes off
+	play sound "cin/tsr1/laugh.adp" for entity leader at volume .9 on channel CHAN_AUTO
+
+wait 3 seconds 
+
+use entity leadertrain // starts the leaders train taking off
+
+wait .8 seconds
+
+use entity sabrefade1 // starts the fade
+
+wait 2 seconds 
+
+use entity sabrefade2 // fade back
+
+use entity rcam1 // shuts the camera off
+disable cinematics 
+
+animate entity rhawk performing action STD_R_N_PK_N by moving [-320, 0, 0]  //new line
+animate entity rhawk performing action STD_R_N_PK_N by moving [-32, -64, 0]  //new line
+
+use entity traintriggerb // sets the trigger active on top of the train
+
+
+
+remove entity leader  // gets these guys out of the world
+remove entity leadertrain

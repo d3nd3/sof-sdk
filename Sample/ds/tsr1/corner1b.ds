@@ -1,0 +1,31 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+local entity hostage1 // the first hostage being kicked
+local entity hostage2 // the second hostage next to him
+local entity hostageshooter // the guy who will try and kill the hostages once the player is in the room
+local entity corner1guy // the other guy around the corner
+local int sig1
+local int sig2
+
+hostage1 = find entity with targetname "hostage1"
+hostage2 = find entity with targetname "hostage2"
+corner1guy = find entity with targetname "corner1guy"
+hostageshooter = find entity with targetname "hostageshooter"
+
+
+use entity hostageshooter // spawns the guy in
+use entity corner1guy // spawns the other guy in
+
+animate entity corner1guy performing action STD_R_N_PK_N by moving [-200, 0, 0]  // gets the other guy moving to the side
+animate entity corner1guy performing action SCRIPT_RELEASE
+
+animate entity hostageshooter performing action STD_R_N_MRS_2 by moving [-256, 0 , 0]  // gets him to the side
+// animate entity hostageshooter performing action STD_F_FWD_S_2 targeting entity hostage2 kill signaling sig1 // he attempts to murder the hostages
+// animate entity hostageshooter performing action STD_F_FWD_S_2 targeting entity hostage1 kill signaling sig2
+// wait for all clearing sig1, sig2
+animate entity hostageshooter performing action SCRIPT_RELEASE 
+
+

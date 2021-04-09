@@ -1,0 +1,31 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+
+
+local entity lhostage // the guy who will get pistol whipped
+local entity lbadguy1 // the guy who does the pistol whip
+local int health
+
+
+lhostage = find entity with targetname "lhostage"
+lbadguy1 = find entity with targetname "lbadguy1"
+health = lbadguy1.health
+
+
+
+if health > 0
+
+
+
+animate entity lhostage performing action  CCH_XONKNEES_N_N_N
+play sound "speech/tsr1/npc/eb9-6.adp" for entity lhostage at volume 0.9
+animate entity lhostage performing action  CCH_SONKNEES_2FRNT_N_N
+
+endif
+
+animate entity lhostage performing action SCRIPT_RELEASE
+

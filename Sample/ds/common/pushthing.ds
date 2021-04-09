@@ -1,0 +1,45 @@
+// template file for common directory
+
+#include "../common/header.ds"
+
+output "p:/base/ds/common"
+
+parameter entity pusher
+parameter entity pushed
+parameter vector movedist
+
+local int sig1
+local int pusherhealth
+
+pusherhealth = pusher.health
+
+if pusherhealth > 0
+	animate entity pusher performing action STD_EPUSHCRATE_N_A_N by moving movedist signaling sig1
+	move entity pushed by movedist
+	wait for all clearing sig1
+endif
+
+pusherhealth = pusher.health
+
+if pusherhealth > 0
+	animate entity pusher performing action STD_EPUSHCRATE_N_A_N by moving movedist signaling sig1
+	move entity pushed by movedist
+	wait for all clearing sig1
+endif
+
+pusherhealth = pusher.health
+
+if pusherhealth > 0
+	animate entity pusher performing action STD_EPUSHCRATE_N_A_N by moving movedist signaling sig1
+	move entity pushed by movedist
+	wait for all clearing sig1
+endif
+
+pusherhealth = pusher.health
+
+if pusherhealth > 0
+	animate entity pusher performing action STD_EPUSHCRATE_N_A_N by moving movedist signaling sig1
+	move entity pushed by movedist
+	wait for all clearing sig1
+endif
+

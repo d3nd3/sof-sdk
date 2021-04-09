@@ -1,0 +1,15 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+// This is a custom death script called for the hostage murdered in the cinematic
+
+local entity introhostage1 // the hostage who will be killed
+
+introhostage1 = find entity with targetname "introhostage1"
+
+
+animate entity introhostage1 performing action CCH_SONKNEES_2FRNT_N_N // the hostage getting shot and slumping to the ground
+
+
+// exit

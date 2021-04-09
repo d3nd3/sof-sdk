@@ -1,0 +1,41 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+// skinhead karate kicks a door open
+
+
+
+local entity closetdoor // the door that opens slowly
+local entity closetguy // the skinhead who will karate kick open the door
+local entity f_closetpush // the push brush infront of the closet in case the player is by the rofed door
+local int sig1
+local int sig2
+
+closetdoor = find entity with targetname "closetdoor"
+closetguy = find entity with targetname "closetguy"
+f_closetpush = find entity with targetname "f_closetpush"
+
+// closetdoor.movetype = MOVETYPE_NOCLIP
+
+use entity closetguy // spawns him in
+animate entity closetguy performing action STD_XKICKDOOR_N_A_A by moving [32, 0, 0] signaling sig1 // this is the ninja kick animation
+animate entity closetguy performing action SCRIPT_RELEASE
+wait .25 seconds
+use entity f_closetpush // triggers the pushbrush to get the player out of the way
+moverotate entity closetdoor from file "generic_door_ccw.rof" signaling sig2 // the door kicking open animation
+wait .2 seconds 
+use entity f_closetpush // shuts this off
+play sound "impact/door/kickdoor.wav" for entity closetdoor at volume 0.9
+wait for all clearing sig1, sig2
+
+
+
+// closetdoor.movetype = MOVETYPE_STOP
+
+
+
+
+
+
+

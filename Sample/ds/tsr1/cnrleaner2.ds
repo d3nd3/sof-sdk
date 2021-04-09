@@ -1,0 +1,43 @@
+
+
+#include "../common/header.ds"
+
+output "p:/base/ds/tsr1"
+
+
+//////////////////////////////////////////////////////////////////////////
+// Enemy leans around corner near token booth coming from tokenbooth
+//////////////////////////////////////////////////////////////////////////
+
+//enemy that leans
+local entity cornerlean2
+
+//to target player
+local entity sneak
+
+//trigger relay for cnrleaner1 script
+local entity cornerln1
+
+
+
+//enemy that leans
+cornerlean2 = find entity with targetname "cornerlean2"
+
+//to target player
+sneak = find entity player
+
+//trigger relay for cnrleaner1 script
+cornerln1 = find entity with targetname "cornerln1"
+
+
+
+
+
+//spawns leaner
+use entity cornerlean2
+// this is him peeking around the corner firing
+animate entity cornerlean2 performing action STD_FCORNERPEAK_LT_P_A targeting entity sneak 
+animate entity cornerlean2 performing action SCRIPT_RELEASE
+
+//remove trigger relay for cnrleaner1 script
+remove entity cornerln1

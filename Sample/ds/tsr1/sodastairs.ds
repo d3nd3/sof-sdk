@@ -1,0 +1,42 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+
+local entity stairguy1 // the guy kicking the soda machine
+local entity stepsrunguy // the guy running up the lower set of steps
+
+local int sig1
+
+stairguy1 = find entity with targetname "stairguy1"
+stepsrunguy = find entity with targetname "stepsrunguy"
+
+
+use entity stepsrunguy // spawns him in the world
+
+
+
+on stairguy1.health < 100 goto sodalet_go
+
+   play sound "impact/vending/kick.wav" for entity stairguy1 at volume 0.9
+   animate entity stairguy1 performing action STD_XKICKDOOR_N_A_A // the first guy kicks the sodamachine
+   wait .1 seconds
+   play sound "impact/vending/kick.wav" for entity stairguy1 at volume 0.9
+   animate entity stairguy1 performing action STD_XKICKDOOR_N_A_A // again
+
+   play sound "impact/vending/sodadrop.wav" for entity stairguy1 at volume 0.9
+   wait 1.5 seconds 
+   play sound "speech/tsr1/skn/bt9-5.adp" for entity stairguy1 at volume 0.8
+   wait .5 seconds
+
+
+label sodalet_go
+
+   reset ai for entity stairguy1
+   animate entity stairguy1 performing action SCRIPT_RELEASE
+   use entity stepsrunguy // starts him on his pointcombats
+
+
+exit

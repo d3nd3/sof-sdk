@@ -1,0 +1,82 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+#include "tsr1.ds"
+
+// this script controls the end raid right before the player jumps on the train
+
+local entity rswat1 // the first swat guy
+local entity rswat2 // the second swatguy
+local entity rhawk // the hawk model used here
+local entity rbadguy1 // first bad skinhead
+local entity rbadguy2 // the second bad skinhead
+local entity leader // the skinhead leader who will take off on the train
+local entity rcam1 // the camera for the one cinematic shot
+local entity rcam1n // the cameras null
+local entity leadertrain // the train that leader takes off on
+local entity sabrefade1 // the first fade
+local entity sabrefade2 // the second fadeback
+local entity traintriggerb // the trigger on top of the train that needs to become active once this script is over
+local entity raidb //
+local int hawkhealth
+
+local int sig1
+
+rswat1 = find entity with targetname "rswat1"
+rswat2 = find entity with targetname "rswat2"
+rhawk = find entity with targetname "rhawk"
+rbadguy1 = find entity with targetname "rbadguy1"
+rbadguy2 = find entity with targetname "rbadguy2"
+leader = find entity with targetname "leader"
+rcam1 = find entity with targetname "rcam1"
+rcam1n = find entity with targetname "rcam1n"
+leadertrain = find entity with targetname "leadertrain"
+sabrefade1 = find entity with targetname "sabrefade1"
+sabrefade2 = find entity with targetname "sabrefade2"
+traintriggerb = find entity with targetname "traintriggerb"
+raidb = find entity with targetname "raidb"
+
+
+rcam1.movetype = MOVETYPE_NOCLIP
+rcam1n.movetype = MOVETYPE_NOCLIP
+
+wait .1 seconds // magic delay
+
+
+animate entity rbadguy1 performing action CCH_XONKNEES_N_N_N holding for 999.0
+animate entity rbadguy2 performing action STD_XAFRAIDSHAKE_N_N_N holding for 999.0  // him laying there on the ground PRN_A_N_A_2
+
+animate entity rhawk performing action STD_XYELLWAVE_BK_A_N holding for 2.6 //new line
+use entity leader //new line
+
+
+
+wait .3 seconds //new line
+
+
+
+	animate entity rhawk showing emotion EMOTION_TALK holding for 1.3
+	play sound "cin/tsr1/c7d1.adp" for entity rhawk at volume 0.9 on channel CHAN_AUTO  // Hawk talking to John
+	print TSR1_C7D1
+	//wait 1 seconds 
+
+wait .5 seconds
+
+
+
+wait .4 seconds
+
+
+	play sound "cin/tsr1/c7d2.adp" for entity rhawk at volume 0.9 on channel CHAN_AUTO  // Hawk talking to John
+	print TSR1_C7D2
+
+wait .5 seconds
+
+hawkhealth = rhawk.health
+
+if hawkhealth > 0
+
+	use entity raidb // triggers the second half of the script
+
+endif
+
+	exit

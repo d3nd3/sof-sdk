@@ -1,0 +1,78 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+/////////////////////////////////////////////////
+// Declare
+
+local entity npc_murder  // guy getting murdered
+local entity npc_killer // the guy who kills him
+local entity npc_watcher // the guy just standing there
+local entity trackcam1_new // the first camera watching
+local int sig1
+
+/////////////////////////////////////////////////
+// Assign
+
+npc_murder = find entity with targetname "npc_murder"
+npc_killer = find entity with targetname "npc_killer"
+npc_watcher = find entity with targetname "npc_watcher"
+trackcam1_new = find entity with targetname "trackcam1_new"
+
+
+
+
+
+/////////////////////////////////////////////////
+
+trackcam1_new.movetype = MOVETYPE_NOCLIP
+
+// Action
+/*
+use entity npc_murder // spawns the guy who will get murdered in
+use entity npc_killer // spawns the guy who will kill him
+use entity npc_watcher // spawns the guy next to him in
+*/
+
+
+animate entity npc_murder performing action STD_XAFRAIDSHAKE_N_N_N
+
+
+play sound "speech/tsr1/npc/eb9-1.adp" for entity npc_murder at volume 0.9
+wait .7 seconds 
+animate entity npc_killer performing action STD_FATTITUDE_N_P_A targeting entity npc_murder kill nulltarget HEAD signaling sig1
+
+
+wait for all clearing sig1
+
+// murder taking off out of sight
+wait 1 seconds 
+play sound "speech/tsr1/skn/bt9-2.adp" for entity npc_killer at volume 0.9
+animate entity npc_killer performing action STD_R_N_PK_N by moving [0, -16, 0]
+
+animate entity npc_watcher performing action STD_R_N_MRS_2 by moving [-112, 0, 0]
+
+animate entity npc_killer performing action STD_R_N_PK_N by moving [-152, 0, 0]
+
+animate entity npc_killer performing action STD_R_N_PK_N by moving [0, -296, 0]  // -226
+animate entity npc_killer performing action STD_R_N_PK_N by moving [-172, 0, 0]  // -226
+
+animate entity npc_watcher performing action STD_R_N_MRS_2 by moving [0, -372, 0] // -382 
+animate entity npc_watcher performing action STD_R_N_MRS_2 by moving [-172, 0, 0] // -382 
+
+
+wait 7 seconds 
+remove entity npc_killer
+remove entity npc_watcher
+
+
+
+
+
+wait 2 seconds
+play sound "speech/tsr1/skn/bt9-2.adp" for entity npc_killer at volume 0.9
+
+
+
+
+
+

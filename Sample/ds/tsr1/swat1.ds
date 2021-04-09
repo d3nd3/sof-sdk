@@ -1,0 +1,26 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+// the script sets up the swatguys
+
+local entity swatguyfront // the guy way up front by the second subway
+local entity endtrackguy // the guy at the end of the tracks
+local int sig1
+
+swatguyfront = find entity with targetname "swatguyfront"
+endtrackguy = find entity with targetname "endtrackguy"
+
+
+
+use entity swatguyfront // spawns the swatguy in
+use entity endtrackguy // spawns the end guy in waiting on the tracks
+
+play sound "speech/tsr1/swt/mcd-1.adp" for entity swatguyfront at volume 0.9 on channel CHAN_AUTO //  Swat guy yelling to drop
+animate entity swatguyfront performing action STD_R_N_PK_N by moving [256, 0, 0] // signaling sig1
+animate entity swatguyfront performing action SCRIPT_RELEASE
+
+// wait for all clearing sig1
+
+animate entity endtrackguy performing action STD_F_FWD_P_2 targeting entity swatguyfront kill
+animate entity endtrackguy performing action SCRIPT_RELEASE

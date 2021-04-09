@@ -1,0 +1,21 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+local entity behinducam  // the cam that shows the enemys sneaking up on the player
+
+
+
+behinducam = find entity with targetname "behinducam"
+
+
+behinducam.movetype = MOVETYPE_NOCLIP
+
+
+use entity behinducam // turns the camera on
+
+use entity behinducam // turns the camera off
+
+

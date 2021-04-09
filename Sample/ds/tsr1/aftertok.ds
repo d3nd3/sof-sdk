@@ -1,0 +1,28 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+local entity runguy1 // the guy who runs by
+local entity waveguy1 // the guy waving at the end of the hallway
+local entity afterguy // a guy who will spawn in the token room
+local entity behindwaver // the guy who spawns behind the guy waving
+local int sig1
+local int sig2
+
+runguy1 = find entity with targetname "runguy1"
+waveguy1 = find entity with targetname "waveguy1"
+afterguy = find entity with targetname "afterguy"
+behindwaver = find entity with targetname "behindwaver"
+
+use entity runguy1 // spawns the guy running by
+use entity waveguy1 //spawns the guy at the end of the hall
+
+
+use entity behindwaver // spawns the guy in the waitingroom
+use entity afterguy // spawns another guy in the token room
+
+animate entity runguy1 performing action SCRIPT_RELEASE
+animate entity waveguy1 performing action SCRIPT_RELEASE
+animate entity afterguy performing action SCRIPT_RELEASE
+animate entity behindwaver performing action SCRIPT_RELEASE

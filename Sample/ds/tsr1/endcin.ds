@@ -1,0 +1,215 @@
+#include "../common/header.ds"
+#include "tsr1.ds"
+output "p:/base/ds/tsr1"
+
+
+// this script starts the end cinematic
+
+
+local entity endcam1 // the first camera 
+local entity endcam1n // the first cameras null
+local entity endcam2 // the second camera
+local entity endcam2n // the second cameras null
+local entity endcam3 // the third camera
+local entity endcam3n // the third cameras null
+local entity endcam4  // the 4th camera
+local entity endcam4n // the 4th cameras null
+local entity endhawk1 // the hawk model for the end cinematic
+local entity endhawk1b // the hawk model for the end cinematic
+local entity endjohn1 // the john model used for the shots
+local entity endhawk2 // the hawk model for the end cinematic
+local entity endjohn2 // the john model used for the shots
+
+
+//Declare all of the camera and notnull entities
+local entity firstcam //first camera for the voice over
+local entity firstnull //first camera null for the voice over
+local entity secondcam //second camera for the voice over
+local entity secondnull //second camera null for the voice over
+local entity thirdcam //third camera for the voice over
+local entity thirdnull //third camera null for the voice over
+local entity fourthcam //fourth camera for the voice over
+local entity fourthnull //fourth camera null for the voice over
+local entity fifthcam //fifth camera for the voice over
+local entity fifthnull //fifth camera null for the voice over
+local entity endlevel // the end level trigger
+
+
+
+
+
+
+// ALL THE GUYS THAT COULD BE LEFT OVER FROM THE SPAWNER SCRIPT INCLUDING THE TRAIN GUYS
+
+local entity endspawner1 // the first spawner at the end
+local entity endspawner2 // the second spawner at the end
+local entity endrightguy // the guy in the right alcove at the end of the tunnel
+local entity endleftguy // the guy in the left alcove at the end of the tunnel
+local entity rtskinhead1 // skinheads on the train
+local entity rtskinhead2 // skinheads on the train
+local entity rtskinhead3 // skinheads on the train
+local entity testfade // the func fade to black
+local entity testfade2 // the func fade that brings it back to normal
+
+//Declare all of the signaling integers
+local int sig1 //first signaling integer
+local int sig2 //second signaling integer
+local int sig3 //third signaling integer
+
+
+
+
+
+
+
+cache sound "cin/tsr1/c8d1.adp"
+cache sound "cin/tsr1/c8d2.adp"
+// cache sound "cin/tsr1/c8d3.adp"
+cache sound "cin/tsr1/c9d1.adp"
+cache sound "cin/tsr1/c9d2.adp"
+cache sound "cin/tsr1/c9d3.adp"
+// cache sound "Enemy/So1/Sib1/Wake4.wav"
+
+endcam1 = find entity with targetname "endcam1"
+enable cinematics 
+use entity endcam1
+
+endcam1n = find entity with targetname "endcam1n"
+endcam2 = find entity with targetname "endcam2"
+endcam2n = find entity with targetname "endcam2n"
+endcam3 = find entity with targetname "endcam3"
+endcam3n = find entity with targetname "endcam3n"
+endcam4 = find entity with targetname "endcam4"
+endcam4n = find entity with targetname "endcam4n"
+endhawk1 = find entity with targetname "endhawk1"
+endhawk1b = find entity with targetname "endhawk1b"
+endjohn1 = find entity with targetname "endjohn1"
+endhawk2 = find entity with targetname "endhawk2"
+endjohn2 = find entity with targetname "endjohn2"
+
+
+
+endspawner1 = find entity with targetname "endspawner1"
+endspawner2 = find entity with targetname "endspawner2"
+endrightguy = find entity with targetname "endrightguy"
+endleftguy = find entity with targetname "endleftguy"
+rtskinhead1 = find entity with targetname "rtskinhead1"
+rtskinhead2 = find entity with targetname "rtskinhead2"
+rtskinhead2 = find entity with targetname "rtskinhead2"
+
+testfade = find entity with targetname "testfade"
+testfade2 = find entity with targetname "testfade2"
+
+
+
+endcam1.movetype = MOVETYPE_NOCLIP
+endcam1n.movetype = MOVETYPE_NOCLIP
+endcam2.movetype = MOVETYPE_NOCLIP
+endcam2n.movetype = MOVETYPE_NOCLIP
+endcam3.movetype = MOVETYPE_NOCLIP
+endcam3n.movetype = MOVETYPE_NOCLIP
+endcam4.movetype  = MOVETYPE_NOCLIP
+endcam4n.movetype = MOVETYPE_NOCLIP
+
+
+//  REMOVE ALL THE GUYS FROM THE LAST SCRIPT,  DONT KNOW IF THIS WILL WORK?
+
+remove entity endspawner1
+remove entity endspawner2
+remove entity endleftguy
+remove entity endrightguy
+remove entity rtskinhead1
+remove entity rtskinhead2
+remove entity rtskinhead3
+
+
+
+// first shot if hawk running into the camera view in the tunnel
+
+use entity testfade2 // fade in from black to show hawk
+
+use entity endhawk1 // spawns him in
+// use entity endcam1 // should turn on the camera
+animate entity endhawk1 performing action STD_R_N_PK_N by moving [0, -242, 0] signaling sig1 // shows hawk running towards the camera
+wait for all clearing sig1
+
+
+
+// third shot of hawk stepping into the frame
+
+use entity endjohn1 // spawns john in for the shot
+use entity endhawk1b //spawns the other hawk model in for the shot
+wait .1 seconds // NEW CHANGE
+
+remove entity endhawk1 // gets old hawk out
+
+use entity endcam3 // turns on the second shot
+
+move entity endcam3 to [1816, -1882, -476] at 65 speed 
+move entity endcam3n to [1822, -1874, -476] at 65 speed 
+animate entity endhawk1b performing action STD_R_N_PK_N by moving [0, -256, 0]   // hawk running into this shot
+animate entity endjohn1 performing action STD_IETALKPOSE_N_A_N holding for 6.0
+wait 1.2 seconds // delay for hawk to stop running
+
+
+
+// hawk talking during this shot
+
+animate entity endhawk1b showing emotion EMOTION_TALK holding for 2.5  // Hawks talking animation 
+animate entity endhawk1b performing action STD_ETALKLEFT_N_A_N holding for .4 
+animate entity endhawk1b performing action STD_ETALK_N_A_N holding for 2.1
+
+	play sound "cin/tsr1/c8d1.adp" for entity endhawk1b at volume 0.9 on channel CHAN_AUTO
+	print TSR1_C8D1
+	// "This ones over John .."
+
+wait 2.5 seconds
+
+
+
+// 4th shot of them running back up the tracks
+
+use entity endhawk2 // triggers the other endhawk in
+use entity endjohn2 // triggers the other end john in
+wait .1 seconds  // NEW STUFF
+
+use entity endcam3 // shuts the second shut off
+remove entity endhawk1b
+
+use entity endcam4 // triggers on that last camera
+wait .1 seconds // magic delay for shot
+
+animate entity endhawk2 performing action STD_R_N_PK_N by moving [0, 600, 0] 
+animate entity endjohn2 performing action STD_R_N_PK_N by moving [0, 600, 0]
+
+	play sound "cin/tsr1/c8d2.adp" for entity endjohn2 at volume 0.9 on channel CHAN_AUTO
+	print TSR1_C8D2	
+	//  "Something big has happened" captioned
+	wait 4 seconds 
+
+use entity testfade // triggers the fade out
+wait 1.5 seconds 
+
+
+disable cinematics
+
+
+
+ 
+unload sound "cin/tsr1/c8d1.adp"
+unload sound "cin/tsr1/c8d2.adp"
+// unload sound "cin/tsr1/c8d3.adp"
+unload sound "cin/tsr1/c9d1.adp"
+unload sound "cin/tsr1/c9d2.adp"
+unload sound "cin/tsr1/c9d3.adp"
+
+// setcvar cvar "scr_blank" to 1.0
+
+setcvar cvar "menu_nextmap" to "tsr2"
+run console command "intermission acc2"
+
+// use entity endlevel // starts the next level
+
+
+
+exit

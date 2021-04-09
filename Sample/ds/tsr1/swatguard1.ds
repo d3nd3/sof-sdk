@@ -1,0 +1,18 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+//////////////////////////////////////////////////
+// swat guarding punk stands up if punk is killed
+//////////////////////////////////////////////////
+
+
+local entity rswat1 // the second swatguy
+
+rswat1 = find entity with targetname "rswat1"
+
+
+
+
+
+animate entity rswat1 performing action STD_IALERT_N_P_N

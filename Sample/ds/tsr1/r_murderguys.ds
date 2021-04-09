@@ -1,0 +1,25 @@
+// template file for newyork directory
+
+#include "../common/header.ds"
+
+output "p:/base/ds/tsr1"
+
+
+
+
+
+local entity npc_murder // the npc who will be shot
+local entity npc_killer // the guy who will kill the hostage
+local entity npc_watcher // guy watching the murder
+
+npc_murder = find entity with targetname "npc_murder"
+npc_killer = find entity with targetname "npc_killer"
+npc_watcher = find entity with targetname "npc_watcher"
+
+// THIS GETS RID OF ALL THESE GUYS IF THEY WERENT USED IN THE CAMERA SCRIPT IN THE TOKEN BOOTH
+
+remove entity npc_murder 
+remove entity npc_killer
+remove entity npc_watcher
+
+

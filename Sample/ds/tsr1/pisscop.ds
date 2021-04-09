@@ -1,0 +1,31 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+#include "tsr1.ds"
+
+
+
+
+local entity pissguy1
+local entity pissguy2
+
+
+
+pissguy1 = find entity with targetname "pissguy1"
+pissguy2 = find entity with targetname "pissguy2"
+
+
+
+
+play sound "Cin/TSR1/Script/Piss.wav" for entity pissguy2 on channel CHAN_VOICE at volume 0.9
+play sound "Speech/TSR1/SKN/BT9-2.adp" for entity pissguy1 on channel CHAN_VOICE at volume 0.9
+
+
+animate entity pissguy2 performing action SCRIPT_RELEASE // releases the second guy 
+wait 1.5 seconds 
+animate entity pissguy1 performing action SCRIPT_RELEASE // releases the other guy a little bit later
+
+
+
+
+
+

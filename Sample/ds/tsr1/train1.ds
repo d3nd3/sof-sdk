@@ -1,0 +1,57 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+/////////////////////////////////////////////////
+// THIS SCRIPT IS THE HOSTAGE GETTING PUSHED IN FRONT OF THE TRAIN
+
+
+local entity train2 // the train that moves
+local entity trainvictim1 // the guy getting pushed in front of the train
+local entity pusher // the guy who does the pushing
+local entity shake1 // the shake when the train derails
+local entity trainexplosion // the explosion when the train derails
+local entity brokensign // the func_wall sign that gets triggered on after the train derails
+local entity trainsmokegen // the smokegen that gets triggered by the train
+local int health
+local int sig1
+
+train2 = find entity with targetname "train2"
+trainvictim1 = find entity with targetname "trainvictim1"
+pusher = find entity with targetname "pusher"
+shake1 = find entity with targetname "shake1"
+brokensign = find entity with targetname "brokensign"
+trainexplosion = find entity with targetname "trainexplosion"
+trainsmokegen = find entity with targetname "trainsmokegen"
+
+health = pusher.health
+
+// animate entity trainvictim1 performing action STD_XAFRAIDSHAKE_N_N_N // the hostage cowering
+
+if health <= 0
+
+   use entity train2 // makes the train move 
+   animate entity trainvictim1 performing action SCRIPT_RELEASE	
+   exit
+endif
+
+animate entity pusher performing action STD_F_FWD_S_2 targeting entity trainvictim1  // the pusher guy pistol whiping the guy
+animate entity pusher performing action SCRIPT_RELEASE
+animate entity trainvictim1 performing action STD_SBLOWN_2BK_N_N by moving [64, 0, 0] // the animation of the guy getting pushed onto the tracks
+play sound "Speech/tsr1/npc/eb9-11.adp" for entity trainvictim1 at volume 0.9
+wait 1.25 seconds
+
+use entity train2 // makes the train move 
+wait .75 seconds
+remove entity trainvictim1  // gets the guy out of the way so the train doesnt get stuck
+
+wait 3 seconds
+// use entity brokensign // triggers the sign in
+use entity shake1 // causes the screen to shake
+use entity trainexplosion // causes the explosions on the tracks.
+rotate entity train2 by [-10, -5, 0] at 150 speed signaling sig1
+// use entity trainsmokegen // triggers the smokegen
+wait for all clearing sig1
+
+
+
+exit

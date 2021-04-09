@@ -1,0 +1,20 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+// THIS SCRIPT RELEASES THE GUY WHO RUNS OUT THE BACK DOOR OF THE TOKEN BOOTH
+
+
+
+
+
+local entity tokenguy1 // the guy who is running out of the room
+
+
+
+tokenguy1 = find entity with targetname "tokenguy1"
+
+
+
+animate entity tokenguy1 performing action SCRIPT_RELEASE // script releases the guy once he gets by the door

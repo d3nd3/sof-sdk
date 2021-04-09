@@ -1,0 +1,15 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+parameter entity health_door // the door that rotates up
+parameter entity health_button // the button that needs to switch textures
+
+
+
+
+use entity health_door // triggers this so it opens
+\wait 1.5 seconds 
+use entity health_button // switches the button texture by using it

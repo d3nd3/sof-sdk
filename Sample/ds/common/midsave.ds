@@ -1,0 +1,9 @@
+// autosave script for mid-level save
+
+#include "../common/header.ds"
+#include "general.ds"
+
+output "p:/base/ds/common"
+
+print GENERAL_MIDSAVE
+run console command "save mid"

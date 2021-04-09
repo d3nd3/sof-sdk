@@ -1,0 +1,60 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+// the script sets up the swatguys
+
+local entity swatguyfront // the guy way up front by the second subway
+local entity endgl2 // the skinhead guy running up the stairs
+local entity jumpingman
+local int sig1
+
+
+
+swatguyfront = find entity with targetname "swatguyfront"
+endgl2 = find entity with targetname "endgl2"
+jumpingman = find entity with targetname "jumpingman"
+
+use entity jumpingman // triggers the guy in who will do jumping
+use entity endgl2 // triggers the guy running up the stairs
+
+
+
+
+animate entity jumpingman performing action STD_F_FWD_S_2 targeting entity swatguyfront kill signaling sig1
+wait for all clearing sig1
+
+on jumpingman.health < 100 goto jumpingman_hit // check to see if he is shot
+
+animate entity jumpingman performing action STD_JRUN_FWD_A_A by moving [-128, 0, 0] signaling sig1
+wait for all clearing sig1
+
+goto jumpingman_hit
+exit
+
+
+
+label jumpingman_hit // lets him go out of the animation if he is shot
+
+reset ai for entity jumpingman
+animate entity jumpingman performing action SCRIPT_RELEASE
+
+// animate entity swatguyfront performing action SCRIPT_RELEASE
+
+animate entity endgl2 performing action SCRIPT_RELEASE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

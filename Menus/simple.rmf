@@ -1,0 +1,51 @@
+This menu demonstrates some of the simple area types
+
+<stm>
+<include tints>
+<backdrop bgcolor black>
+<vbar tint vbargray>
+
+<center>
+
+<font type title tint normaltext atint hilitetext>
+
+<hbr>
+
+<ctext percent atext "The Percentage is : ">
+<slider cvari percent min 0 max 100 step 1>
+
+<hbr>
+<hbr>
+
+<ctext fruit atext "The current fruit number is : ">
+<list "Apples,Oranges,Pears" cvar fruit atext "Fruit : ">
+
+<hbr>
+<hbr>
+
+<ctext fruittaste atext "The current tastiness is : ">
+<list "Apples,Oranges,Pears" match "Sweet,Bitter,Juicy" cvar fruittaste atext "Fruit : ">
+
+<hbr>
+<hbr>
+
+<image "icons/f_mail" tint red alt "icons/f_joystick" atint blue key mouse1 "play menu/small/invalid">
+
+<hbr>
+<hbr>
+
+<ctext nickname atext "Your current nickname is : ">
+<input cvar nickname global maxchars 32 width 150 border 3 1 gray>
+
+<hbr>
+<hbr>
+
+<ticker "This page demonstrates some of the simple area types to get you started customising your own menus" speed 5>
+
+<hbr>
+<hbr>
+
+<text "OK" key mouse1 "killmenu" border 16 1 gray>
+
+</stm>
+

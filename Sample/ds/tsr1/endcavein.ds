@@ -1,0 +1,85 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+
+local entity beam1 // the first beam looking from the front
+local entity beam1b
+
+local entity beam2 // second beam
+local entity beam2b 
+
+local entity beam3 // third beam
+local entity beam3b 
+
+local entity rubblechunk1 // the first ceiling rubble chunk that will animate
+local entity rubblechunk2 // the second one
+
+local entity breakceiling // the ceiling breakable brush
+
+local entity endexplosion1 // the first explosion
+local entity endexplosion2 // 2nd
+local entity endexplosion3 // 3rd
+local entity trainplayer
+local entity trainshake // the screenshake effect for the explosion
+local entity dirtpile //
+local entity tunnelsabre // the sabre model the player will see running into the alcove
+local int sig1
+
+
+beam1 = find entity with targetname "beam1"
+beam1b = find entity with targetname "beam1b"
+beam2 = find entity with targetname "beam2"
+beam2b = find entity with targetname "beam2b"
+beam3 = find entity with targetname "beam3"
+beam3b = find entity with targetname "beam3b"
+
+rubblechunk1 = find entity with targetname "rubblechunk1"
+rubblechunk2 = find entity with targetname "rubblechunk2"
+
+
+breakceiling = find entity with targetname "breakceiling"
+
+
+endexplosion1 = find entity with targetname "endexplosion1"
+endexplosion2 = find entity with targetname "endexplosion2"
+endexplosion3 = find entity with targetname "endexplosion3"
+
+trainplayer = get entity activator
+trainshake = find entity with targetname "trainshake"
+tunnelsabre = find entity with targetname "tunnelsabre"
+
+
+dirtpile = find entity with targetname "dirtpile"
+
+// THE EXPLOSIVES GETTING SET OFF
+
+animate entity tunnelsabre performing action STD_R_N_PK_N by moving [-448, 0, 0] signaling sig1 // him running into the little alcove
+wait for all clearing sig1
+
+
+use entity endexplosion1
+
+moverotate entity beam1 from file "tsr1_beam1.rof" // the first beams animation
+moverotate entity beam1b from file "tsr1_beam1b.rof" // the first part 2
+moverotate entity beam2 from file "tsr1_beam2.rof" // second 
+moverotate entity beam2b from file "tsr1_beam2b.rof" // 
+moverotate entity beam3 from file "tsr1_beam3.rof" // third
+moverotate entity beam3b from file "tsr1_beam3b.rof" // 
+
+
+moverotate entity rubblechunk1 from file "tsr1_rchunk1.rof" // the first rubble chunk animation
+moverotate entity rubblechunk2 from file "tsr1_rchunk2.rof" // second one
+
+
+play sound "Impact\Stone\BigRubble.adp" for entity trainplayer at volume 0.9 on channel CHAN_AUTO
+use entity trainshake // triggers it
+use entity breakceiling
+use entity dirtpile // triggers the dirpile in
+
+animate entity tunnelsabre performing action STD_R_N_PK_N by moving [0, 176, 0] signaling sig1 // him running out of view
+wait for all clearing sig1
+remove entity tunnelsabre // gets him out of the world
+

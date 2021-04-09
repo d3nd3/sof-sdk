@@ -1,0 +1,41 @@
+// template file for newyork directory
+
+#include "../common/header.ds"
+
+output "p:/base/ds/tsr1"
+
+
+
+local entity fuseguy // the guy hiding in the fusebox alcove
+local entity stepsguy1 // the first guy at the bottom of the steps
+local entity stepsguy2 // the second guy at the bottom of the steps
+local entity fusedoor // the door that will get kicked open
+local entity killhim68 // the player
+local int sig1
+local int sig2
+
+fuseguy = find entity with targetname "fuseguy"
+stepsguy1 = find entity with targetname "stepsguy1"
+stepsguy2 = find entity with targetname "stepsguy2"
+fusedoor = find entity with targetname "fusedoor"
+killhim68 = find entity player
+// fusedoor.movetype = MOVETYPE_NOCLIP
+
+
+use entity stepsguy1 // spawns the first guy in
+use entity stepsguy2 // spawns the sec guy in
+animate entity stepsguy2 performing action SCRIPT_RELEASE
+
+animate entity stepsguy1 performing action STD_FCORNERPEAK_RT_P_A targeting entity killhim68
+animate entity stepsguy1 performing action SCRIPT_RELEASE
+
+animate entity fuseguy performing action STD_XKICKDOOR_N_A_A signaling sig1 // plays the kicking door animations
+animate entity fuseguy performing action SCRIPT_RELEASE
+wait .25 seconds
+moverotate entity fusedoor from file "generic_door_ccw.rof" signaling sig2 // rotates the door kicked open
+play sound "Impact/Vending/Kick.wav" for entity fusedoor at volume 0.9
+wait for all clearing sig1, sig2
+
+
+
+

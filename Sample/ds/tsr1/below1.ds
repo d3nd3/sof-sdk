@@ -1,0 +1,27 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+// this script starts the guys running below the grate on the nyc1 map
+
+
+local entity belowguy1 // the first enemy below the tracks
+local entity train1    // the train that goes by underneath
+local int sig1
+
+belowguy1 = find entity with targetname "belowguy1"
+train1 = find entity with targetname "train1"
+
+
+use entity belowguy1 // spawns the front guy in
+animate entity belowguy1 performing action STD_R_N_PK_N by moving [512, 0, 0] signaling sig1
+wait for all clearing sig1
+wait 5 seconds
+use entity train1 // triggers the train going by
+remove entity belowguy1 // removes the guys from the track
+
+exit 
+
+
+

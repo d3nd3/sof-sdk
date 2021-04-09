@@ -1,0 +1,11 @@
+// template file for newyork directory
+
+#include "../common/header.ds"
+
+output "p:/base/ds/newyork"
+
+
+local entity topstairguy1
+
+
+topstairguy1 = find entity with targetname "topstairguy1"

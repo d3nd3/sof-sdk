@@ -1,0 +1,22 @@
+// Generic counter clockwise door 90 degree swing
+
+#include "../common/header.ds"
+
+output "p:/base/ds/common"
+
+/////////////////////////////////////////////////////////////
+// Define
+
+// Actors
+parameter entity door_ccw	// Two doors, clockwise and counter-cw
+
+/////////////////////////////////////////////////////////////
+// Assign
+
+// door_ccw.movetype = MOVETYPE_NOCLIP
+
+/////////////////////////////////////////////////////////////
+// Action
+
+moverotate entity door_ccw from file "generic_door_ccw.rof"
+

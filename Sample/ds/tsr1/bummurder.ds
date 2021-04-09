@@ -1,0 +1,23 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+local entity deadbum // the bum who will get killed on the subway tracks
+local entity bumkiller // the guy who will shoot the bum from behind
+local int sig1
+
+deadbum = find entity with targetname "deadbum"
+bumkiller = find entity with targetname "bumkiller"
+
+
+use entity bumkiller // spawns the bumkiller in
+animate entity bumkiller performing action STD_R_N_PK_N by moving [0, -256, 0]  signaling sig1 // guy runs down other track tunnel
+wait for all clearing sig1
+animate entity bumkiller performing action STD_F_FWD_P_2 targeting entity deadbum kill signaling sig1 // he should kill the bum with this shot
+wait for all clearing sig1
+
+animate entity bumkiller performing action SCRIPT_RELEASE
+
+

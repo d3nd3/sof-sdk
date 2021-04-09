@@ -1,0 +1,85 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+#include "tsr1.ds"
+
+// THIS SCRIPT STARTS THE CAMERA IN THE TOKEN AREA SHOWING THE SUBWAY DOOR OPEN
+
+
+local entity tokencam  // the camera
+local entity tokencamn  // the cameras null
+local entity tdoorjohn // the john model that spawns in the players spot
+local entity tokenlocked2 // the relay that has the locked message
+local entity tdoor // the actual door that will open
+local entity new_tok_lever // the actual lever that will move
+local entity use_the_switch // this is the actual trigger that opens the door and triggers this script
+local entity host_count 
+local int host_counthealth
+
+// THIS IS STUFF THAT SHOULDNT GET REMOVED DURING THE CINEMATIC, THAT IS THE ONLY REASON IT IS HERE
+
+local entity roundguy // the skinhead that will spawn round the corner shooting at the player entering
+local entity tokvictim // the guy who will run past the token booth
+local entity tokchaser // the guy following him
+local entity tollguy // the guy by the token machines
+
+
+enable cinematics
+
+tokencam = find entity with targetname "tokencam"
+tokencamn = find entity with targetname "tokencamn"
+tdoorjohn = find entity with targetname "tdoorjohn"
+tokenlocked2 = find entity with targetname "tokenlocked2"
+tdoor = find entity with targetname "tdoor"
+host_count = find entity with targetname "host_count"
+new_tok_lever = find entity with targetname "new_tok_lever"
+use_the_switch = find entity with scripttarget "use_the_switch"
+
+// HERE IS THE STUFF AGAIN
+
+roundguy = find entity with targetname "roundguy"
+tokvictim = find entity with targetname "tokvictim"
+tokchaser = find entity with targetname "tokchaser"
+tollguy = find entity with targetname "tollguy"
+
+
+
+// label intro
+
+host_counthealth = host_count.health
+
+
+
+
+// if host_counthealth < 5 // hostcount health must be greater than this number to get into the subway
+ 
+//  print TSR1_USELEVER // string to warn the player there are still hostages left		
+
+// else
+
+
+use entity tdoorjohn // spawns the john model in players place **uncommented by SM**
+// enable cinematics
+use entity tokencam // turns the camera on
+
+
+// use entity new_tok_lever // moves the level up
+move entity new_tok_lever by [0, 0, -8]
+use entity tdoor // starts the door moving up
+remove entity use_the_switch // gets rid of the trigger multiple since it isnt needed anymore
+
+wait 2 seconds // pause time
+use entity tokencam // shuts the camera off
+
+
+
+remove entity tokenlocked2 // cuts off the message on the relay
+
+// remove john model
+remove entity tdoorjohn
+disable cinematics 
+// endif
+
+
+// suspend
+
+// goto intro

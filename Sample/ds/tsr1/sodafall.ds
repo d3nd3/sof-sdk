@@ -1,0 +1,25 @@
+// template file for newyork directory
+
+#include "../common/header.ds"
+
+output "p:/base/ds/tsr1"
+
+
+
+local entity swatkiller // the guy who will push over the soda machine
+local entity soda_fall // the soda machine that will be tipped over
+local entity deadswatguy1 // the dead swat guy, the sound will be played from this origin to make it louder
+local int sig1
+
+soda_fall = find entity with targetname "soda_fall"
+swatkiller = find entity with targetname "swatkiller"
+deadswatguy1 = find entity with targetname "deadswatguy1"
+
+animate entity swatkiller  performing action STD_EPUSHOVER_N_PK_A  // guy pushing over the soda machine
+animate entity swatkiller  performing action SCRIPT_RELEASE
+moverotate entity soda_fall from file "tsr1_soda_fall.rof" signaling sig1
+wait .75 seconds 
+play sound "Impact/Metal/SodaMach.adp" for entity deadswatguy1 on channel CHAN_AUTO at volume 0.9
+wait for all clearing sig1
+
+exit

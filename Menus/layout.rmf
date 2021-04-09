@@ -1,0 +1,52 @@
+This menu demonstrates some of the simple layout controls of the menu system
+
+<stm>
+<include tints>
+
+<backdrop tile "backdrop/web_bg">
+
+<font type title tint normaltext atint hilitetext>
+
+<hr width 200>
+
+<left>
+LEFT
+<right>
+RIGHT
+<center>
+CENTER
+
+<hr width 200>
+
+<left>
+LEFT<hbr>
+<right>
+RIGHT<hbr>
+<center>
+CENTER
+
+<hr width 200>
+
+<font type medium>
+
+<right>
+These words appear in reverse order
+<left>
+These words appear in order
+
+<hr width 200>
+
+<center>
+Not good with spaces.<hbr>
+<hbr>
+"Much better at handling spaces in quotes"<hbr>
+
+<hr width 200>
+
+<normal>
+Normal text just appears left to right as you would expect - automatically carriage returning at the end
+of a line. The carriage returns in the rmf document are ignored. Note how each word is highlighted individually.
+
+</stm>
+
+Anything past the </stm> is ignored completely - it is a good place to put comments like this :)

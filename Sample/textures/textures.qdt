@@ -1,0 +1,1764 @@
+$mipdir subway
+
+$load \art\textures\final\ny\con1.tga
+$mip con1 0 0 64 64 scale 0.5 0.5 mip detail d_stoneholey2.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\con2.tga
+$mip con2 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\con3.tga
+$mip con3 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\con4.tga
+$mip con4 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\con5.tga
+$mip con5 0 0 64 64 scale 0.5 0.5 mip detail d_stonesmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\con6.tga
+$mip con6 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\metal1.tga
+$mip metal1 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\metal2.tga
+$mip metal2 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\metalrib1.tga
+$mip metalrib1 0 0 32 32 scale 0.5 0.5 mip detail d_metalsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\metalrib2.tga
+$mip metalrib2 0 0 64 64 scale 0.5 0.5 mip detail d_metalsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\brick1.tga
+$mip brick1 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_tile.tga
+$mip 1_tile 0 0 64 64 scale 0.5 0.5 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_trim1.tga
+$mip 1_trim1 0 0 32 32 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\trim2.tga
+$mip trim2 0 0 32 32 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\trim2a.tga
+$mip trim2a 0 0 32 32 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\3_brick2.tga
+$mip 3_brick2 0 0 128 128 scale 0.5 0.5 mip detail d_stonecracked.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_brick3.tga
+$mip 2_brick3 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_brick3a.tga
+$mip 2_brick3a 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\clip.tga
+$mip clip 0 0 64 64 scale 0.5 0.5 monsterclip playerclip nodraw trans33
+$load \art\textures\final\ny\hint.tga
+$mip hint 0 0 64 64 scale 0.5 0.5 hint nodraw trans33
+$load \art\textures\final\ny\skip.tga
+$mip skip 0 0 64 64 scale 0.5 0.5 nodraw skip trans33
+$load \art\textures\final\ny\trigger.tga
+$mip trigger 0 0 64 64 scale 0.5 0.5 nodraw trans33
+$load \art\textures\final\ny\light_florescent.tga
+$mip light_florescent 0 0 16 16 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\metalfloor1.tga
+$mip metalfloor1 0 0 64 64 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\2_water1.tga
+$mip 2_water1 0 0 64 64 scale 0.5 0.5 mip water trans66 warping material liquid_blue
+$load \art\textures\final\ny\2_warning.tga
+$mip 2_warning 0 0 32 32 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\3_woodfence.tga
+$mip 3_woodfence 0 0 64 128 scale 0.5 0.5 mip detail d_woodrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\1_duct.tga
+$mip 1_duct 0 0 64 64 scale 0.5 0.5 alt 1_duct2.m32 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\3_medcrate1.tga
+$mip 3_medcrate1 0 0 64 64 scale 0.5 0.5 mip detail d_woodrough2.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_lbrown
+$load \art\textures\final\ny\3_medcrate2.tga
+$mip 3_medcrate2 0 0 64 64 scale 0.5 0.5 mip detail d_woodrough2.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\origin.tga
+$mip origin 0 0 64 64 scale 0.5 0.5 origin nodraw
+$load \art\textures\final\ny\3_brick4.tga
+$mip 3_brick4 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_scumconcrete.tga
+$mip 2_scumconcrete 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_fuse1.tga
+$mip 2_fuse1 0 0 32 64 scale 0.5 0.5 damage 2_fuse2.m32 1 mip spherical env1b.m32 material metal_computer
+$load \art\textures\final\ny\2_fuse2.tga
+$mip 2_fuse2 0 0 32 64 scale 0.5 0.5 damage 2_fuse3d.m32 1 mip material metal_computer
+$load \art\textures\final\ny\2_fuse3.tga
+$mip 2_fuse3 0 0 16 32 scale 0.5 0.5 mip spherical env1b.m32 material metal
+$load \art\textures\final\ny\newpipe1.tga
+$mip newpipe1 0 0 64 32 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\newpipe1hilight.tga
+$mip newpipe1hilight 0 0 64 32 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\2_mortar.tga
+$mip 2_mortar 0 0 32 32 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\2_oldwall1.tga
+$mip 2_oldwall1 0 0 64 64 scale 0.5 0.5 alt 2_oldwall2.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_oldwallwet.tga
+$mip 2_oldwallwet 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\2_oldceiling1.tga
+$mip 2_oldceiling1 0 0 64 64 scale 0.5 0.5 alt 2_oldceiling1a.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_oldceiling1a.tga
+$mip 2_oldceiling1a 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_oldwall2.tga
+$mip 2_oldwall2 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_oldceiling1b.tga
+$mip 2_oldceiling1b 0 0 64 64 scale 0.5 0.5 alt 2_oldceiling1a.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\light_green.tga
+$mip light_green 0 0 16 16 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\light_emergency.tga
+$mip light_emergency 0 0 16 16 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\3_redpaint.tga
+$mip 3_redpaint 0 0 16 16 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\light_offwhite.tga
+$mip light_offwhite 0 0 16 16 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\light_tungsten.tga
+$mip light_tungsten 0 0 16 16 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\1_tile_bottom.tga
+$mip 1_tile_bottom 0 0 32 32 scale 0.5 0.5 mip detail d_tile.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_middle.tga
+$mip 1_tile_middle 0 0 32 32 scale 0.5 0.5 mip detail d_tile.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_top.tga
+$mip 1_tile_top 0 0 32 16 scale 0.5 0.5 mip detail d_tile.m32 4 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\light_orange.tga
+$mip light_orange 0 0 32 32 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\3_building1a.tga
+$mip 3_building1a 0 0 128 32 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_building1b.tga
+$mip 3_building1b 0 0 128 32 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_building1c.tga
+$mip 3_building1c 0 0 128 128 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_woodfloor.tga
+$mip 3_woodfloor 0 0 64 64 scale 0.5 0.5 mip detail d_woodrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\1_tile_big.tga
+$mip 1_tile_big 0 0 32 32 scale 0.5 0.5 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_concrete_floor.tga
+$mip 1_concrete_floor 0 0 128 128 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\2_water2.tga
+$mip 2_water2 0 0 64 64 scale 0.5 0.5 mip water trans66 warping material liquid_green
+$load \art\textures\final\ny\3_building2.tga
+$mip 3_building2 0 0 128 128 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_building3.tga
+$mip 3_building3 0 0 128 128 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock.tga
+$mip 2_cinderblock 0 0 64 64 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_bottom.tga
+$mip 2_cinderblock_bottom 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_top.tga
+$mip 2_cinderblock_top 0 0 64 32 scale 0.5 0.5 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\2_cinderblock_cruddy.tga
+$mip 2_cinderblock_cruddy 0 0 64 64 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\con1a.tga
+$mip con1a 0 0 16 64 scale 0.5 0.5 mip detail d_stonerough.m32 1 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\con1b.tga
+$mip con1b 0 0 32 64 scale 0.5 0.5 mip detail d_stonerough.m32 2 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_wall1.tga
+$mip 3_wall1 0 0 128 128 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\3_wall2.tga
+$mip 3_wall2 0 0 128 128 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\con2_corner.tga
+$mip con2_corner 0 0 32 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\con2_pipe1.tga
+$mip con2_pipe1 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\con2_pipe2.tga
+$mip con2_pipe2 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\1_fusebox.tga
+$mip 1_fusebox 0 0 32 64 scale 0.5 0.5 damage 2_fuse3d.m32 1 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_fusebox_side.tga
+$mip 1_fusebox_side 0 0 16 16 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\grating1.tga
+$mip grating1 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 alpha material metal
+$load \art\textures\final\ny\2_cinderblock_64.tga
+$mip 2_cinderblock_64 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\metal_rust.tga
+$mip metal_rust 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\metal_clean.tga
+$mip metal_clean 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_duct2.tga
+$mip 1_duct2 0 0 64 64 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_soda_top.tga
+$mip 1_soda_top 0 0 64 64 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_soda_front_a.tga
+$mip 1_soda_front_a 0 0 64 64 scale 0.5 0.5 damage 1_soda_front_a3.m32 10 spherical env1b.m32 material sodabroke
+$load \art\textures\final\ny\1_soda_front_b.tga
+$mip 1_soda_front_b 0 0 64 32 scale 0.5 0.5 damage 1_soda_front_b3.m32 10 spherical env1b.m32 material sodabroke
+$load \art\textures\final\ny\1_soda_side_a.tga
+$mip 1_soda_side_a 0 0 64 64 scale 0.5 0.5 damage 1_soda_side_ad.m32 10 spherical env1b.m32 material sodabroke
+$load \art\textures\final\ny\1_soda_side_b.tga
+$mip 1_soda_side_b 0 0 64 32 scale 0.5 0.5 damage 1_soda_side_bd.m32 10 spherical env1b.m32 material sodabroke
+$load \art\textures\final\ny\2_open_box.tga
+$mip 2_open_box 0 0 64 64 scale 0.5 0.5 damage 2_open_boxd.m32 1 detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\big_pipe1.tga
+$mip big_pipe1 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\big_pipe2.tga
+$mip big_pipe2 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_news_front1.tga
+$mip 1_news_front1 0 0 64 64 scale 0.5 0.5 alt 1_news_frontB.m32 damage 1_news_front1d.m32 20 spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_news_front2.tga
+$mip 1_news_front2 0 0 64 64 scale 0.5 0.5 alt 1_news_frontB.m32 damage 1_news_front1d.m32 1 material metal
+$load \art\textures\final\ny\1_news_side1.tga
+$mip 1_news_side1 0 0 32 64 scale 0.5 0.5 alt 1_news_sideb.m32 spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_news_top1.tga
+$mip 1_news_top1 0 0 32 64 scale 0.5 0.5 alt 1_news_topb.m32 spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_tunnelwall.tga
+$mip 1_tunnelwall 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material sand_dbrown
+$load \art\textures\final\ny\1_metal_polished.tga
+$mip 1_metal_polished 0 0 32 32 scale 0.5 0.5 mip spherical env1c.m32 material metal
+$load \art\textures\final\ny\con1c.tga
+$mip con1c 0 0 64 64 scale 0.5 0.5 alt con1.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_tunnelwall_pipe.tga
+$mip 1_tunnelwall_pipe 0 0 64 64 scale 0.5 0.5 alt 1_tunnelwall.m32 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material sand_dbrown
+$load \art\textures\final\ny\1_tunnelwall_floor.tga
+$mip 1_tunnelwall_floor 0 0 64 32 scale 0.5 0.5 mip detail d_metalrough.m32 4 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material gravel_dbrown
+$load \art\textures\final\ny\1_tunnelwall_2.tga
+$mip 1_tunnelwall_2 0 0 64 64 scale 0.5 0.5 alt 1_tunnelwall.m32 detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material sand_dbrown
+$load \art\textures\final\ny\1_tunnelwall_3.tga
+$mip 1_tunnelwall_3 0 0 64 64 scale 0.5 0.5 alt 1_tunnelwall.m32 detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material sand_dbrown
+$load \art\textures\final\ny\1_black.tga
+$mip 1_black 0 0 16 16 scale 0.5 0.5 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\1_florescent.tga
+$mip 1_florescent 0 0 32 16 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\1_tunnel_ceiling.tga
+$mip 1_tunnel_ceiling 0 0 64 64 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material sand_dbrown
+$load \art\textures\final\ny\1_sewer_wall.tga
+$mip 1_sewer_wall 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tunnelfloor_1.tga
+$mip 1_tunnelfloor_1 0 0 32 32 scale 0.5 0.5 mip detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_tunnelfloor_2.tga
+$mip 1_tunnelfloor_2 0 0 32 32 scale 0.5 0.5 mip detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_tunneltrack_1.tga
+$mip 1_tunneltrack_1 0 0 64 64 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_tunneltrack_2.tga
+$mip 1_tunneltrack_2 0 0 64 64 scale 0.5 0.5 alt 1_tunneltrack_1.m32 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_tunneltrack_3.tga
+$mip 1_tunneltrack_3 0 0 64 64 scale 0.5 0.5 alt 1_tunneltrack_1.m32 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_tunneltrack_4.tga
+$mip 1_tunneltrack_4 0 0 64 64 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_tunneltrack_end1.tga
+$mip 1_tunneltrack_end1 0 0 64 64 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_tunneltrack_end2.tga
+$mip 1_tunneltrack_end2 0 0 64 64 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_tunneltrack_plain.tga
+$mip 1_tunneltrack_plain 0 0 64 64 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\fire_extinguisher.tga
+$mip fire_extinguisher 0 0 16 32 scale 0.5 0.5 spherical env1b.m32 material glass
+$load \art\textures\final\ny\1_news_frontb.tga
+$mip 1_news_frontB 0 0 64 64 scale 0.5 0.5 damage 1_news_frontbd.m32 1 spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_news_sideb.tga
+$mip 1_news_sideB 0 0 32 64 scale 0.5 0.5 spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_news_topb.tga
+$mip 1_news_topB 0 0 32 64 scale 0.5 0.5 spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_danger.tga
+$mip 1_danger 0 0 128 32 scale 0.5 0.5 m_spherical detail d_stonecracked.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_map.tga
+$mip 1_map 0 0 128 64 scale 1 1 damage 1_mapd.m32 10 light 10000 material glass
+$load \art\textures\final\ny\1_tile_big_green.tga
+$mip 1_tile_big_green 0 0 32 32 scale 0.5 0.5 alt 1_tile_big.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_tile_big_blue.tga
+$mip 1_tile_big_blue 0 0 32 32 scale 0.5 0.5 alt 1_tile_big.m32 mip detail d_tile.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_bench.tga
+$mip 1_bench 0 0 32 32 scale 0.5 0.5 mip detail d_metalribbed.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\1_door_jam.tga
+$mip 1_door_jam 0 0 16 16 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_sign1.tga
+$mip 1_sign1 0 0 128 32 scale 0.5 0.5 damage 1_sign1d.m32 10 detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material glass_computer
+$load \art\textures\final\ny\1_sign2.tga
+$mip 1_sign2 0 0 128 32 scale 0.5 0.5 damage 1_sign2d.m32 10 detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material glass_computer
+$load \art\textures\final\ny\1_tunnel_ceiling2.tga
+$mip 1_tunnel_ceiling2 0 0 64 64 scale 0.5 0.5 alt 1_tunnel_ceiling.m32 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material sand_dbrown
+$load \art\textures\final\ny\1_tunnel_ceiling3.tga
+$mip 1_tunnel_ceiling3 0 0 64 64 scale 0.5 0.5 alt 1_tunnel_ceiling.m32 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material sand_dbrown
+$load \art\textures\final\ny\1_tunnel_ceiling4.tga
+$mip 1_tunnel_ceiling4 0 0 64 64 scale 0.5 0.5 alt 1_tunnel_ceiling.m32 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material sand_dbrown
+$load \art\textures\final\ny\1_poster1.tga
+$mip 1_poster1 0 0 64 64 scale 0.5 0.5 alt 1_poster3.m32 spherical env1b.m32 material glass
+$load \art\textures\final\ny\1_poster2.tga
+$mip 1_poster2 0 0 64 64 scale 0.5 0.5 alt 1_poster3.m32 m_parental spherical env1b.m32 material glass
+$load \art\textures\final\ny\1_poster3.tga
+$mip 1_poster3 0 0 64 64 scale 0.5 0.5 spherical env1b.m32 material glass
+$load \art\textures\final\ny\1_poster2a.tga
+$mip 1_poster2a 0 0 64 64 scale 0.5 0.5 alt 1_poster3a.m32 m_parental spherical env1b.m32 material glass
+$load \art\textures\final\ny\1_poster3a.tga
+$mip 1_poster3a 0 0 64 64 scale 0.5 0.5 spherical env1b.m32 material glass
+$load \art\textures\final\ny\1_poster_top.tga
+$mip 1_poster_top 0 0 64 16 scale 0.5 0.5 mip spherical env1b.m32 material metal
+$load \art\textures\final\ny\2_cinderblock_sign1.tga
+$mip 2_cinderblock_sign1 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 m_spherical detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\2_cinderblock_sign2.tga
+$mip 2_cinderblock_sign2 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 m_spherical detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\2_cinderblock_sign3.tga
+$mip 2_cinderblock_sign3 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 m_spherical detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\2_cinderblock_sign4.tga
+$mip 2_cinderblock_sign4 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 m_spherical detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32
+$load \art\textures\final\ny\2_cinderblock_num2.tga
+$mip 2_cinderblock_num2 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_num3.tga
+$mip 2_cinderblock_num3 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf1.tga
+$mip 2_cinderblock_graf1 0 0 128 64 scale 0.5 0.5 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_oldwall1_sign1.tga
+$mip 2_oldwall1_sign1 0 0 64 64 scale 0.5 0.5 alt 2_oldwall2.m32 detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_tile_blood.tga
+$mip 1_tile_blood 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_damage1.tga
+$mip 1_tile_damage1 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_damage2.tga
+$mip 1_tile_damage2 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_soda_front_a3.tga
+$mip 1_soda_front_a3 0 0 64 64 scale 0.5 0.5 material sodabroke
+$load \art\textures\final\ny\1_soda_front_b3.tga
+$mip 1_soda_front_b3 0 0 64 32 scale 0.5 0.5 material sodabroke
+$load \art\textures\final\ny\2_valve.tga
+$mip 2_valve 0 0 32 16 scale 0.5 0.5 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_door_1.tga
+$mip 2_door_1 0 0 64 128 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\pipe_rusty1.tga
+$mip pipe_rusty1 0 0 64 32 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\pipe_rusty2.tga
+$mip pipe_rusty2 0 0 64 32 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\pipe_grey1.tga
+$mip pipe_grey1 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\pipe_grey2.tga
+$mip pipe_grey2 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_tile_graf1.tga
+$mip 1_tile_graf1 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf2.tga
+$mip 1_tile_graf2 0 0 64 64 scale 0.5 0.5 alt 1_tile_graf2b.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf3.tga
+$mip 1_tile_graf3 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf4.tga
+$mip 1_tile_graf4 0 0 64 64 scale 0.5 0.5 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf5.tga
+$mip 1_tile_graf5 0 0 64 64 scale 0.5 0.5 alt 1_tile_graf5b.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\2_corrigated_metal.tga
+$mip 2_corrigated_metal 0 0 32 32 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\1_tile_graf6.tga
+$mip 1_tile_graf6 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf7.tga
+$mip 1_tile_graf7 0 0 64 64 scale 0.5 0.5 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf8.tga
+$mip 1_tile_graf8 0 0 64 64 scale 0.5 0.5 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf9.tga
+$mip 1_tile_graf9 0 0 64 64 scale 0.5 0.5 alt 1_tile_graf9b.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\2_orange_paint.tga
+$mip 2_orange_paint 0 0 16 16 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material stone_red
+$load \art\textures\final\ny\sky2.tga
+$mip sky2 0 0 64 64 scale 0.5 0.5 sky
+$load \art\textures\final\ny\2_open_box2.tga
+$mip 2_open_box2 0 0 64 64 scale 0.5 0.5 damage 2_open_box2d.m32 1 detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\2_open_box3.tga
+$mip 2_open_box3 0 0 64 64 scale 0.5 0.5 damage 2_open_box.m32 1 detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_computer
+$load \art\textures\final\ny\1_cork_ceiling.tga
+$mip 1_cork_ceiling 0 0 64 64 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material snow
+$load \art\textures\final\ny\1_stair_top1.tga
+$mip 1_stair_top1 0 0 32 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\1_stair_side1.tga
+$mip 1_stair_side1 0 0 16 16 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_stair_side2.tga
+$mip 1_stair_side2 0 0 16 16 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_stair_side1.tga
+$mip 2_stair_side1 0 0 16 16 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\2_stair_side2.tga
+$mip 2_stair_side2 0 0 16 16 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\stair_side.tga
+$mip stair_side 0 0 16 16 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\2_oldwallwet_2.tga
+$mip 2_oldwallwet_2 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\2_oldceiling2.tga
+$mip 2_oldceiling2 0 0 64 32 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\1_danger2.tga
+$mip 1_danger2 0 0 128 32 scale 0.5 0.5 alt 1_danger2.m32 m_spherical detail d_stonecracked.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_grating.tga
+$mip 1_grating 0 0 64 64 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR alpha material metal
+$load \art\textures\final\ny\2_fan_grate.tga
+$mip 2_fan_grate 0 0 128 128 scale 0.5 0.5 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\grating2.tga
+$mip grating2 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 alpha material metal
+$load \art\textures\final\ny\1_beam1.tga
+$mip 1_beam1 0 0 64 32 scale 0.5 0.5 alt 1_beam2.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_beam2.tga
+$mip 1_beam2 0 0 64 32 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_restroom1.tga
+$mip 1_restroom1 0 0 32 32 scale 0.5 0.5 spherical env1a.m32 material metal
+$load \art\textures\final\ny\1_restroom2.tga
+$mip 1_restroom2 0 0 32 32 scale 0.5 0.5 spherical env1a.m32 material metal
+$load \art\textures\final\ny\1_switch1.tga
+$mip 1_switch1 0 0 16 32 scale 0.5 0.5 damage 1_switch1d.m32 10 spherical env1c.m32 anim 1_switch2.m32 animspeed 1 material metal_computer
+$load \art\textures\final\ny\1_switch2.tga
+$mip 1_switch2 0 0 16 32 scale 0.5 0.5 damage 1_switch1d.m32 10 spherical env1c.m32 anim 1_switch1.m32 animspeed 1 material metal
+$load \art\textures\final\ny\1_shield.tga
+$mip 1_shield 0 0 32 32 scale 0.5 0.5 detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_cops.tga
+$mip 1_cops 0 0 64 64 scale 0.5 0.5 m_nomip spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_brushed_metal.tga
+$mip 1_brushed_metal 0 0 32 32 scale 0.5 0.5 mip spherical env1c.m32 material metal
+$load \art\textures\final\ny\1_bathroom_men.tga
+$mip 1_bathroom_men 0 0 64 64 scale 0.5 0.5 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\1_bathroom_men_bottom.tga
+$mip 1_bathroom_men_bottom 0 0 32 32 scale 0.5 0.5 mip detail d_tile.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\1_bathroom_men_damage.tga
+$mip 1_bathroom_men_damage 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_men.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\1_bathroom_men_top.tga
+$mip 1_bathroom_men_top 0 0 32 16 scale 0.5 0.5 mip detail d_tile.m32 4 1 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\1_bathroom_women.tga
+$mip 1_bathroom_women 0 0 64 64 scale 0.5 0.5 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\1_bathroom_women_bottom.tga
+$mip 1_bathroom_women_bottom 0 0 32 32 scale 0.5 0.5 mip detail d_tile.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\1_bathroom_women_top.tga
+$mip 1_bathroom_women_top 0 0 32 16 scale 0.5 0.5 mip detail d_tile.m32 4 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\1_bathroom_floor.tga
+$mip 1_bathroom_floor 0 0 64 64 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR flowing trans33 trans66 material stone_lbrown
+$load \art\textures\final\ny\1_bathroom_floor_edge.tga
+$mip 1_bathroom_floor_edge 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_floor.m32 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_bathroom_floor_drain.tga
+$mip 1_bathroom_floor_drain 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_floor.m32 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR flowing sky slick trans66 warping material metal
+$load \art\textures\final\ny\1_bathroom_men_graf1.tga
+$mip 1_bathroom_men_graf1 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_men.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\1_bathroom_men_graf2.tga
+$mip 1_bathroom_men_graf2 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_men.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\1_bathroom_men_graf4.tga
+$mip 1_bathroom_men_graf4 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_men.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\1_bathroom_women_blood.tga
+$mip 1_bathroom_women_blood 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_women.m32 mip m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\1_bathroom_men_graf3.tga
+$mip 1_bathroom_men_graf3 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_men.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\1_bathroom_streak_bottom.tga
+$mip 1_bathroom_streak_bottom 0 0 64 32 scale 0.5 0.5 alt 1_bathroom_women_bottom.m32 mip detail d_tile.m32 8 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\1_bathroom_streak_mid.tga
+$mip 1_bathroom_streak_mid 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_women.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\1_bathroom_streak_top.tga
+$mip 1_bathroom_streak_top 0 0 64 16 scale 0.5 0.5 mip detail d_tile.m32 8 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\1_bathroom_women_graf1.tga
+$mip 1_bathroom_women_graf1 0 0 64 64 scale 0.5 0.5 alt 1_bathroom_women.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\grating3.tga
+$mip grating3 0 0 64 128 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR alpha material metal
+$load \art\textures\final\ny\1_cops2.tga
+$mip 1_cops2 0 0 64 64 scale 0.5 0.5 alt 1_cops.m32 m_nomip spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_lobby_floor.tga
+$mip 1_lobby_floor 0 0 64 64 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\1_sign3.tga
+$mip 1_sign3 0 0 128 32 scale 0.5 0.5 damage 1_sign3d.m32 10 detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material glass_computer
+$load \art\textures\final\ny\1_sign4.tga
+$mip 1_sign4 0 0 128 32 scale 0.5 0.5 alt 1_sign4b.m32 m_parental detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass_computer
+$load \art\textures\final\ny\2_sign1.tga
+$mip 2_sign1 0 0 64 64 scale 0.5 0.5 detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_sign3.tga
+$mip 2_sign3 0 0 64 64 scale 0.5 0.5 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_sign4.tga
+$mip 2_sign4 0 0 64 64 scale 0.5 0.5 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_grocery1.tga
+$mip 3_grocery1 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_grocery1_window.tga
+$mip 3_grocery1_window 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_grocery1_window_wide.tga
+$mip 3_grocery1_window_wide 0 0 128 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_grocery2.tga
+$mip 3_grocery2 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_grocery2_bottom.tga
+$mip 3_grocery2_bottom 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_grocery2_bottom2.tga
+$mip 3_grocery2_bottom2 0 0 64 64 scale 0.5 0.5 alt 3_grocery2.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_grocery2_bottom3.tga
+$mip 3_grocery2_bottom3 0 0 64 64 scale 0.5 0.5 alt 3_grocery2.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_grocery2_bottom4.tga
+$mip 3_grocery2_bottom4 0 0 64 64 scale 0.5 0.5 alt 3_grocery2.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_grocery3.tga
+$mip 3_grocery3 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_grocery3_park.tga
+$mip 3_grocery3_park 0 0 128 64 scale 0.5 0.5 alt 3_grocery3.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\sign1.tga
+$mip sign1 0 0 32 32 scale 0.5 0.5 detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\sign2.tga
+$mip sign2 0 0 32 32 scale 0.5 0.5 material metal
+$load \art\textures\final\ny\sign3.tga
+$mip sign3 0 0 64 64 scale 0.5 0.5 spherical env1a.m32 material metal
+$load \art\textures\final\ny\sign4.tga
+$mip sign4 0 0 64 64 scale 0.5 0.5 spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_apt.tga
+$mip 3_apt 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_apt_bottom1.tga
+$mip 3_apt_bottom1 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_apt_bottom2.tga
+$mip 3_apt_bottom2 0 0 64 64 scale 0.5 0.5 alt 3_apt_bottom1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_apt_bottom3.tga
+$mip 3_apt_bottom3 0 0 64 64 scale 0.5 0.5 alt 3_apt_bottom1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_apt_window.tga
+$mip 3_apt_window 0 0 64 64 scale 0.5 0.5 damage 3_apt_windowd.m32 20 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_bar.tga
+$mip 3_bar 0 0 32 32 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_bar2.tga
+$mip 3_bar2 0 0 64 64 scale 1 1 alt 3_bar.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_bar_bottom1.tga
+$mip 3_bar_bottom1 0 0 32 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_bar_bottom2.tga
+$mip 3_bar_bottom2 0 0 64 64 scale 1 1 alt 3_bar_bottom1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_bar_bottom3.tga
+$mip 3_bar_bottom3 0 0 64 64 scale 1 1 alt 3_bar_bottom1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_bar_bottom4.tga
+$mip 3_bar_bottom4 0 0 64 64 scale 1 1 alt 3_bar_bottom1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_bar_white.tga
+$mip 3_bar_white 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_bar_window.tga
+$mip 3_bar_window 0 0 64 64 scale 1 1 alt 3_bar2.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_oldbrick.tga
+$mip 3_oldbrick 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_oldbrick_window.tga
+$mip 3_oldbrick_window 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_redbrick.tga
+$mip 3_redbrick 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_redbrick_bottom1.tga
+$mip 3_redbrick_bottom1 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_redbrick_bottom1a.tga
+$mip 3_redbrick_bottom1a 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\3_redbrick_bottom1b.tga
+$mip 3_redbrick_bottom1b 0 0 64 64 scale 0.5 0.5 alt 3_redbrick_bottom1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_redbrick_bottom2.tga
+$mip 3_redbrick_bottom2 0 0 64 64 scale 0.5 0.5 alt 3_redbrick_bottom1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_redbrick_trim.tga
+$mip 3_redbrick_trim 0 0 16 16 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_redbrick_trim_a.tga
+$mip 3_redbrick_trim_a 0 0 64 64 scale 0.5 0.5 alt 3_redbrick.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_redbrick_trim_b.tga
+$mip 3_redbrick_trim_b 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\3_redbrick_window_a.tga
+$mip 3_redbrick_window_a 0 0 64 64 scale 0.5 0.5 damage 3_redbrick_window_ad1.m32 10 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_redbrick_window_b.tga
+$mip 3_redbrick_window_b 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\1_bathroom_men_nos.tga
+$mip 1_bathroom_men_nos 0 0 64 64 scale 0.5 0.5 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\1_bathroom_women_nos.tga
+$mip 1_bathroom_women_nos 0 0 64 64 scale 0.5 0.5 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\1_beam1_plain.tga
+$mip 1_beam1_plain 0 0 16 16 scale 0.5 0.5 alt 1_beam2_plain.m32 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_beam2_plain.tga
+$mip 1_beam2_plain 0 0 16 16 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_clock.tga
+$mip 1_clock 0 0 32 32 scale 0.5 0.5 damage 1_clockd.m32 10 spherical env1b.m32 material glass_computer
+$load \art\textures\final\ny\3_bar_white_bottom.tga
+$mip 3_bar_white_bottom 0 0 64 64 scale 0.5 0.5 alt 3_bar_white.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_cement.tga
+$mip 3_cement 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement2.tga
+$mip 3_cement2 0 0 64 64 scale 0.5 0.5 alt 3_cement.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_crack.tga
+$mip 3_cement_crack 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_crack_edge.tga
+$mip 3_cement_crack_edge 0 0 64 64 scale 0.5 0.5 alt 3_cement_crack.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_crack_edge2.tga
+$mip 3_cement_crack_edge2 0 0 64 64 scale 0.5 0.5 alt 3_cement_crack.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_cement_crack_line.tga
+$mip 3_cement_crack_line 0 0 64 64 scale 0.5 0.5 alt 3_cement_crack.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_crack_line_side.tga
+$mip 3_cement_crack_line_side 0 0 64 64 scale 0.5 0.5 alt 3_cement_crack.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_edge.tga
+$mip 3_cement_edge 0 0 64 64 scale 0.5 0.5 alt 3_cement.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_line1.tga
+$mip 3_cement_line1 0 0 64 64 scale 0.5 0.5 alt 3_cement.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_line2.tga
+$mip 3_cement_line2 0 0 64 64 scale 0.5 0.5 alt 3_cement.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_line3.tga
+$mip 3_cement_line3 0 0 64 64 scale 0.5 0.5 alt 3_cement.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_line4.tga
+$mip 3_cement_line4 0 0 64 64 scale 0.5 0.5 alt 3_cement.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_cement_line_bottom.tga
+$mip 3_cement_line_bottom 0 0 64 64 scale 0.5 0.5 alt 3_cement.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cement_line_top.tga
+$mip 3_cement_line_top 0 0 64 64 scale 0.5 0.5 alt 3_cement.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_cobble.tga
+$mip 3_cobble 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_cobble_edge1.tga
+$mip 3_cobble_edge1 0 0 64 64 scale 0.5 0.5 alt 3_cobble.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_cobble_edge2.tga
+$mip 3_cobble_edge2 0 0 64 64 scale 0.5 0.5 alt 3_cobble.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_cobble_edge3.tga
+$mip 3_cobble_edge3 0 0 64 64 scale 0.5 0.5 alt 3_cobble.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_cobble_edge4.tga
+$mip 3_cobble_edge4 0 0 64 64 scale 0.5 0.5 alt 3_cobble.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\3_cobble_manhole.tga
+$mip 3_cobble_manhole 0 0 64 64 scale 0.5 0.5 alt 3_cobble.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_cobble_plate.tga
+$mip 3_cobble_plate 0 0 64 64 scale 0.5 0.5 alt 3_cobble.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_cobble_stain1.tga
+$mip 3_cobble_stain1 0 0 64 64 scale 0.5 0.5 alt 3_cobble.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_dog.tga
+$mip 3_dog 0 0 64 32 scale 0.5 0.5 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_door1.tga
+$mip 3_door1 0 0 64 128 scale 0.5 0.5 detail d_stonecracked.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_door2.tga
+$mip 3_door2 0 0 64 128 scale 0.5 0.5 detail d_stoneholey.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_door3.tga
+$mip 3_door3 0 0 64 128 scale 0.5 0.5 mip detail d_woodsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_door_blocked1.tga
+$mip 3_door_blocked1 0 0 64 128 scale 0.5 0.5 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_door_blocked2.tga
+$mip 3_door_blocked2 0 0 64 128 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_market1.tga
+$mip 3_market1 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_market1_bottom.tga
+$mip 3_market1_bottom 0 0 64 64 scale 0.5 0.5 alt 3_market1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_market1_top.tga
+$mip 3_market1_top 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_market2.tga
+$mip 3_market2 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_market2_bottom.tga
+$mip 3_market2_bottom 0 0 64 64 scale 0.5 0.5 alt 3_market2.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_market2_top.tga
+$mip 3_market2_top 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_market3.tga
+$mip 3_market3 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_market3_bottom.tga
+$mip 3_market3_bottom 0 0 64 64 scale 0.5 0.5 alt 3_market3.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_market3_top.tga
+$mip 3_market3_top 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_market_door.tga
+$mip 3_market_door 0 0 64 128 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_market_sign1.tga
+$mip 3_market_sign1 0 0 64 64 scale 0.5 0.5 alt 3_market1.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\3_market_sign2.tga
+$mip 3_market_sign2 0 0 64 64 scale 0.5 0.5 alt 3_market1.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\3_market_sign3.tga
+$mip 3_market_sign3 0 0 64 64 scale 0.5 0.5 alt 3_market1.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\3_market_window1.tga
+$mip 3_market_window1 0 0 64 64 scale 0.5 0.5 alt 3_market_window2.m32 damage 3_market_window1d.m32 10 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_market_window2.tga
+$mip 3_market_window2 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_orange.tga
+$mip 3_orange 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_orange2.tga
+$mip 3_orange2 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_orange2a.tga
+$mip 3_orange2a 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_orange2b.tga
+$mip 3_orange2b 0 0 64 64 scale 0.5 0.5 alt 3_orange2a.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_orange_bottom1.tga
+$mip 3_orange_bottom1 0 0 64 64 scale 0.5 0.5 alt 3_orange2.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_orange_bottom2.tga
+$mip 3_orange_bottom2 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_orange_window.tga
+$mip 3_orange_window 0 0 64 64 scale 0.5 0.5 damage 3_orange_windowd.m32 20 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_orange_window2.tga
+$mip 3_orange_window2 0 0 64 64 scale 0.5 0.5 damage 3_orange_window2d.m32 20 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_private.tga
+$mip 3_private 0 0 64 32 scale 0.5 0.5 detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\3_store_brick1.tga
+$mip 3_store_brick1 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_store_brick1_bottom.tga
+$mip 3_store_brick1_bottom 0 0 64 64 scale 1 1 alt 3_store_brick1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_store_brick2.tga
+$mip 3_store_brick2 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_store_brick2_bottom.tga
+$mip 3_store_brick2_bottom 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_store_brick3.tga
+$mip 3_store_brick3 0 0 64 64 scale 1 1 alt 3_store_brick1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_store_brick3_bottom.tga
+$mip 3_store_brick3_bottom 0 0 64 64 scale 1 1 alt 3_store_brick3.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_store_brick_door.tga
+$mip 3_store_brick_door 0 0 64 128 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\3_store_brick_window.tga
+$mip 3_store_brick_window 0 0 64 64 scale 1 1 damage 3_store_brick_windowd.m32 10 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_store_trans.tga
+$mip 3_store_trans 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_store_trans_bottom.tga
+$mip 3_store_trans_bottom 0 0 64 64 scale 1 1 alt 3_store_trans.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_store_white.tga
+$mip 3_store_white 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_store_white2.tga
+$mip 3_store_white2 0 0 64 64 scale 1 1 alt 3_store_white.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_store_white_bottom.tga
+$mip 3_store_white_bottom 0 0 64 64 scale 1 1 alt 3_store_white.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_store_white_bottom2.tga
+$mip 3_store_white_bottom2 0 0 64 64 scale 1 1 alt 3_store_white.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\3_store_white_door.tga
+$mip 3_store_white_door 0 0 64 128 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_store_white_sign1.tga
+$mip 3_store_white_sign1 0 0 64 64 scale 1 1 alt 3_store_white.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_store_white_sign2.tga
+$mip 3_store_white_sign2 0 0 64 64 scale 1 1 alt 3_store_white.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_store_white_sign3.tga
+$mip 3_store_white_sign3 0 0 64 64 scale 1 1 alt 3_store_white.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_store_white_sign4.tga
+$mip 3_store_white_sign4 0 0 64 64 scale 1 1 alt 3_store_white.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_store_white_sign5.tga
+$mip 3_store_white_sign5 0 0 64 64 scale 1 1 alt 3_store_white.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_store_white_sign6.tga
+$mip 3_store_white_sign6 0 0 64 64 scale 1 1 alt 3_store_white.m32 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_street.tga
+$mip 3_street 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_street2.tga
+$mip 3_street2 0 0 64 64 scale 0.5 0.5 alt 3_street.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_street_crack.tga
+$mip 3_street_crack 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_street_crack_edge.tga
+$mip 3_street_crack_edge 0 0 64 64 scale 0.5 0.5 alt 3_street_crack.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_street_crack_trans1.tga
+$mip 3_street_crack_trans1 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_street_crack_trans2.tga
+$mip 3_street_crack_trans2 0 0 64 64 scale 0.5 0.5 alt 3_street_crack_trans1.m32 detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_street_edge1.tga
+$mip 3_street_edge1 0 0 64 64 scale 0.5 0.5 alt 3_street.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_street_edge2.tga
+$mip 3_street_edge2 0 0 64 64 scale 0.5 0.5 alt 3_street.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_street_middle.tga
+$mip 3_street_middle 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_street_trans.tga
+$mip 3_street_trans 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_sweatwall.tga
+$mip 3_sweatwall 0 0 64 64 scale 0.5 0.5 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_sweatwall2.tga
+$mip 3_sweatwall2 0 0 64 64 scale 0.5 0.5 alt 3_sweatwall.m32 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_sweatwall3.tga
+$mip 3_sweatwall3 0 0 64 64 scale 0.5 0.5 alt 3_sweatwall.m32 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_sweatwall4.tga
+$mip 3_sweatwall4 0 0 64 64 scale 0.5 0.5 alt 3_sweatwall.m32 damage 3_sweatwall4d.m32 1 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_sweatwall_bottom.tga
+$mip 3_sweatwall_bottom 0 0 64 64 scale 0.5 0.5 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_sweatwall_top.tga
+$mip 3_sweatwall_top 0 0 64 64 scale 0.5 0.5 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_sweatwall_top2.tga
+$mip 3_sweatwall_top2 0 0 64 64 scale 0.5 0.5 alt 3_sweatwall_top.m32 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_sweatwall_top3.tga
+$mip 3_sweatwall_top3 0 0 64 128 scale 0.5 0.5 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_tarpaper.tga
+$mip 3_tarpaper 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_black
+$load \art\textures\final\ny\3_tarpaper_cross.tga
+$mip 3_tarpaper_cross 0 0 64 64 scale 0.5 0.5 alt 3_tarpaper.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_black
+$load \art\textures\final\ny\3_tarpaper_horiz.tga
+$mip 3_tarpaper_horiz 0 0 64 64 scale 0.5 0.5 alt 3_tarpaper.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_black
+$load \art\textures\final\ny\3_tarpaper_vert.tga
+$mip 3_tarpaper_vert 0 0 64 64 scale 0.5 0.5 alt 3_tarpaper.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_black
+$load \art\textures\final\ny\3_elevator_door.tga
+$mip 3_elevator_door 0 0 64 128 scale 0.5 0.5 mip detail d_stonecracked.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_sweatfloor.tga
+$mip 3_sweatfloor 0 0 64 64 scale 0.5 0.5 mip detail d_woodrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_lbrown
+$load \art\textures\final\ny\3_sweat_ceil1.tga
+$mip 3_sweat_ceil1 0 0 64 64 scale 0.5 0.5 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_sweat_ceil1a.tga
+$mip 3_sweat_ceil1a 0 0 64 64 scale 0.5 0.5 alt 3_sweat_ceil1.m32 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_sweat_ceil_edge1.tga
+$mip 3_sweat_ceil_edge1 0 0 64 64 scale 0.5 0.5 alt 3_sweat_ceil1.m32 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_sweat_ceil_edge2.tga
+$mip 3_sweat_ceil_edge2 0 0 64 64 scale 0.5 0.5 alt 3_sweat_ceil1.m32 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_sweat_ceil_edge2a.tga
+$mip 3_sweat_ceil_edge2a 0 0 64 64 scale 0.5 0.5 alt 3_sweat_ceil1.m32 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_tow_sign.tga
+$mip 3_tow_sign 0 0 64 64 scale 0.5 0.5 m_nomip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\sign10.tga
+$mip sign10 0 0 64 64 scale 0.5 0.5 alt sign15.m32 m_parental spherical env1b.m32
+$load \art\textures\final\ny\sign5.tga
+$mip sign5 0 0 64 64 scale 0.5 0.5 alt sign13b.m32 m_parental spherical env1a.m32
+$load \art\textures\final\ny\sign6.tga
+$mip sign6 0 0 128 64 scale 0.5 0.5 alt sign8.m32 m_parental spherical env1b.m32
+$load \art\textures\final\ny\sign7.tga
+$mip sign7 0 0 128 64 scale 0.5 0.5 alt sign8.m32 m_parental spherical env1b.m32
+$load \art\textures\final\ny\sign8.tga
+$mip sign8 0 0 128 64 scale 0.5 0.5 spherical env1b.m32
+$load \art\textures\final\ny\sign9.tga
+$mip sign9 0 0 64 64 scale 0.5 0.5
+$load \art\textures\final\ny\1_sign5.tga
+$mip 1_sign5 0 0 64 64 scale 0.5 0.5 alt 1_lobby1a.m32 detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_sign6.tga
+$mip 1_sign6 0 0 64 64 scale 0.5 0.5 spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_tile_graf10.tga
+$mip 1_tile_graf10 0 0 128 64 scale 0.5 0.5 alt 1_tile_graf10b.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf11.tga
+$mip 1_tile_graf11 0 0 128 64 scale 0.5 0.5 alt 1_tile_graf11b.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf12.tga
+$mip 1_tile_graf12 0 0 64 64 scale 0.5 0.5 alt 1_tile_graf12b.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf13.tga
+$mip 1_tile_graf13 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\2_boiler_edge.tga
+$mip 2_boiler_edge 0 0 64 64 scale 1 1 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_waterjet
+$load \art\textures\final\ny\2_boiler_side.tga
+$mip 2_boiler_side 0 0 64 64 scale 1 1 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_waterjet
+$load \art\textures\final\ny\2_boiler_side1.tga
+$mip 2_boiler_side1 0 0 128 64 scale 1 1 alt 2_boiler_side.m32 detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_waterjet
+$load \art\textures\final\ny\2_boiler_side2.tga
+$mip 2_boiler_side2 0 0 128 64 scale 1 1 alt 2_boiler_side.m32 detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_waterjet
+$load \art\textures\final\ny\2_cinderblock_graf10.tga
+$mip 2_cinderblock_graf10 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf11.tga
+$mip 2_cinderblock_graf11 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\2_cinderblock_graf2.tga
+$mip 2_cinderblock_graf2 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock_graf2b.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf3.tga
+$mip 2_cinderblock_graf3 0 0 128 64 scale 0.5 0.5 alt 2_cinderblock_graf3b.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf4.tga
+$mip 2_cinderblock_graf4 0 0 128 64 scale 0.5 0.5 alt 2_cinderblock_graf6b.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf5.tga
+$mip 2_cinderblock_graf5 0 0 128 64 scale 0.5 0.5 alt 2_cinderblock_graf2b.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf6.tga
+$mip 2_cinderblock_graf6 0 0 128 64 scale 0.5 0.5 alt 2_cinderblock_graf6b.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf7.tga
+$mip 2_cinderblock_graf7 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf8.tga
+$mip 2_cinderblock_graf8 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock_graf8b.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf9.tga
+$mip 2_cinderblock_graf9 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock_graf9b.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_door4.tga
+$mip 3_door4 0 0 64 128 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_door_blocked3.tga
+$mip 3_door_blocked3 0 0 64 128 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_privatealley.tga
+$mip 3_privatealley 0 0 64 32 scale 0.5 0.5 detail d_metalsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\sign11.tga
+$mip sign11 0 0 128 64 scale 0.5 0.5 alt sign8.m32 m_parental spherical env1b.m32
+$load \art\textures\final\ny\1_lobby1.tga
+$mip 1_lobby1 0 0 64 64 scale 0.5 0.5 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby2.tga
+$mip 1_lobby2 0 0 64 64 scale 0.5 0.5 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby3.tga
+$mip 1_lobby3 0 0 64 64 scale 0.5 0.5 mip detail d_stucco.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby4.tga
+$mip 1_lobby4 0 0 64 64 scale 0.5 0.5 alt 1_lobby3.m32 mip detail d_stucco.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby1a.tga
+$mip 1_lobby1a 0 0 64 64 scale 0.5 0.5 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby_floor_edge.tga
+$mip 1_lobby_floor_edge 0 0 64 64 scale 0.5 0.5 alt 1_lobby_floor.m32 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\1_turnstile_front.tga
+$mip 1_turnstile_front 0 0 16 32 scale 0.5 0.5 spherical env1c.m32 material metal
+$load \art\textures\final\ny\1_turnstile_side.tga
+$mip 1_turnstile_side 0 0 16 32 scale 0.5 0.5 spherical env1c.m32 material metal
+$load \art\textures\final\ny\bars1.tga
+$mip bars1 0 0 64 64 scale 0.5 0.5 mip spherical env1c.m32 alpha material metal
+$load \art\textures\final\ny\bars2.tga
+$mip bars2 0 0 64 64 scale 0.5 0.5 mip spherical env1c.m32 alpha material metal
+$load \art\textures\final\ny\ladder_rung.tga
+$mip ladder_rung 0 0 32 16 scale 0.5 0.5 mip spherical env1c.m32 alpha material metal
+$load \art\textures\final\ny\glass_bulletproof.tga
+$mip Glass_bulletproof 0 0 64 64 scale 1 1 mip spherical env1b.m32 material glass
+$load \art\textures\final\ny\glass_new.tga
+$mip glass_new 0 0 64 64 scale 1 1 damage glass_newd.m32 20 mip spherical env1b.m32 material glass
+$load \art\textures\final\ny\glass_new2.tga
+$mip Glass_new2 0 0 128 128 scale 1 1 damage glass_new2d.m32 20 mip spherical env1b.m32 material glass
+$load \art\textures\final\ny\glass_streaked.tga
+$mip glass_streaked 0 0 64 64 scale 1 1 damage glass_streakedd.m32 20 mip material glass
+$load \art\textures\final\ny\glass_window.tga
+$mip glass_window 0 0 64 64 scale 1 1 damage glass_windowd.m32 20 mip material glass
+$load \art\textures\final\ny\physics.tga
+$mip PHYSICS 0 0 64 64 scale 0.5 0.5
+$load \art\textures\final\ny\2_watersteam.tga
+$mip 2_watersteam 0 0 128 128 scale 1 1 mip material liquid_blue
+$load \art\textures\final\ny\3_flatwood.tga
+$mip 3_flatwood 0 0 64 64 scale 0.5 0.5 mip detail d_stonesmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\chainlink.tga
+$mip chainlink 0 0 32 32 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1c.m32 alpha material metal
+$load \art\textures\final\ny\3_dirt.tga
+$mip 3_dirt 0 0 128 128 scale 1 1 mip detail d_gravel.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material gravel_dbrown
+$load \art\textures\final\ny\3_mrust1.tga
+$mip 3_mrust1 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_mrust2.tga
+$mip 3_mrust2 0 0 64 64 scale 0.5 0.5 alt 3_mrust1.m32 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_mrust3.tga
+$mip 3_mrust3 0 0 64 64 scale 0.5 0.5 alt 3_mrust1.m32 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_mrust4.tga
+$mip 3_mrust4 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_mtrim2.tga
+$mip 3_mtrim2 0 0 64 32 scale 0.5 0.5 mip detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_guage.tga
+$mip 2_guage 0 0 16 16 scale 0.5 0.5 detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_computer
+$load \art\textures\final\ny\2_holes.tga
+$mip 2_holes 0 0 32 32 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR alpha material metal
+$load \art\textures\final\ny\grating4.tga
+$mip grating4 0 0 32 32 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR alpha material metal
+$load \art\textures\final\ny\3_metalside.tga
+$mip 3_metalside 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_shingle.tga
+$mip 3_shingle 0 0 64 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_grey
+$load \art\textures\final\ny\window1.tga
+$mip window1 0 0 64 64 scale 0.5 0.5 damage window1_d1.m32 10 mip alpha material glass
+$load \art\textures\final\ny\window1_dirt.tga
+$mip window1_dirt 0 0 64 64 scale 0.5 0.5 damage window1_dirt_d1.m32 10 mip alpha material glass
+$load \art\textures\final\ny\window2.tga
+$mip window2 0 0 64 64 scale 0.5 0.5 damage window2_d1.m32 10 mip alpha material glass
+$load \art\textures\final\ny\window2_dirt.tga
+$mip window2_dirt 0 0 64 64 scale 0.5 0.5 damage window2_dirt_d.m32 10 mip alpha material glass
+$load \art\textures\final\ny\calendar.tga
+$mip calendar 0 0 32 64 scale 0.5 0.5 alt calendar2b.m32 m_parental
+$load \art\textures\final\ny\calendar2.tga
+$mip calendar2 0 0 32 64 scale 0.5 0.5 alt calendar2b.m32 m_parental
+$load \art\textures\final\ny\catwalk.tga
+$mip catwalk 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 alpha material metal
+$load \art\textures\final\ny\greenbox_front1.tga
+$mip greenbox_front1 0 0 64 64 scale 0.5 0.5 damage greenbox_front3.m32 1 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\greenbox_front2.tga
+$mip greenbox_front2 0 0 64 64 scale 0.5 0.5 damage greenbox_front3.m32 1 detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\greenbox_front3.tga
+$mip greenbox_front3 0 0 64 64 scale 0.5 0.5 damage greenbox_front3d.m32 1 detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\greenbox_side.tga
+$mip greenbox_side 0 0 16 16 scale 0.5 0.5 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\button1a.tga
+$mip button1a 0 0 32 32 scale 0.5 0.5 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR anim button1b.m32 material metal
+$load \art\textures\final\ny\button1b.tga
+$mip button1b 0 0 32 32 scale 0.5 0.5 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\button2a.tga
+$mip button2a 0 0 32 32 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR anim button2b.m32 animspeed 2 light 2 material metal
+$load \art\textures\final\ny\button2b.tga
+$mip button2b 0 0 32 32 scale 0.5 0.5 damage button2d.m32 10 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR anim button2a.m32 animspeed 2 light 2 material metal
+$load \art\textures\final\ny\exit.tga
+$mip exit 0 0 64 32 scale 0.5 0.5 damage exitd.m32 10 light 30000 material glass_computer
+$load \art\textures\final\ny\barbwire.tga
+$mip barbwire 0 0 128 64 scale 0.5 0.5 detail d_metalsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1c.m32 alpha material metal
+$load \art\textures\final\ny\meter1.tga
+$mip Meter1 0 0 64 64 scale 0.5 0.5 damage meter1d.m32 1 detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\3_wareceiling1.tga
+$mip 3_wareceiling1 0 0 128 128 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_woodfloor2.tga
+$mip 3_woodfloor2 0 0 128 128 scale 0.5 0.5 mip detail d_woodrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\1_cork_ceiling_edge.tga
+$mip 1_cork_ceiling_edge 0 0 64 64 scale 0.5 0.5 alt 1_cork_ceiling.m32 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material snow
+$load \art\textures\final\ny\1_cork_ceiling_stain.tga
+$mip 1_cork_ceiling_stain 0 0 64 64 scale 0.5 0.5 alt 1_cork_ceiling.m32 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material snow
+$load \art\textures\final\ny\3_wall1b.tga
+$mip 3_Wall1b 0 0 128 128 scale 0.5 0.5 alt 3_wall1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\3_wall2_bottom.tga
+$mip 3_Wall2_bottom 0 0 128 128 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\dryer16.tga
+$mip dryer-16 0 0 16 16 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\dryercontrol.tga
+$mip dryer-control 0 0 64 16 scale 0.5 0.5 damage dryercontrold.m32 10 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\dryerfrt.tga
+$mip dryer-frt 0 0 64 64 scale 0.5 0.5 damage dryerfrtd.m32 10 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\dryerside.tga
+$mip dryer-side 0 0 64 64 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\dryertop.tga
+$mip dryer-top 0 0 64 64 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\dump16.tga
+$mip dump-16 0 0 16 16 scale 0.5 0.5 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\dumplid.tga
+$mip dump-lid 0 0 64 64 scale 0.5 0.5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\washerfrt.tga
+$mip washer-frt 0 0 64 64 scale 0.5 0.5 damage washerfrtd.m32 10 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\washertop.tga
+$mip washer-top 0 0 64 64 scale 0.5 0.5 damage washertopd.m32 10 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\girdwall.tga
+$mip girdwall 0 0 128 128 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\dumpbck.tga
+$mip dumpbck 0 0 128 64 scale 0.5 0.5 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\dumpfrt.tga
+$mip dumpfrt 0 0 128 32 scale 0.5 0.5 detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\light_blue.tga
+$mip light_blue 0 0 32 32 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\light_tube.tga
+$mip light_tube 0 0 128 32 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\light_yellow.tga
+$mip light_yellow 0 0 32 32 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\light_red.tga
+$mip light_red 0 0 32 32 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\light_bluey.tga
+$mip light_bluey 0 0 32 32 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\light_square.tga
+$mip light_square 0 0 32 32 scale 0.5 0.5 mip light 30000 material glass
+$load \art\textures\final\ny\3_store_brick_window2.tga
+$mip 3_store_brick_window2 0 0 64 64 scale 1 1 damage 3_store_brick_window2d.m32 10 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\girdwall2.tga
+$mip girdwall2 0 0 128 128 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 alpha material metal
+$load \art\textures\final\ny\1_build1_win1.tga
+$mip 1_build1_win1 0 0 64 32 scale 1 1 damage 1_build1_win1d.m32 10 mip light 30000 material glass
+$load \art\textures\final\ny\1_build1_win2.tga
+$mip 1_build1_win2 0 0 64 32 scale 1 1 damage 1_build1_win2d.m32 10 mip material glass
+$load \art\textures\final\ny\1_build2_win1.tga
+$mip 1_build2_win1 0 0 32 32 scale 1 1 damage 1_build2_win1d.m32 10 mip light 30000 material glass
+$load \art\textures\final\ny\1_build2_win2.tga
+$mip 1_build2_win2 0 0 32 32 scale 1 1 damage 1_build2_win2d.m32 10 mip material glass
+$load \art\textures\final\ny\mirror.tga
+$mip mirror 0 0 64 64 scale 1 1 damage mirrord.m32 10 mip spherical env1b.m32 material glass
+$load \art\textures\final\ny\sidewalk.tga
+$mip sidewalk 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby1aa.tga
+$mip 1_lobby1aa 0 0 64 64 scale 0.5 0.5 alt 1_lobby1a.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby1ab.tga
+$mip 1_lobby1ab 0 0 64 64 scale 0.5 0.5 alt 1_lobby1a.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby1ac.tga
+$mip 1_lobby1ac 0 0 64 64 scale 0.5 0.5 alt 1_lobby1a.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby1ad.tga
+$mip 1_lobby1ad 0 0 64 64 scale 0.5 0.5 alt 1_lobby1a.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby1ae.tga
+$mip 1_lobby1ae 0 0 64 64 scale 0.5 0.5 alt 1_lobby1a.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby1af.tga
+$mip 1_lobby1af 0 0 128 64 scale 0.5 0.5 alt 1_lobby1a.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby1ag.tga
+$mip 1_lobby1ag 0 0 128 64 scale 0.5 0.5 alt 1_lobby1agb.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_lobby1ah.tga
+$mip 1_lobby1ah 0 0 64 64 scale 0.5 0.5 alt 1_lobby1a.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_tilegraf14.tga
+$mip 1_tilegraf14 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tilegraf15.tga
+$mip 1_tilegraf15 0 0 64 64 scale 0.5 0.5 alt 1_tilegraf15b.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tilegraf16.tga
+$mip 1_tilegraf16 0 0 64 64 scale 0.5 0.5 alt 1_tilegraf18.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tilegraf17.tga
+$mip 1_tilegraf17 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tilegraf18.tga
+$mip 1_tilegraf18 0 0 64 64 scale 0.5 0.5 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tilegraf19.tga
+$mip 1_tilegraf19 0 0 128 64 scale 0.5 0.5 alt 1_tilegraf19b.m32 m_parental detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tilegraf20.tga
+$mip 1_tilegraf20 0 0 128 64 scale 0.5 0.5 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\2_cinderblock_graf12.tga
+$mip 2_cinderblock_graf12 0 0 128 64 scale 0.5 0.5 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf13.tga
+$mip 2_cinderblock_graf13 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf14.tga
+$mip 2_cinderblock_graf14 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock_graf15.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf15.tga
+$mip 2_cinderblock_graf15 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf16.tga
+$mip 2_cinderblock_graf16 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\file_front.tga
+$mip file_front 0 0 32 64 scale 1 1 damage file_frontd2.m32 10 mip spherical env1b.m32 material metal
+$load \art\textures\final\ny\file_side.tga
+$mip file_side 0 0 32 64 scale 1 1 mip spherical env1b.m32 material metal
+$load \art\textures\final\ny\file_top.tga
+$mip file_top 0 0 32 32 scale 1 1 mip spherical env1b.m32 material metal
+$load \art\textures\final\ny\2_cinderblock_graf19.tga
+$mip 2_cinderblock_graf19 0 0 64 64 scale 0.5 0.5 alt 2_cinderblock.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf20.tga
+$mip 2_cinderblock_graf20 0 0 128 64 scale 0.5 0.5 alt 2_cinderblock_graf20b.m32 m_parental detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\doordark1.tga
+$mip doordark1 0 0 64 128 scale 1 1 mip spherical env1a.m32 material metal
+$load \art\textures\final\ny\doordark2.tga
+$mip doordark2 0 0 64 128 scale 1 1 mip spherical env1a.m32 material metal
+$load \art\textures\final\ny\light_small.tga
+$mip light_small 0 0 32 16 scale 1 1 mip light 30000 material glass
+$load \art\textures\final\ny\1_hotdog1.tga
+$mip 1_hotdog1 0 0 64 64 scale 1 1 alt 1_hotdog2.m32 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_hotdog2.tga
+$mip 1_hotdog2 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_hotdog3.tga
+$mip 1_hotdog3 0 0 16 16 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material stone_red
+$load \art\textures\final\ny\1_hotdog4.tga
+$mip 1_hotdog4 0 0 32 32 scale 1 1 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_hotdog5.tga
+$mip 1_hotdog5 0 0 16 32 scale 1 1 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_poster4.tga
+$mip 1_poster4 0 0 64 64 scale 1 1 alt 1_poster3.m32 damage 1_poster4s.m32 10 spherical env1b.m32 material glass
+$load \art\textures\final\ny\1_static1.tga
+$mip 1_static1 0 0 64 64 scale 1 1 anim 1_static2.m32 animspeed 50
+$load \art\textures\final\ny\1_static2.tga
+$mip 1_static2 0 0 64 64 scale 1 1 anim 1_static3.m32 animspeed 50
+$load \art\textures\final\ny\2_conduit.tga
+$mip 2_conduit 0 0 16 16 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1c.m32 material metal_computer
+$load \art\textures\final\ny\2_fuseside.tga
+$mip 2_fuseside 0 0 16 16 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\light_tube1.tga
+$mip light_tube1 0 0 64 32 scale 1 1 mip light 30000 material glass
+$load \art\textures\final\ny\light_tube2.tga
+$mip light_tube2 0 0 64 16 scale 1 1 mip light 30000 material glass
+$load \art\textures\final\ny\sign12.tga
+$mip sign12 0 0 128 64 scale 1 1 alt sign16.m32 m_parental spherical env1b.m32
+$load \art\textures\final\ny\sign13.tga
+$mip sign13 0 0 128 128 scale 1 1 alt sign13b.m32 m_parental
+$load \art\textures\final\ny\1_build1_win1d.tga
+$mip 1_build1_win1d 0 0 64 32 scale 1 1 damage 1_build1_win2d.m32 40 mip material glass
+$load \art\textures\final\ny\1_build1_win2d.tga
+$mip 1_build1_win2d 0 0 64 32 scale 1 1 mip material glass
+$load \art\textures\final\ny\1_build2_win1d.tga
+$mip 1_build2_win1d 0 0 32 32 scale 1 1 damage 1_build2_win2d.m32 40 mip material glass
+$load \art\textures\final\ny\1_build2_win2d.tga
+$mip 1_build2_win2d 0 0 32 32 scale 1 1 mip material glass
+$load \art\textures\final\ny\1_news_front1d.tga
+$mip 1_news_front1d 0 0 64 64 scale 1 1 alt 1_news_frontbd.m32 material metal
+$load \art\textures\final\ny\1_sign1d.tga
+$mip 1_sign1d 0 0 128 32 scale 1 1 mip detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_sign2d.tga
+$mip 1_sign2d 0 0 128 32 scale 1 1 mip detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_sign3d.tga
+$mip 1_sign3d 0 0 128 32 scale 1 1 mip detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_fuse3d.tga
+$mip 2_fuse3d 0 0 32 64 scale 1 1 mip material metal_computer
+$load \art\textures\final\ny\3_store_brick_window2d.tga
+$mip 3_store_brick_window2d 0 0 64 64 scale 1 1 damage 3_store_brick_windowd.m32 60 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_store_brick_windowd.tga
+$mip 3_store_brick_windowd 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_sweatwall4d.tga
+$mip 3_sweatwall4d 0 0 64 64 scale 1 1 alt 3_sweatwall.m32 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\dryercontrold.tga
+$mip dryercontrold 0 0 64 16 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\dryerfrtd.tga
+$mip dryerfrtd 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\exitd.tga
+$mip exitd 0 0 64 32 scale 1 1 material glass_computer
+$load \art\textures\final\ny\glass_new2d.tga
+$mip glass_new2d 0 0 128 128 scale 1 1 mip spherical env1b.m32 material glass
+$load \art\textures\final\ny\glass_newd.tga
+$mip glass_newd 0 0 64 64 scale 1 1 mip spherical env1b.m32 material glass
+$load \art\textures\final\ny\glass_streakedd.tga
+$mip glass_streakedd 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\glass_windowd.tga
+$mip glass_windowd 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\greenbox_front3d.tga
+$mip greenbox_front3d 0 0 64 64 scale 1 1 detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\light_tubey.tga
+$mip light_tubey 0 0 16 64 scale 1 1 mip light 30000 material glass
+$load \art\textures\final\ny\mirrord.tga
+$mip mirrord 0 0 64 64 scale 1 1 mip material metal
+$load \art\textures\final\ny\washerfrtd.tga
+$mip washerfrtd 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\washertopd.tga
+$mip washertopd 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\window1_d1.tga
+$mip window1_d1 0 0 64 64 scale 1 1 damage window1_d2.m32 40 mip material glass
+$load \art\textures\final\ny\window1_d2.tga
+$mip window1_d2 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\window1_dirt_d1.tga
+$mip window1_dirt_d1 0 0 64 64 scale 1 1 damage window1_dirt_d2.m32 40 mip material glass
+$load \art\textures\final\ny\window1_dirt_d2.tga
+$mip window1_dirt_d2 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\window2_d1.tga
+$mip window2_d1 0 0 64 64 scale 1 1 damage window2_d2.m32 10 mip material glass
+$load \art\textures\final\ny\window2_d2.tga
+$mip window2_d2 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\window2_dirt_d.tga
+$mip window2_dirt_d 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\3_apt_windowd.tga
+$mip 3_apt_windowd 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_grocery1_windowd.tga
+$mip 3_grocery1_windowd 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_market_window1d.tga
+$mip 3_market_window1d 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_orange_window2d.tga
+$mip 3_orange_window2d 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_orange_windowd.tga
+$mip 3_orange_windowd 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\file_frontd.tga
+$mip file_frontd 0 0 32 64 scale 1 1 damage file_frontd2.m32 10 mip spherical env1b.m32 material metal
+$load \art\textures\final\ny\3_redbrick_window_ad1.tga
+$mip 3_redbrick_window_ad1 0 0 64 64 scale 1 1 damage 3_redbrick_window_ad2.m32 60 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_redbrick_window_ad2.tga
+$mip 3_redbrick_window_ad2 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\d_genericsmooth.tga
+$mip d_genericsmooth 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_gravel.tga
+$mip d_gravel 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_metalbump.tga
+$mip d_metalbump 0 0 32 32 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_metalribbed.tga
+$mip d_metalribbed 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_metalrough.tga
+$mip d_metalrough 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_metalsmooth.tga
+$mip d_metalsmooth 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_sand.tga
+$mip d_sand 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_stonecracked.tga
+$mip d_stonecracked 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_stoneholey.tga
+$mip d_stoneholey 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_stoneholey2.tga
+$mip d_stoneholey2 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_stonerough.tga
+$mip d_stonerough 0 0 128 128 scale 1 1 m_detail detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_stonesmooth.tga
+$mip d_stonesmooth 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_stucco.tga
+$mip d_stucco 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_woodrough.tga
+$mip d_woodrough 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_woodsmooth.tga
+$mip d_woodsmooth 0 0 64 64 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_tile.tga
+$mip d_tile 0 0 32 32 scale 1 1 m_detail detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\1_clockd.tga
+$mip 1_clockd 0 0 32 32 scale 1 1 material metal
+$load \art\textures\final\ny\1_concrete_floor2.tga
+$mip 1_concrete_floor2 0 0 128 128 scale 1 1 alt 1_concrete_floor.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\1_duct_rust.tga
+$mip 1_duct_rust 0 0 64 64 scale 1 1 alt 1_duct2.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_poster4s.tga
+$mip 1_poster4s 0 0 64 64 scale 1 1 alt 1_poster3.m32 spherical env1b.m32 material glass
+$load \art\textures\final\ny\1_switch1d.tga
+$mip 1_switch1d 0 0 16 32 scale 1 1 material metal
+$load \art\textures\final\ny\2_cinderblock_bottom2.tga
+$mip 2_cinderblock_bottom2 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_oldceiling1ab.tga
+$mip 2_oldceiling1ab 0 0 64 64 scale 1 1 alt 2_oldceiling1a.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_oldceiling1ab2.tga
+$mip 2_oldceiling1ab2 0 0 64 64 scale 1 1 alt 2_oldceiling1a.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_oldwall2b.tga
+$mip 2_oldwall2b 0 0 64 64 scale 1 1 alt 2_oldwall2.m32 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_oldwall2c.tga
+$mip 2_oldwall2c 0 0 64 64 scale 1 1 alt 2_oldwall2.m32 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_subwood.tga
+$mip 2_subwood 0 0 64 64 scale 1 1 mip material wood_dbrown
+$load \art\textures\final\ny\2_subwood1.tga
+$mip 2_subwood1 0 0 64 64 scale 1 1 mip material wood_dbrown
+$load \art\textures\final\ny\2_wirewindow.tga
+$mip 2_wirewindow 0 0 64 64 scale 0.5 0.5 detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\con1_drain.tga
+$mip con1_drain 0 0 64 64 scale 1 1 alt con1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\file_frontd2.tga
+$mip file_frontd2 0 0 32 64 scale 1 1 mip material metal
+$load \art\textures\final\ny\metalfloor1b.tga
+$mip metalfloor1b 0 0 64 64 scale 1 1 alt metalfloor1.m32 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\trim3.tga
+$mip trim3 0 0 32 32 scale 1 1 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_red
+$load \art\textures\final\ny\wood1.tga
+$mip wood1 0 0 64 64 scale 1 1 mip detail d_woodrough2.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\1_2_track2.tga
+$mip 1_2_track2 0 0 16 32 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_2_subfloor_1a.tga
+$mip 1_2_subfloor_1a 0 0 64 64 scale 1 1 alt 1_2_subfloor1.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_2_subfloor1.tga
+$mip 1_2_subfloor1 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_2_track1.tga
+$mip 1_2_track1 0 0 16 32 scale 1 1 alt 1_2_track2.m32 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_mapd.tga
+$mip 1_mapd 0 0 128 64 scale 1 1 material glass
+$load \art\textures\final\ny\2_anglebrk1.tga
+$mip 2_anglebrk1 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_cinderblock_dirty1.tga
+$mip 2_cinderblock_dirty1 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\2_cinderblock_dirty1b.tga
+$mip 2_cinderblock_dirty1b 0 0 64 64 scale 1 1 alt 2_cinderblock_dirty1.m32 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\2_cinderblock_dirty1c.tga
+$mip 2_cinderblock_dirty1c 0 0 64 64 scale 1 1 alt 2_cinderblock_dirty1.m32 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_cinderblock_dirty1d.tga
+$mip 2_cinderblock_dirty1d 0 0 64 64 scale 1 1 alt 2_cinderblock_dirty1c.m32 mip detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_cinderblock_dirty1e.tga
+$mip 2_cinderblock_dirty1e 0 0 128 64 scale 1 1 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\2_door_2.tga
+$mip 2_door_2 0 0 64 128 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\2_oldwall3.tga
+$mip 2_oldwall3 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\cargo_elev_but.tga
+$mip cargo_elev_but 0 0 16 32 scale 1 1 damage cargo_elev_butd.m32 10 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\cargo_elev1.tga
+$mip cargo_elev1 0 0 64 64 scale 1 1 alt cargo_elev2.m32 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\cargo_elev2.tga
+$mip cargo_elev2 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\cargo_elev3.tga
+$mip cargo_elev3 0 0 64 64 scale 1 1 alt cargo_elev2.m32 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\cargo_elev4.tga
+$mip cargo_elev4 0 0 64 64 scale 1 1 alt cargo_elev2.m32 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material wood_dbrown
+$load \art\textures\final\ny\fanblade.tga
+$mip fanblade 0 0 32 16 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1c.m32 material metal
+$load \art\textures\final\ny\light_tube_d.tga
+$mip light_tube_d 0 0 64 32 scale 1 1 mip material glass
+$load \art\textures\final\ny\metal_panel.tga
+$mip metal_panel 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\window_sky.tga
+$mip window_sky 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\camera1.tga
+$mip camera1 0 0 64 64 scale 1 1 anim camera2.m32 animspeed 1 light 1
+$load \art\textures\final\ny\camera2.tga
+$mip camera2 0 0 64 64 scale 1 1 anim camera3.m32 animspeed 1 light 1
+$load \art\textures\final\ny\camera3.tga
+$mip camera3 0 0 64 64 scale 1 1 anim camera1.m32 animspeed 1 light 1
+$load \art\textures\final\ny\con_ceil.tga
+$mip con_ceil 0 0 64 64 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\con10.tga
+$mip con10 0 0 64 64 scale 1 1 mip detail d_metalribbed.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\con11.tga
+$mip con11 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\con11_seam.tga
+$mip con11_seam 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\con12.tga
+$mip con12 0 0 32 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\con13.tga
+$mip con13 0 0 128 128 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\con14.tga
+$mip con14 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\d_dirt.tga
+$mip d_dirt 0 0 128 128 scale 1 1 m_detail detail d_dirt.m32 6 6 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_grass.tga
+$mip d_grass 0 0 128 128 scale 1 1 m_detail detail d_grass.m32 6 6 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_woodrough2.tga
+$mip d_woodrough2 0 0 64 64 scale 1 1 m_detail detail d_woodrough2.m32 6 6 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\d_woodsmooth2.tga
+$mip d_woodsmooth2 0 0 64 64 scale 1 1 m_detail detail d_woodsmooth2.m32 6 6 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\rail.tga
+$mip rail 0 0 16 16 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1c.m32 material metal
+$load \art\textures\final\ny\camerad.tga
+$mip camerad 0 0 64 64 scale 1 1 mip material metal
+$load \art\textures\final\ny\con_ceil2.tga
+$mip con_ceil2 0 0 64 32 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\sign14.tga
+$mip sign14 0 0 64 64 scale 1 1 spherical env1b.m32 material metal
+$load \art\textures\final\ny\w_boxside.tga
+$mip w_boxside 0 0 64 64 scale 1 1 damage w_boxsided.m32 10 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\w_boxtop.tga
+$mip w_boxtop 0 0 64 64 scale 1 1 damage w_boxtopd.m32 10 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\w_crate1.tga
+$mip w_crate1 0 0 64 32 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\w_crate2.tga
+$mip w_crate2 0 0 32 32 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\w_gardoor1.tga
+$mip w_gardoor1 0 0 128 128 scale 1 1 alt w_gardoor3.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_gardoor2.tga
+$mip w_gardoor2 0 0 128 128 scale 1 1 alt w_gardoor1.m32 mip m_parental detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_paintbrick1.tga
+$mip w_paintbrick1 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\w_palette1.tga
+$mip w_palette1 0 0 64 64 scale 1 1 mip detail d_woodrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_lbrown
+$load \art\textures\final\ny\w_palette2.tga
+$mip w_palette2 0 0 64 64 scale 1 1 mip detail d_woodrough2.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_lbrown
+$load \art\textures\final\ny\w_pallette3.tga
+$mip w_pallette3 0 0 64 64 scale 1 1 mip detail d_woodrough2.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_lbrown
+$load \art\textures\final\ny\w_pntbrick2.tga
+$mip w_pntbrick2 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\w_pntbrick3.tga
+$mip w_pntbrick3 0 0 64 64 scale 1 1 alt w_pntbrick2.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\w_pntbrick4.tga
+$mip w_pntbrick4 0 0 64 64 scale 1 1 alt w_pntbrick2.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_green
+$load \art\textures\final\ny\w_semiback.tga
+$mip w_semiback 0 0 64 128 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_semiside.tga
+$mip w_semiside 0 0 64 128 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal1.tga
+$mip w_shtmetal1 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal2.tga
+$mip w_shtmetal2 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\w_window.tga
+$mip w_window 0 0 64 64 scale 1 1 damage w_windowd.m32 1 mip material glass
+$load \art\textures\final\ny\w_windowd.tga
+$mip w_windowd 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\sign15.tga
+$mip sign15 0 0 64 64 scale 1 1 alt sign9.m32 m_parental spherical env1b.m32
+$load \art\textures\final\ny\sign16.tga
+$mip sign16 0 0 128 64 scale 1 1 alt sign6.m32 spherical env1b.m32
+$load \art\textures\final\ny\1_bath_towels.tga
+$mip 1_bath_towels 0 0 64 128 scale 1 1 mip spherical env1b.m32
+$load \art\textures\final\ny\1_bath_stall.tga
+$mip 1_bath_stall 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\1_bath_stalldoor.tga
+$mip 1_bath_stalldoor 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\1_bath_stallurinal.tga
+$mip 1_bath_stallurinal 0 0 32 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\1_beam3.tga
+$mip 1_beam3 0 0 64 32 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_clock2.tga
+$mip 1_clock2 0 0 64 64 scale 1 1 damage 1_clock2d.m32 1 spherical env1b.m32 material glass_computer
+$load \art\textures\final\ny\1_clock2d.tga
+$mip 1_clock2d 0 0 64 64 scale 1 1 material metal
+$load \art\textures\final\ny\1_sign7.tga
+$mip 1_sign7 0 0 64 32 scale 1 1 spherical env1b.m32 material metal
+$load \art\textures\final\ny\1_soda_side_ad.tga
+$mip 1_soda_side_ad 0 0 64 64 scale 1 1 material sodabroke
+$load \art\textures\final\ny\1_soda_side_bd.tga
+$mip 1_soda_side_bd 0 0 64 32 scale 1 1 material sodabroke
+$load \art\textures\final\ny\1_static_tv.tga
+$mip 1_static_tv 0 0 32 32 scale 1 1 mip spherical env1b.m32 material metal_computer
+$load \art\textures\final\ny\1_static3.tga
+$mip 1_static3 0 0 64 64 scale 0.5 0.5 anim 1_static1.m32 animspeed 50
+$load \art\textures\final\ny\2_door3.tga
+$mip 2_door3 0 0 64 128 scale 1 1 mip m_spherical detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\2_oldwall3_bot.tga
+$mip 2_oldwall3_bot 0 0 64 64 scale 1 1 alt 2_oldwall3.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_pipe_int.tga
+$mip 2_pipe_int 0 0 64 64 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\2_pipe_int2.tga
+$mip 2_pipe_int2 0 0 64 64 scale 1 1 alt 2_pipe_int.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\2_sign5.tga
+$mip 2_sign5 0 0 64 32 scale 1 1 detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\con15.tga
+$mip con15 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\con15b.tga
+$mip con15b 0 0 64 64 scale 1 1 alt con15.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\metalrib1b.tga
+$mip metalrib1b 0 0 32 32 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_door5.tga
+$mip 3_door5 0 0 64 128 scale 1 1 mip detail d_woodrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\s_asphalt.tga
+$mip s_asphalt 0 0 64 64 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\s_curb.tga
+$mip s_curb 0 0 16 128 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\s_sidewalk.tga
+$mip s_sidewalk 0 0 128 128 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_build_win.tga
+$mip 1_build_win 0 0 64 64 scale 1 1 damage 1_build_wind.m32 10 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_door6.tga
+$mip 3_door6 0 0 64 128 scale 1 1 mip detail d_woodrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\1_beam4.tga
+$mip 1_beam4 0 0 64 32 scale 1 1 alt 1_beam3.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\1_news_frontbd.tga
+$mip 1_news_frontbd 0 0 64 64 scale 1 1 material metal
+$load \art\textures\final\ny\2_brick4.tga
+$mip 2_brick4 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_brick4bot.tga
+$mip 2_brick4bot 0 0 64 64 scale 1 1 alt 2_brick4.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_brick5.tga
+$mip 2_brick5 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_brick5bot.tga
+$mip 2_brick5bot 0 0 64 64 scale 1 1 alt 2_brick5.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_cinderbloc.tga
+$mip 2_cinderbloc 0 0 32 16 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_conwall1.tga
+$mip 2_conwall1 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\2_conwall1bot.tga
+$mip 2_conwall1bot 0 0 64 32 scale 1 1 mip detail d_stonerough.m32 4 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\2_conwall2.tga
+$mip 2_conwall2 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\2_conwall2bot.tga
+$mip 2_conwall2bot 0 0 64 32 scale 1 1 mip detail d_stonerough.m32 4 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\2_open_box2d.tga
+$mip 2_open_box2d 0 0 64 64 scale 1 1 detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\2_open_boxd.tga
+$mip 2_open_boxd 0 0 64 64 scale 1 1 detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\3_grocery1_window_l.tga
+$mip 3_grocery1_window_l 0 0 64 64 scale 1 1 damage 3_grocery1_window_ld.m32 5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_grocery1_window_ld.tga
+$mip 3_grocery1_window_ld 0 0 64 64 scale 1 1 damage 3_grocery1_window.m32 5 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_grocery1_window_wide_l.tga
+$mip 3_grocery1_window_wide_l 0 0 128 64 scale 1 1 damage 3_grocery1_window_wide_ld.m32 10 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\barrel.tga
+$mip barrel 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_oilspurt
+$load \art\textures\final\ny\contrim1.tga
+$mip contrim1 0 0 128 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\meter1d.tga
+$mip meter1d 0 0 64 64 scale 1 1 detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\pipe_insul1a.tga
+$mip pipe_insul1a 0 0 32 32 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\pipe_insul1b.tga
+$mip pipe_insul1b 0 0 32 32 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\pipe_insul2a.tga
+$mip pipe_insul2a 0 0 32 32 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\pipe_insul2b.tga
+$mip pipe_insul2b 0 0 32 32 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\s_asphalt_hole.tga
+$mip s_asphalt_hole 0 0 64 64 scale 1 1 alt s_asphalt.m32 detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_brick6.tga
+$mip 2_brick6 0 0 64 64 scale 1 1 alt 2_brick5.m32 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\2_dirt_floor.tga
+$mip 2_dirt_floor 0 0 64 64 scale 1 1 mip detail d_gravel.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material gravel_dbrown
+$load \art\textures\final\ny\2_dirt_floor2.tga
+$mip 2_dirt_floor2 0 0 64 64 scale 1 1 alt 2_dirt_floor.m32 mip detail d_gravel.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material gravel_dbrown
+$load \art\textures\final\ny\barrel_top.tga
+$mip barrel_top 0 0 32 32 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_oilspurt
+$load \art\textures\final\ny\pipe_cap.tga
+$mip pipe_cap 0 0 64 64 scale 1 1 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\glass_wire.tga
+$mip glass_wire 0 0 64 64 scale 1 1 damage glass_wire_d.m32 1 material glass
+$load \art\textures\final\ny\glass_wire_d.tga
+$mip glass_wire_d 0 0 64 64 scale 1 1 material glass
+$load \art\textures\final\ny\3_grocery2_dark.tga
+$mip 3_grocery2_dark 0 0 64 64 scale 1 1 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_grocery2_dark_btm.tga
+$mip 3_grocery2_dark_btm 0 0 64 64 scale 1 1 alt 3_grocery2_dark.m32 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_woodfence_alpha.tga
+$mip 3_woodfence_alpha 0 0 64 128 scale 1 1 mip detail d_woodrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\barrel_big_end.tga
+$mip barrel_big_end 0 0 64 64 scale 1 1 alt barrel_big_endb.m32 m_parental detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_oilspurt
+$load \art\textures\final\ny\tire1.tga
+$mip tire1 0 0 64 32 scale 1 1 mip material metal
+$load \art\textures\final\ny\tire2.tga
+$mip tire2 0 0 64 32 scale 1 1 mip material metal
+$load \art\textures\final\ny\w_gardoor3.tga
+$mip w_gardoor3 0 0 128 128 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_semiback2.tga
+$mip w_semiback2 0 0 64 128 scale 1 1 alt w_semiback.m32 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\w_semiback3.tga
+$mip w_semiback3 0 0 64 128 scale 1 1 alt w_semiback.m32 mip m_parental detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_semiside2.tga
+$mip w_semiside2 0 0 64 128 scale 1 1 alt w_semiside.m32 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\w_semiside3.tga
+$mip w_semiside3 0 0 64 128 scale 1 1 alt w_semiside.m32 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\window_paned.tga
+$mip window_paned 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\ammobox_end.tga
+$mip ammobox_end 0 0 32 32 scale 1 1 mip detail d_woodrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\ammobox_side.tga
+$mip ammobox_side 0 0 64 32 scale 1 1 mip detail d_woodrough2.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\ammobox_top.tga
+$mip ammobox_top 0 0 64 32 scale 1 1 damage ammobox_topd.m32 10 detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\ammobox_topd.tga
+$mip ammobox_topd 0 0 64 32 scale 1 1 detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\crate1a.tga
+$mip crate1a 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\crate1b.tga
+$mip crate1b 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\crate2a.tga
+$mip crate2a 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\crate2b.tga
+$mip crate2b 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\crate3a.tga
+$mip crate3a 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\crate3b.tga
+$mip crate3b 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\crate4a.tga
+$mip crate4a 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\crate4b.tga
+$mip crate4b 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\w_crete1.tga
+$mip w_crete1 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\w_metalwall1.tga
+$mip w_metalwall1 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\w_win1_noalpha.tga
+$mip w_win1_noalpha 0 0 64 64 scale 1 1 damage w_win1_noalphad1.m32 1 mip material glass
+$load \art\textures\final\ny\w_win1_noalphad1.tga
+$mip w_win1_noalphad1 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\w_win1_noalphad2.tga
+$mip w_win1_noalphad2 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\w_win2_noalpha.tga
+$mip w_win2_noalpha 0 0 64 64 scale 1 1 damage window2_dirt_d2.m32 10 mip material glass
+$load \art\textures\final\ny\w_win3_noalpha.tga
+$mip w_win3_noalpha 0 0 64 64 scale 1 1 damage w_win3_noalphad.m32 1 mip material glass
+$load \art\textures\final\ny\w_win4_noalpha.tga
+$mip w_win4_noalpha 0 0 64 64 scale 1 1 damage w_win4_noalphad.m32 1 mip material glass
+$load \art\textures\final\ny\w_win4_noalphad.tga
+$mip w_win4_noalphad 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\3_grocery2_bottom_g1.tga
+$mip 3_grocery2_bottom_g1 0 0 64 64 scale 1 1 alt 3_grocery2_bottom.m32 mip detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\3_grocery2_bottom_g2.tga
+$mip 3_grocery2_bottom_g2 0 0 128 64 scale 1 1 alt 3_grocery2_bottom.m32 detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\w_crane_beam1.tga
+$mip w_crane_beam1 0 0 16 16 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\w_crane_beam1a.tga
+$mip w_crane_beam1a 0 0 128 128 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\w_crane_body_vent.tga
+$mip w_crane_body_vent 0 0 32 32 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\w_crane_body1.tga
+$mip w_crane_body1 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\w_crane_body1a.tga
+$mip w_crane_body1a 0 0 64 64 scale 1 1 alt w_crane_body1.m32 detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\w_crane_cab.tga
+$mip w_crane_cab 0 0 16 16 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_crane_weight.tga
+$mip w_crane_weight 0 0 64 64 scale 1 1 alt w_crane_weight2.m32 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\w_crane_weight2.tga
+$mip w_crane_weight2 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\w_fencewheel.tga
+$mip w_fencewheel 0 0 32 32 scale 1 1 mip material metal
+$load \art\textures\final\ny\w_gardoor3_g1.tga
+$mip w_gardoor3_g1 0 0 128 128 scale 1 1 alt w_gardoor3.m32 mip m_parental detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_rustwall1.tga
+$mip w_rustwall1 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_rustwall2.tga
+$mip w_rustwall2 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_rustwall3.tga
+$mip w_rustwall3 0 0 128 128 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_rustwall3a.tga
+$mip w_rustwall3a 0 0 128 128 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_rustwall4.tga
+$mip w_rustwall4 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_rustwall5.tga
+$mip w_rustwall5 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_rustwall6.tga
+$mip w_rustwall6 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal_1_g1.tga
+$mip w_shtmetal_1_g1 0 0 128 64 scale 1 1 alt w_shtmetal1.m32 detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal_1_g2.tga
+$mip w_shtmetal_1_g2 0 0 128 64 scale 1 1 alt w_shtmetal_1_g1.m32 m_parental detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal_1_g3.tga
+$mip w_shtmetal_1_g3 0 0 64 64 scale 1 1 alt w_shtmetal1.m32 detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal_1a.tga
+$mip w_shtmetal_1a 0 0 64 64 scale 1 1 alt w_shtmetal1.m32 detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal_1b.tga
+$mip w_shtmetal_1b 0 0 64 64 scale 1 1 alt w_shtmetal1.m32 detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal_1c.tga
+$mip w_shtmetal_1c 0 0 64 64 scale 1 1 alt w_shtmetal1.m32 detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal_1d.tga
+$mip w_shtmetal_1d 0 0 64 64 scale 1 1 alt w_shtmetal1.m32 detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal_1e.tga
+$mip w_shtmetal_1e 0 0 64 64 scale 1 1 alt w_shtmetal1.m32 detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_shtmetal_1f.tga
+$mip w_shtmetal_1f 0 0 64 64 scale 1 1 alt w_shtmetal1.m32 detail d_stonerough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_rustwall1a.tga
+$mip w_rustwall1a 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_rustwall4b.tga
+$mip w_rustwall4b 0 0 64 64 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_door_5_b.tga
+$mip 3_door_5_b 0 0 64 128 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_door6_burn.tga
+$mip 3_door6_burn 0 0 64 128 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_elevator_but.tga
+$mip 3_elevator_but 0 0 32 64 scale 1 1 damage 3_elevator_butd.m32 10 mip spherical env1b.m32 material metal_computer
+$load \art\textures\final\ny\3_slats.tga
+$mip 3_slats 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_grey
+$load \art\textures\final\ny\sign17.tga
+$mip sign17 0 0 64 128 scale 1 1 alt sign18.m32 damage sign17_d.m32 40 m_detail m_parental animspeed 1 light 3000 material glass_computer
+$load \art\textures\final\ny\sign18.tga
+$mip sign18 0 0 64 128 scale 1 1 damage sign18_d.m32 40 light 3000
+$load \art\textures\final\ny\3_elevator_door_2b.tga
+$mip 3_elevator_door_2b 0 0 64 128 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_sweat_trim.tga
+$mip 3_sweat_trim 0 0 8 8 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_sweat_trim1.tga
+$mip 3_sweat_trim1 0 0 32 16 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_elevator_sign.tga
+$mip 3_elevator_sign 0 0 64 32 scale 1 1 detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\3_store_end.tga
+$mip 3_store_end 0 0 32 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_store_flr_burn.tga
+$mip 3_store_flr_burn 0 0 128 128 scale 1 1 mip detail d_metalbump.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_store_flr_burn2.tga
+$mip 3_store_flr_burn2 0 0 128 128 scale 1 1 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_storewall_burn.tga
+$mip 3_storewall_burn 0 0 128 128 scale 1 1 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\3_sweat_bars.tga
+$mip 3_sweat_bars 0 0 32 32 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_sweat_ceil2.tga
+$mip 3_sweat_ceil2 0 0 64 64 scale 1 1 alt 3_sweat_ceil1.m32 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_white
+$load \art\textures\final\ny\3_sweat_flr.tga
+$mip 3_sweat_flr 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_sweat_flr_trim.tga
+$mip 3_sweat_flr_trim 0 0 32 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\no_draw.tga
+$mip no_draw 0 0 64 64 scale 1 1 nodraw
+$load \art\textures\final\ny\sky.tga
+$mip sky 0 0 64 64 scale 1 1
+$load \art\textures\final\ny\3_door_5_burn.tga
+$mip 3_door_5_burn 0 0 64 128 scale 1 1 mip detail d_woodsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_store_flr_burn3.tga
+$mip 3_store_flr_burn3 0 0 64 128 scale 1 1 mip detail d_gravel.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_grey
+$load \art\textures\final\ny\3_storewall_burn_btm.tga
+$mip 3_storewall_burn_btm 0 0 128 128 scale 1 1 alt 3_storewall_burn.m32 mip detail d_stucco.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\crate2a_burn.tga
+$mip crate2a_burn 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\crate2b_burn.tga
+$mip crate2b_burn 0 0 64 64 scale 1 1 mip detail d_genericsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_door7.tga
+$mip 3_door7 0 0 64 128 scale 1 1 mip detail d_woodsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material wood_dbrown
+$load \art\textures\final\ny\3_store_white_top.tga
+$mip 3_store_white_top 0 0 64 32 scale 1 1 mip detail d_stonerough.m32 4 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\testwtr.tga
+$mip testwtr 0 0 128 128 scale 1 1 mip material liquid_green
+$load \art\textures\final\ny\glass.tga
+$mip glass 0 0 32 32 scale 1 1 mip spherical env1b.m32 material glass
+$load \art\textures\final\ny\button2d.tga
+$mip button2d 0 0 32 32 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\w_win3_noalphad.tga
+$mip w_win3_noalphad 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\grenade.tga
+$mip grenade 0 0 16 16 scale 1 1 mip detail d_genericsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_steelceilb.tga
+$mip 2_steelceilb 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_steelwalla.tga
+$mip 2_steelwalla 0 0 64 128 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\2_steelwallb.tga
+$mip 2_steelwallb 0 0 64 128 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\2_steelwallc5.tga
+$mip 2_steelwallc5 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\2_steelwallh.tga
+$mip 2_steelwallh 0 0 64 128 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\2_steelwallred.tga
+$mip 2_steelwallred 0 0 128 128 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\2_steelwallredb.tga
+$mip 2_steelwallredb 0 0 128 128 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\3_catwalk2.tga
+$mip 3_catwalk2 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_cweighta.tga
+$mip 3_cweighta 0 0 64 32 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal
+$load \art\textures\final\ny\3_meter3.tga
+$mip 3_meter3 0 0 64 64 scale 1 1 detail d_metalsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\3_oiltank2plain.tga
+$mip 3_oiltank2plain 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1a.m32 material metal_oilspurt
+$load \art\textures\final\ny\3_panel2.tga
+$mip 3_panel2 0 0 64 64 scale 1 1 damage 3_panel2d.m32 10 detail d_metalsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material glass_computer
+$load \art\textures\final\ny\3_panel2d.tga
+$mip 3_panel2d 0 0 64 64 scale 1 1 detail d_metalsmooth.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\3_panel7.tga
+$mip 3_panel7 0 0 128 64 scale 1 1 damage 3_panel7d.m32 10 spherical env1b.m32 material metal_computer
+$load \art\textures\final\ny\3_panel7d.tga
+$mip 3_panel7d 0 0 128 64 scale 1 1 material metal_computer
+$load \art\textures\final\ny\3_pipes2.tga
+$mip 3_pipes2 0 0 64 32 scale 1 1 mip spherical env1b.m32 material metal_steam
+$load \art\textures\final\ny\h_cretewall.tga
+$mip h_cretewall 0 0 64 64 scale 1 1 mip detail d_stonesmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\h_cretewall_dirty.tga
+$mip h_cretewall_dirty 0 0 64 64 scale 1 1 mip detail d_stonesmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\h_cretewall_plain.tga
+$mip h_cretewall_plain 0 0 64 64 scale 1 1 mip detail d_stonesmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\h_cretewall_yellow.tga
+$mip h_cretewall_yellow 0 0 64 64 scale 1 1 mip detail d_stonesmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\h_heli_land_b.tga
+$mip h_heli_land_b 0 0 64 64 scale 1 1 mip detail d_stonesmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\h_heli_land_c.tga
+$mip h_heli_land_c 0 0 64 64 scale 1 1 mip detail d_stonesmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\h_heli_land_d.tga
+$mip h_heli_land_d 0 0 64 64 scale 1 1 mip detail d_stonesmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\h_heli_land1.tga
+$mip h_heli_land1 0 0 64 64 scale 1 1 mip detail d_stonesmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\h_light5.tga
+$mip h_light5 0 0 32 32 scale 1 1 mip material glass
+$load \art\textures\final\ny\h_yardfloor.tga
+$mip h_yardfloor 0 0 128 128 scale 1 1 mip detail d_stonecracked.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dbrown
+$load \art\textures\final\ny\light_tiny_yellow.tga
+$mip light_tiny_yellow 0 0 16 16 scale 1 1 mip material glass
+$load \art\textures\final\ny\pipe3b.tga
+$mip pipe3b 0 0 128 128 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal
+$load \art\textures\final\ny\cargo_elev_butd.tga
+$mip cargo_elev_butd 0 0 16 32 scale 1 1 detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal_computer
+$load \art\textures\final\ny\1_build_wind.tga
+$mip 1_build_wind 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_elevator_butd.tga
+$mip 3_elevator_butd 0 0 32 64 scale 1 1 mip material metal_computer
+$load \art\textures\final\ny\3_grocery1_window_wide_ld.tga
+$mip 3_grocery1_window_wide_ld 0 0 128 64 scale 1 1 mip detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\3_grocery1_window_wided.tga
+$mip 3_grocery1_window_wided 0 0 128 64 scale 1 1 damage 3_grocery1_window_wided.m32 10 mip detail d_stonerough.m32 0 0 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material glass
+$load \art\textures\final\ny\w_boxsided.tga
+$mip w_boxsided 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\w_boxtopd.tga
+$mip w_boxtopd 0 0 64 64 scale 1 1 mip detail d_metalsmooth.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR
+$load \art\textures\final\ny\nukebox_a.tga
+$mip nukebox_a 0 0 64 32 scale 1 1 mip spherical env1c.m32 material metal
+$load \art\textures\final\ny\nukebox_b.tga
+$mip nukebox_b 0 0 32 32 scale 1 1 mip spherical env1c.m32 material metal
+$load \art\textures\final\ny\sign17_d.tga
+$mip sign17_d 0 0 64 128 scale 1 1 alt sign18_d.m32 m_parental material metal
+$load \art\textures\final\ny\sign18_d.tga
+$mip sign18_d 0 0 64 128 scale 1 1 material metal
+$load \art\textures\final\ny\1_lobby1agb.tga
+$mip 1_lobby1agb 0 0 128 64 scale 1 1 alt 1_lobby1a.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lgrey
+$load \art\textures\final\ny\1_sign4b.tga
+$mip 1_sign4b 0 0 128 32 scale 1 1 detail d_genericsmooth.m32 2 2 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal
+$load \art\textures\final\ny\1_tile_graf10b.tga
+$mip 1_tile_graf10b 0 0 128 64 scale 1 1 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf11b.tga
+$mip 1_tile_graf11b 0 0 128 64 scale 1 1 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf12b.tga
+$mip 1_tile_graf12b 0 0 64 64 scale 1 1 alt 1_tile_graf4.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf2b.tga
+$mip 1_tile_graf2b 0 0 64 64 scale 1 1 alt 1_tile_graf4.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf5b.tga
+$mip 1_tile_graf5b 0 0 64 64 scale 1 1 alt 1_tile_graf4.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tile_graf9b.tga
+$mip 1_tile_graf9b 0 0 64 64 scale 1 1 alt 1_tile_graf4.m32 mip detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tilegraf15b.tga
+$mip 1_tilegraf15b 0 0 64 64 scale 1 1 alt 1_tile_graf4.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\1_tilegraf19b.tga
+$mip 1_tilegraf19b 0 0 128 64 scale 1 1 alt 1_tile.m32 detail d_tile.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_lbrown
+$load \art\textures\final\ny\2_cinderblock_graf16b.tga
+$mip 2_cinderblock_graf16b 0 0 64 64 scale 1 1 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf19b.tga
+$mip 2_cinderblock_graf19b 0 0 64 64 scale 1 1 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf20b.tga
+$mip 2_cinderblock_graf20b 0 0 128 64 scale 1 1 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf2b.tga
+$mip 2_cinderblock_graf2b 0 0 64 64 scale 1 1 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf3b.tga
+$mip 2_cinderblock_graf3b 0 0 128 64 scale 1 1 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf6b.tga
+$mip 2_cinderblock_graf6b 0 0 128 64 scale 1 1 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf8b.tga
+$mip 2_cinderblock_graf8b 0 0 64 64 scale 1 1 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\2_cinderblock_graf9b.tga
+$mip 2_cinderblock_graf9b 0 0 64 64 scale 1 1 alt 2_cinderblock.m32 detail d_metalbump.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material stone_dgrey
+$load \art\textures\final\ny\barrel_big_endb.tga
+$mip barrel_big_endb 0 0 64 64 scale 1 1 detail d_stonerough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1b.m32 material metal_oilspurt
+$load \art\textures\final\ny\calendar2b.tga
+$mip calendar2b 0 0 32 64 scale 1 1 spherical env1a.m32
+$load \art\textures\final\ny\sign13b.tga
+$mip sign13b 0 0 128 128 scale 1 1 spherical env1b.m32
+$load \art\textures\final\ny\1_sign8.tga
+$mip 1_sign8 0 0 128 32 scale 1 1 spherical env1b.m32 material glass_computer
+$load \art\textures\final\ny\window2_dirt_d2.tga
+$mip window2_dirt_d2 0 0 64 64 scale 1 1 mip material glass
+$load \art\textures\final\ny\1_button_off.tga
+$mip 1_button_off 0 0 32 32 scale 1 1 mip spherical env1c.m32 anim 1_button_on.m32 material metal
+$load \art\textures\final\ny\1_button_on.tga
+$mip 1_button_on 0 0 32 32 scale 1 1 mip spherical env1c.m32 material metal
+$load \art\textures\final\ny\chain1.tga
+$mip chain1 0 0 16 64 scale 1 1 detail d_metalrough.m32 4 4 0 0 0  GL_DST_COLOR  GL_SRC_COLOR spherical env1c.m32 material metal
+$load \art\textures\final\ny\med_door.tga
+$mip med_door 0 0 32 32 scale 1 1 mip spherical env1b.m32
+$load \art\textures\final\ny\med_inside.tga
+$mip med_inside 0 0 32 32 scale 1 1 mip anim med_inside_used.m32
+$load \art\textures\final\ny\med_inside_used.tga
+$mip med_inside_used 0 0 32 32 scale 1 1 mip
+$load \art\textures\final\ny\med_sides.tga
+$mip med_sides 0 0 16 16 scale 1 1 mip spherical env1b.m32
+$load \art\textures\final\ny\env1a.tga
+$mip env1a 0 0 256 256 scale 1 1 m_nomip m_spherical
+$load \art\textures\final\ny\env1b.tga
+$mip env1b 0 0 256 256 scale 1 1 m_nomip m_spherical
+$load \art\textures\final\ny\env1c.tga
+$mip env1c 0 0 256 256 scale 1 1 m_nomip m_spherical
+$load \art\textures\final\ny\med_red.tga
+$mip med_red 0 0 16 16 scale 1 1
+$load \art\textures\final\ny\med_sign.tga
+$mip med_sign 0 0 64 64 scale 1 1
+$load \art\textures\final\ny\med_stripe.tga
+$mip med_stripe 0 0 16 16 scale 1 1
+$load \art\textures\final\ny\ctfb_base.tga
+$mip ctfb_base 0 0 64 64 scale 1 1 material stone_lgrey
+$load \art\textures\final\ny\ctfr_base.tga
+$mip ctfr_base 0 0 64 64 scale 1 1 material stone_lgrey
+$load \art\textures\final\ny\1_mtrim1.tga
+$mip 1_mtrim1 0 0 64 32 scale 1 1 mip detail d_metalrough.m32 8 8 0 0 0  GL_DST_COLOR  GL_SRC_COLOR material metal

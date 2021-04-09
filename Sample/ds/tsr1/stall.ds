@@ -1,0 +1,33 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+local entity stallshooter // the guy who will shoot the stall
+local entity breakstall // the breakable brush for the stall
+local entity originalwall // the func wall that needs to be removed
+local entity stall_playerfind // the target that the stall guy will shoot at
+local int sig1
+
+stallshooter = find entity with targetname "stallshooter"  // \
+breakstall = find entity with targetname "breakstall"
+originalwall = find entity with targetname "originalwall"
+stall_playerfind = find entity with targetname "stall_playerfind"
+
+// use entity stallshooter // spawns the guy in
+
+if stallshooter.health > 0
+
+   use entity originalwall // this should remove the func_wall
+   animate entity stallshooter performing action STD_F_FWD_S_2 targeting entity stall_playerfind signaling sig1 //breakstall // this should get the guy to fire and break the brush
+   wait .1 seconds 
+   use entity breakstall // should trigger the stall to break no matter what, lets hope this fixes a bug
+   wait for all clearing sig1
+  
+   
+endif 
+
+
+   reset ai for entity stallshooter 
+   animate entity stallshooter performing action SCRIPT_RELEASE
+   exit

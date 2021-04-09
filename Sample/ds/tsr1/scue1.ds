@@ -1,0 +1,47 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+#include "tsr1.ds"
+
+
+
+
+
+// THE FIRST SOUND CUE FROM HAWK TRIGGERED WHEN THE PLAYER LEAVES THE SUBWAY STATION
+
+local entity splayer1 // the player who sets off the trigger
+local entity notoken // the clip brush in front of the token booth
+local entity scue1b // the relay between the trigger and the script runner so it doesnt get used twice
+
+splayer1 = get entity activator
+notoken = find entity with targetname "notoken"
+scue1b = find entity with targetname "scue1b"
+
+// THE WHOLE CONVERSATION EXCHANGE 
+
+use entity notoken // should remove the clip brush func wall in the token booth windows
+
+play sound "cin/tsr1/s1d1.adp" for entity splayer1 at volume 0.9   // Hawks first call to John
+	print TSR1_S1D1
+	wait 1.5 seconds 
+	// "John do you read" 
+
+play sound "cin/tsr1/s1d2.adp" for entity splayer1 at volume 0.9   // johns response
+	print TSR1_S1D2
+	//" go ahead" 
+	wait 1.5 seconds 
+
+play sound "cin/tsr1/s1d3.adp" for entity splayer1 at volume 0.9   // hawk saying the info
+	print TSR1_S1D3
+	// "nypd has a large group ....."
+	wait 4 seconds 
+
+play sound "cin/tsr1/s1d4.adp" for entity splayer1 at volume 0.9   // roger
+	print TSR1_S1D4
+
+	// "roger" 
+
+
+
+
+
+

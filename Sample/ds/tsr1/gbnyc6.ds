@@ -1,0 +1,100 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+/////////////////////////////////////////////////
+// Declare
+
+local entity stall1
+local entity stall2
+local entity new_kick_stall // the new stall kick that Brian wanted in
+local entity new_kick_stall_push // push brush that will simulate force when the door is kicked open
+local entity backbystairs // trigger that needs to be hit when leaving ladies room
+local entity lstallguy1 // the first guy in the ladies room stall
+local entity lstallguy2 // the sec guy in the ladies rooms stall
+local entity lstallguy3 // the newest guy in the stall sequence
+local entity setup // this sets up the ambush on the way out
+local entity stallshooter // the guy who will shoot the stall on the way out
+local entity originalwall // the func_wall clean version stall that needs to be taken out for the ambush
+local entity raf_clipdoor // the func wall clip brush for the bathroom door
+local entity new_clip_stall // the clip brush func wall that will provide collision for when the door is kicked open
+local int sig1
+local int sig2
+
+/////////////////////////////////////////////////
+// Assign
+
+stall1 = find entity with targetname "stall1"
+stall2 = find entity with targetname "stall2"
+new_kick_stall = find entity with targetname "new_kick_stall"
+new_kick_stall_push = find entity with targetname "new_kick_stall_push"
+backbystairs = find entity with targetname "backbystairs"
+lstallguy1 = find entity with targetname "lstallguy1"
+lstallguy2 = find entity with targetname "lstallguy2"
+lstallguy3 = find entity with targetname "lstallguy3"
+stallshooter = find entity with targetname "stallshooter"
+setup = find entity with targetname "setup"
+originalwall = find entity with targetname "originalwall"
+raf_clipdoor = find entity with targetname "raf_clipdoor"
+new_clip_stall = find entity with targetname "new_clip_stall"
+
+/////////////////////////////////////////////////
+// Action
+
+// THE FIRST STALL GUY
+if lstallguy1.health > 0
+
+  animate entity lstallguy1 performing action STD_XKICKDOOR_N_A_A // signaling sig1
+  wait .25 seconds // mmm the magic delay
+  moverotate entity stall1 from file "gbnyc_stall.rof"// signaling sig2
+  play sound "impact/door/kickdoor.wav" for entity stall1 at volume 0.9
+  // wait 0.5 seconds
+  //wait for all clearing sig1, sig2
+  animate entity lstallguy1 performing action STD_R_N_MRS_2 by moving [-64, 0, 0] 
+  animate entity lstallguy1 performing action SCRIPT_RELEASE
+
+endif
+
+// THE SECOND STALL GUY
+
+if lstallguy2.health > 0
+  
+   animate entity lstallguy2 performing action STD_XKICKDOOR_N_A_A //signaling sig1
+   wait .25 seconds
+   moverotate entity stall2 from file "generic_door_cw.rof" //signaling sig2
+   play sound "impact/door/kickdoor.wav" for entity stall2 at volume 0.9
+   use entity new_clip_stall // triggers the funcwall in for clipping
+   //wait for all clearing sig1, sig2
+   animate entity lstallguy2 performing action STD_R_N_MRS_2 by moving [-64, 0, 0] 
+   animate entity lstallguy2 performing action SCRIPT_RELEASE
+//    use entity backbystairs
+
+endif
+	
+wait 1 seconds // stall for the last guy to kick the stall
+
+// THE THIRD STALL GUY
+
+if lstallguy3.health > 0
+
+   animate entity lstallguy3 performing action STD_XKICKDOOR_N_A_A //signaling sig1
+   wait .25 seconds
+   use entity new_kick_stall_push // triggers the push brush
+   wait .2 seconds
+   use entity new_kick_stall_push // shuts the stall push brush off
+   moverotate entity new_kick_stall from file "generic_door_ccw.rof" //signaling sig2
+   use entity raf_clipdoor // triggers the clip hull in
+   play sound "impact/door/kickdoor.wav" for entity stall2 at volume 0.9
+   //wait for all clearing sig1, sig2
+   animate entity lstallguy3 performing action STD_R_N_MRS_2 by moving [64, 0, 0] 
+   animate entity lstallguy3 performing action SCRIPT_RELEASE
+
+endif
+
+use entity setup // activates the trigger for the stall shooting guy
+use entity stallshooter // spawns the skinhead in behind the front partition
+// use entity originalwall // this should remove the func_wall
+
+animate entity stallshooter performing action SCRIPT_RELEASE
+
+
+// End

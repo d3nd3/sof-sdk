@@ -1,0 +1,18 @@
+// The handy dandy moving subway train script
+
+#include "../common/header.ds"
+
+output "p:/base/ds/common"
+
+// declare the variables
+
+parameter entity train //which train to move
+parameter vector move //how far the train should move
+local int sig = 0
+
+// move the trains
+
+move entity train by move signaling sig
+wait for all signaling sig
+
+//This is a very stupid piece of crap

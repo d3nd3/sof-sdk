@@ -1,0 +1,11 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+// the script that calls the death animation of the swat guy in the intro
+
+local entity introdeadswat // the guy who will be killed
+
+introdeadswat = find entity with targetname "introdeadswat"
+
+animate entity introdeadswat performing action STD_SINBACK_2FRNT_N_N  // this is him getting shot in the back

@@ -1,0 +1,29 @@
+
+
+#include "../common/header.ds"
+
+output "p:/base/ds/tsr1"
+
+
+//////////////////////////////////////////////////////////////////////////
+// Enemy leans around corner in subway tunnel
+//////////////////////////////////////////////////////////////////////////
+
+//enemy that leans
+local entity tunnelleaner
+
+//to target player
+local entity sneak
+
+
+
+//enemy that leans
+tunnelleaner = find entity with targetname "tunnelleaner"
+sneak = find entity player
+
+
+//spawns leaner
+use entity tunnelleaner 
+// this is him peeking around the corner firing
+animate entity tunnelleaner performing action STD_FCORNERPEAK_RT_P_A targeting entity sneak 
+animate entity tunnelleaner performing action SCRIPT_RELEASE

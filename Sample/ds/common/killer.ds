@@ -1,0 +1,15 @@
+// template file for common directory
+
+#include "../common/header.ds"
+
+output "p:/base/ds/common"
+
+
+//  THIS SCRIPT JUST TAKES PARM1 FROM A SCRIPT RUNNER AND WILL REMOVE IT,  USEFUL FOR GETTING LOCKED MESSAGES OFF OF DOORS
+
+
+parameter entity kill_thing
+
+
+
+remove entity kill_thing // removes whatever was in parm1 

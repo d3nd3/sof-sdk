@@ -1,0 +1,20 @@
+// template file for newyork directory
+
+#include "../common/header.ds"
+
+output "p:/base/ds/tsr1"
+
+
+
+local entity istairsguy
+local entity sneak
+
+istairsguy = find entity with targetname "istairsguy"
+sneak = find entity player
+
+// use entity istairsguy // spawns the guy in at the bottom of the steps
+// animate entity istairsguy performing action RUN by moving to [-488, 1576, -104] 
+// animate entity istairsguy performing action STD_FCORNERPEAK_RT_P_A by turning to [100, -500, 150] targeting entity sneak // this is him peeking around the corner firing
+
+animate entity istairsguy performing action STD_FCORNERPEAK_RT_P_A targeting entity sneak // this is him peeking around the corner firing
+animate entity istairsguy performing action SCRIPT_RELEASE

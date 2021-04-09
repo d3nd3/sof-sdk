@@ -1,0 +1,21 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+
+local entity sabre1 // skinhead boss who will shoot the hostages
+local entity introhostage1 // the hostage to the left of sabre in the intro
+
+
+sabre1 = find entity with targetname "sabre1"
+introhostage1 = find entity with targetname "introhostage1"
+
+
+
+
+
+
+
+
+animate entity sabre1 performing action STD_ERAGESHOOT_N_P_N targeting entity introhostage1 kill nulltarget HEAD//

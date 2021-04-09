@@ -1,0 +1,106 @@
+//First entry points to the working directory for the player model
+//	(this should generally be "enemy/meso" or "enemy/female")
+enemy/meso
+
+//Second entry points to .ghb file to be used by menus
+//	(meso_menu1-10 and fem_menu1&2 are available in the pakfile)
+meso_menu5
+
+//Third entry points to .ghb file to be used in the game
+//	(meso_player and fem_play are available in the pakfile)
+meso_player
+
+//Fourth entry points to set of .gsq files to be used in the game
+//	(this will determine most of the model parts turned on/off in game--can
+//	be adjusted further down)
+playerbulbul
+
+//Fifth entry is the teamname of this model
+//	("Noteam" designates that model isn't on any team)
+"Noteam"
+
+//Sixth entry points to the directory in which pain and death sounds are found
+//	(the following directories are available in the pakfile:
+//				"enemy/dth/skin"--used for New York single player levels
+//				"enemy/dth/russ"--used for Siberia/Kosovo single player levels
+//				"enemy/dth/arab"--used for Iraq/Sudan single player levels
+//				"enemy/dth/jpn"--used for Japan single player levels
+//				"enemy/dth/rad"--used for Castle single player levels
+//				"enemy/dth/fem"--used for females in single player)
+"enemy/dth/skin"
+
+//Seventh entry points to set of faces to be used by player model
+//	(this can be set to "" if you don't want to make use of facial expressions--the
+//	ninja player model is set this way)
+//	(these face sets are available in the pakfile:
+//			f_amu_--General Amu
+//			f_w_2,3,4,6,8,10,11,12,15,16,17_--most of the caucasion faces in the single player game
+//			f_b_2-7_--most of the African and African-American faces
+//			f_h_6_--a serbian face
+//			f_hb_1_--a bearded face
+//			f_j_3,4,&8_--Asian faces
+//			f_john_--John Mullins
+//			f_m_1&5_--Middle Eastern faces
+//			f_sam_--Sam
+//			f_taylor_--Taylor)
+"f_w_3_"
+
+//Eighth entry is a list of skins to set for the model
+//	(each list member has three parts: the material to set the skin for, the name of
+//	the skin, and the model part to set the skin for.  The materials on the meso player
+//	model are:
+//			H--head material
+//			HD--hood material, for hooded coat
+//			F--face material
+//			MD--mask material, for chemical suit
+//			A--arm material
+//			B--body material
+//			C--cap material (generally just used for severed limbs)
+//			GZ--gore zone material (generally just used for bullet-hole textures)
+//	The female player model has the same materials, except for HD and MD.
+//
+//	If the seventh entry was set validly, it will override any face skin set here.
+//	These are the static faces available in the pakfile (for use when you set the 7th entry to ""):
+//			f_afrrocket
+//			f_dekker
+//			f_irqrocket
+//			f_irqwoman1
+//			f_irqwoman2
+//			f_ninja
+//			f_raider2-5
+//			f_sibtroop
+//			f_sibtroop2
+//
+//	The model part can be the name of any mesh on the model, or can be set to 0 if you
+//	want the material on the entire model changed to the specified skin.)
+{
+a a_kosmechanic 0
+b b_kosmechanic 0
+f f_w_3_n 0
+h h_w_3_s 0
+h h_raider2 _mohawk
+}
+
+//Ninth entry is a list of bolt-ons for the model
+//	(each list member has four parts:  the name of the .gbm file which descibes the item being
+//	bolted on, the name of the bolt on the player model, the name of the bolt on the item, and the
+//	scale to be applied to the item.)
+{
+boltons/funface.gbm abolt_head_t to_abolt_head_t 1.187857142857
+}
+
+//Tenth entry is a list of extra part toggles
+//	(each list member has two parts: the name of the mesh on the player model, and a 1-or-0 value
+//	which specifies whether the part should be on (1) or off (0).)
+{
+_mohawk 1
+_crewhead 0
+_beardhead 0
+_beardface 0
+_lbang 0
+_rbang 0
+_ponytail 0
+_helmethead 0
+_helmetface 0
+_lear 0
+}

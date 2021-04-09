@@ -1,0 +1,28 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+/////////////////////////////////////////////////
+// Declare
+
+local entity bloke
+local entity inplayer
+local int sig
+
+/////////////////////////////////////////////////
+// Assign
+
+bloke = find entity with targetname "subway_bloke1"
+inplayer = find entity player
+/////////////////////////////////////////////////
+// Action
+
+play sound "enemy/sk1/tsr1/wake3.wav" for entity inplayer at volume 0.9 on channel CHAN_AUTO
+animate entity bloke performing action STD_R_N_PK_N by moving [256,0,0] signaling sig // 336
+wait for all clearing sig
+// animate entity bloke performing action STD_R_N_PK_N by moving [0,-208,0] signaling sig
+// wait for all clearing sig
+// animate entity bloke performing action SCRIPT_RELEASE
+remove entity bloke
+
+
+// End

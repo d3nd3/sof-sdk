@@ -1,0 +1,145 @@
+// end camera voice over and flick for TEASER map
+
+#include "../common/header.ds"
+
+output "p:/base/ds/tsr1"
+
+//Declare all of the camera and notnull entities
+local entity firstcam //first camera for the voice over
+local entity firstnull //first camera null for the voice over
+local entity secondcam //second camera for the voice over
+local entity secondnull //second camera null for the voice over
+local entity thirdcam //third camera for the voice over
+local entity thirdnull //third camera null for the voice over
+local entity fourthcam //fourth camera for the voice over
+local entity fourthnull //fourth camera null for the voice over
+local entity fifthcam //fifth camera for the voice over
+local entity fifthnull //fifth camera null for the voice over
+local entity endlevel // the end level trigger
+
+//Declare all of the black raider entities
+local entity firstguard
+local entity secondguard
+local entity thirdguard
+local entity fourthguard
+local entity fifthguard
+local entity sixthguard
+local entity seventhguard
+local entity eighthguard
+local entity ninthguard
+local entity escapetruck
+local entity exitdoor
+
+
+//Declare all of the signaling integers
+local int sig1 //first signaling integer
+local int sig2 //second signaling integer
+local int sig3 //third signaling integer
+
+// assign all cameras and nulls to their appropriate entities
+firstcam = find entity with targetname "firstcam"
+firstnull = find entity with targetname "firstnull"
+secondcam = find entity with targetname "secondcam"
+secondnull = find entity with targetname "secondnull"
+thirdcam = find entity with targetname "thirdcam"
+thirdnull = find entity with targetname "thirdnull"
+fourthcam = find entity with targetname "fourthcam"
+fourthnull = find entity with targetname "fourthnull"
+fifthcam = find entity with targetname "fifthcam"
+fifthnull = find entity with targetname "fifthnull"
+endlevel = find entity with targetname "endlevel"
+
+//assign all black raiders to the appropriate entities
+firstguard = find entity with targetname "firstguard"
+secondguard = find entity with targetname "secondguard"
+thirdguard = find entity with targetname "thirdguard"
+fourthguard = find entity with targetname "fourthguard"
+fifthguard = find entity with targetname "fifthguard"
+sixthguard = find entity with targetname "sixthguard"
+seventhguard = find entity with targetname "seventhguard"
+eighthguard = find entity with targetname "eighthguard"
+ninthguard = find entity with targetname "ninthguard"
+escapetruck = find entity with targetname "escapetruck"
+exitdoor = find entity with targetname "exitdoor"
+
+//Assign movetypes to the cameras and their associated notnulls
+firstcam.movetype = MOVETYPE_NOCLIP
+firstnull.movetype = MOVETYPE_NOCLIP
+
+secondcam.movetype = MOVETYPE_NOCLIP
+secondnull.movetype = MOVETYPE_NOCLIP
+
+thirdcam.movetype = MOVETYPE_NOCLIP
+thirdnull.movetype = MOVETYPE_NOCLIP
+
+fourthcam.movetype = MOVETYPE_NOCLIP
+fourthnull.movetype = MOVETYPE_NOCLIP
+
+fifthcam.movetype = MOVETYPE_NOCLIP
+fifthnull.movetype = MOVETYPE_NOCLIP
+
+escapetruck.movetype = MOVETYPE_NOCLIP
+
+use entity firstcam // turn on the first camera and watch the guys shoot for a while
+//make sure to remember to start the voice over here.  Play the damn sound!
+animate entity firstguard performing action STD_WBACKAIM_N_MS_2 by moving [-200,0,0] //signaling sig1
+wait .25 seconds
+animate entity secondguard performing action STD_WBACKAIM_N_MS_2 by moving [-200,0,0]//signaling sig2
+//wait for all clearing sig1, sig2
+wait 2.5 seconds
+use entity firstcam // turn off the first camera
+remove entity firstguard
+remove entity secondguard
+
+
+use entity secondcam // turn on the second camera and watch the guys shoot for a while
+animate entity thirdguard performing action STD_WBACKAIM_N_MS_2  by moving [-200,0,0] //signaling sig1
+wait .25 seconds
+animate entity fourthguard performing action STD_WBACKAIM_N_MS_2  by moving [-200,0,0] //signaling sig2
+//wait for all clearing sig1, sig2
+wait 2.5 seconds
+use entity secondcam // turn off the second camera
+remove entity thirdguard
+remove entity fourthguard
+
+
+use entity thirdcam //turn on third camera
+animate entity fifthguard performing action STD_XYELLWAVE_BK_A_N signaling sig1
+animate entity seventhguard performing action CCH_A_FWD_MS_2 repeating for 2 times 
+wait for any clearing sig1
+animate entity fifthguard performing action STD_R_N_MRS_2 by moving [-200,0,0]
+use entity sixthguard 
+animate entity seventhguard performing action CCH_XCROUCH_UP_MRS_2 //signaling sig1 
+//wait for any clearing sig1
+animate entity seventhguard performing action STD_F_FWD_S_2 signaling sig1
+wait for any clearing sig1
+animate entity seventhguard performing action STD_WBACKAIM_N_MS_2  by moving [-64,0,0] signaling sig1
+wait for any clearing sig1
+use entity thirdcam //turn off third camera
+remove entity fifthguard
+remove entity sixthguard
+remove entity seventhguard
+
+use entity fourthcam //turn on fourth camera
+animate entity ninthguard performing action CCH_A_FWD_MS_2 signaling sig1
+wait for all clearing sig1
+wait 2 seconds
+use entity fourthcam //turn off fourth camera
+remove entity ninthguard
+
+use entity fifthcam //turn on fifth camera
+use entity exitdoor
+animate entity eighthguard performing action STD_ISTAND_N_A_N signaling sig1 // 
+wait for any clearing sig1
+animate entity eighthguard performing action STD_ECOMEHERE_N_A_N repeating for 2 times signaling sig1
+wait for any clearing sig1
+use entity escapetruck // should start the wheels moving // MADE BY JERSEY :)
+move entity escapetruck by [-400,0,0] at 60 speed
+animate entity eighthguard performing action STD_ISTAND_N_A_N signaling sig1
+wait for any clearing sig1
+wait 1 seconds
+use entity fifthcam // turn off fifth camera
+// use entity endlevel // starts the next level
+ 
+
+exit

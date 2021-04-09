@@ -1,0 +1,42 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+/////////////////////////////////////////////////
+// Declare
+
+ 
+local entity runningguy // skinhead guy who runs around the corner quickly
+local entity deadswatguy1 // the swat guy who will get killed
+local entity swatkiller // the guy who will shoot the wounded swatguy
+local entity gumball1 // the gumball machine
+local int sig1
+
+/////////////////////////////////////////////////
+// Assign
+
+
+runningguy = find entity with targetname "runningguy"
+deadswatguy1 = find entity with targetname "deadswatguy1"
+swatkiller = find entity with targetname "swatkiller"
+gumball1 = find entity with targetname "gumball1"
+
+
+
+/////////////////////////////////////////////////
+// Action
+use entity deadswatguy1 // spawns the dead swatguy
+use entity runningguy // spawns the guy in
+animate entity swatkiller performing action SCRIPT_RELEASE
+
+use entity gumball1 // makes sure the gumball machine breaks
+
+
+animate entity deadswatguy1 performing action LB_XLEANUPSHOOT_N_P_N targeting entity swatkiller
+animate entity deadswatguy1 performing action SCRIPT_RELEASE
+remove entity runningguy // gets him out of the way
+
+
+
+
+
+// End

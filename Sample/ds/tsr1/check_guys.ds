@@ -1,0 +1,28 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+local entity lstallguy1 // the first guy in the ladies room stall
+local entity lstallguy2 // the sec guy in the ladies rooms stall
+local entity lstallguy3 // the newest guy in the stall sequence
+local entity fire_script // the script runner that will start the sequence
+
+lstallguy1 = find entity with targetname "lstallguy1"
+lstallguy2 = find entity with targetname "lstallguy2"
+lstallguy3 = find entity with targetname "lstallguy3"
+fire_script = find entity with targetname "t57"
+
+
+// this checks the health all the time to see if the player takes a cheap shot at the guys in the stalls
+
+on lstallguy1.health < 100 goto stall_release
+on lstallguy2.health < 100 goto stall_release
+on lstallguy3.health < 100 goto stall_release
+
+suspend
+
+label stall_release 
+
+use entity fire_script // fires off the script runner in case any of the guys get shot by the player
+exit 

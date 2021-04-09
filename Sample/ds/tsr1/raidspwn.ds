@@ -1,0 +1,34 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+/////////////////////////////////////////
+// spawns in actors for the RAID script
+/////////////////////////////////////////
+
+
+local entity rswat1 // the first swat guy
+local entity rswat2 // the second swatguy
+local entity rbadguy1 // first bad skinhead
+local entity rbadguy2 // the second bad skinhead
+
+
+
+
+rswat1 = find entity with targetname "rswat1"
+rswat2 = find entity with targetname "rswat2"
+rbadguy1 = find entity with targetname "rbadguy1"
+rbadguy2 = find entity with targetname "rbadguy2"
+
+
+
+
+//spawns in swat guards 
+use entity rswat1
+use entity rswat2
+
+//spawns in skinheads 
+use entity rbadguy1
+use entity rbadguy2
+
+animate entity rbadguy2 performing action STD_XAFRAIDSHAKE_N_N_N holding for 999.0  // him laying there on the ground PRN_A_N_A_2

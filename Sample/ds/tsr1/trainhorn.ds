@@ -1,0 +1,23 @@
+#include "../common/header.ds"
+output "p:/base/ds/tsr1"
+
+
+
+local entity runovertrain
+local entity new_train_shake // the camera shake that people wanted
+local entity qa_explosion // the explosion at the end of the tunnel
+local entity qa_camerashake // the camera shake for the explosion at the end of the tunnel
+
+runovertrain = find entity with scripttarget "runovertrain"
+new_train_shake = find entity with targetname "new_train_shake"
+qa_explosion = find entity with targetname "qa_explosion"
+qa_camerashake = find entity with targetname "qa_camerashake"
+
+wait .1 seconds 
+play sound "Cin/TSR1/Script/Warning.wav" for entity runovertrain at volume 0.9 
+wait 2.2 seconds 
+use entity runovertrain // triggers the train going
+use entity new_train_shake // triggers the camera shake effect
+wait 4 seconds 
+use entity qa_explosion // the explosion gets triggered
+use entity qa_camerashake // triggers the camera shake
